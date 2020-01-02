@@ -17,6 +17,25 @@
 #解决方法：弄清逻辑
 
 #6，写一个程序，利用queue实现进程间通信；
+
+from queue import Queue
+import threading
+import time
+def func1(q):
+    q.put('这是一条信息')
+
+def func2(q):
+    i = q.get()
+    print(i)
+
+if __name__ == '__main__':
+    q = Queue()
+    t1 = threading.Thread(target=func1,args=(q,))
+    t2 = threading.Thread(target=func1,args=(q,))
+
+
+
+
 # from multiprocessing import Queue,Process
 # def func1(q):
 #     q.put('info')
@@ -128,7 +147,7 @@
 
 
 import threading
-num = 0
+num = 1
 def func1():
     while True:
         if num < 10:
@@ -147,6 +166,7 @@ def func2():
             break
 def func3():
     global num
+    print(num)
     while True:
         if num < 10:
             if lock3.acquire():
