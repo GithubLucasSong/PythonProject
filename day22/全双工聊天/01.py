@@ -5,7 +5,7 @@ import threading
 import time
 s = socket(AF_INET,SOCK_DGRAM)
 s.bind(('',7890))
-addr = ('192.168.14.25',7891)
+addr = ('192.168.14.153',7891)
 
 def func1():
     while True:
