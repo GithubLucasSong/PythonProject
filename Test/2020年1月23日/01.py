@@ -79,14 +79,55 @@
 
 
 
+#
+# class A():
+#     def __init__(self,name):
+#         self.name = name
+#
+#     def __del__(self):
+#         print('删除的时候执行我')
+#
+#
+# a = A('alex')
+# del a.name
+
+
+# class A():
+#
+#     def __init__(self,name): # 给空间封装东西的
+#         print('我是init')
+#         self.name = name
+#
+#     def __new__(cls, *args, **kwargs): #开辟空间的
+#         print('我是New')
+#
+#     def show(self):
+#         print(self.name)
+#
+# a = A('alex')
+# a1 = A('alex')
+# a2 = A('alex')
+# a3 = A('alex')
+#
+# a.show()
+# a1.show()
+
 
 class A():
-    def __init__(self,name):
+
+    __a = None
+
+    def __init__(self,name): # 给空间封装东西的
+        print('我是init')
         self.name = name
 
-    def __del__(self):
-        print('删除的时候执行我')
+    def __new__(cls, *args, **kwargs): #开辟空间的
+        if not cls.__a:
+            a = cls.__new__(cls, *args, **kwargs) # 让父类开辟空间
+
+    def show(self):
+        print(self.name)
 
 
 a = A('alex')
-del a.name
+print(a.name)
