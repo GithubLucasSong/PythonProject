@@ -12,7 +12,7 @@
 # b,在原文件后面追加一行内容：信不信由你，反正我信了。
 # f = open('a1.txt',mode='a',encoding='utf-8')
 # f.write('\n信不信由你，反正我信了')
-f = open('a1.txt',mode='w',encoding='utf-8')
+# f = open('a1.txt',mode='w',encoding='utf-8')
 
 # c,将原文件全部清空，换成下面的内容：
 # 每天坚持一点，
@@ -66,22 +66,22 @@ f = open('a1.txt',mode='w',encoding='utf-8')
 # lenovo 30000 3
 # chicken 10 3
 # 通过代码，将其构建成这种数据类型：[{'name':'apple','price':10,'amount':3},{'name':'tesla','price':1000000,'amount':1}......] 并计算出总价钱。
-f = open('a.txt',mode='r',encoding='utf-8')
-content = []
-money = 0
-for i in f:
-    lis = []
-    dic = {}
-    i = i.strip()
-    lis = i.split(' ')
-    print(lis)
-    dic['name'] = lis[0]
-    dic['price'] = int(lis[1])
-    dic['amount'] = int(lis[2])
-    money += dic['price'] * dic['amount']
-    content.append(dic)
-print(content)
-print(f'总价是：{money}')
+# f = open('a.txt',mode='r',encoding='utf-8')
+# content = []
+# money = 0
+# for i in f:
+#     lis = []
+#     dic = {}
+#     i = i.strip()
+#     lis = i.split(' ')
+#     print(lis)
+#     dic['name'] = lis[0]
+#     dic['price'] = int(lis[1])
+#     dic['amount'] = int(lis[2])
+#     money += dic['price'] * dic['amount']
+#     content.append(dic)
+# print(content)
+# print(f'总价是：{money}')
 
 
 
@@ -93,6 +93,14 @@ print(f'总价是：{money}')
 # 谁说alex是sb？
 # 你们真逗，alex再牛逼，也掩饰不住资深屌丝的气质。
 # 将文件中所有的alex都替换成大写的SB（文件的改的操作）。
+# f = open('4.txt',mode='r',encoding='utf-8')
+# data = f.read()
+# new_data = data.replace('alex','sb')
+# f1 = open('4.txt',mode='w',encoding='utf-8')
+# f1.write(new_data)
+
+
+
 #
 # 5.文件a1.txt内容,建议写的支持扩展 (35分钟)
 #
@@ -102,13 +110,44 @@ print(f'总价是：{money}')
 # [{'name':'apple','price':10,'amount':3,year:2012},
 # {'name':'tesla','price':1000000,'amount':1}]
 # 并计算出总价钱。
+# f = open('5.txt',mode='r',encoding='utf-8')
+# lis = []
+# for i in f:
+#     dic = {}
+#     i_lis = i.split(' ')
+#     for i in i_lis:
+#         dic[i.split(':')[0]] = i.split(':')[1]
+#     lis.append(dic)
 #
+# print(lis)
+
+
+
+
 # 6.文件a1.txt内容,建议写的支持扩展 (40分钟)
 #
-# 序号     部门      人数      平均年龄      备注
-# 1       python    30         26         单身狗
-# 2       Linux     26         30         没对象
-# 3       运营部     20         24         女生多
+# # 序号     部门      人数      平均年龄      备注
+# # 1       python    30         26         单身狗
+# # 2       Linux     26         30         没对象
+# # 3       运营部     20         24         女生多
 # 通过代码，将其构建成这种数据类型：
 # [{'序号':'1','部门':Python,'人数':30,'平均年龄':26,'备注':'单身狗'},
-# ......]
+# # ......]
+
+
+
+f = open('6.txt',mode='r',encoding='utf-8')
+lis = []
+f1 = f.readline()
+a,b,c,d,e = f1.split()
+for i in f:
+    dic = {}
+    a1,b1,c1,d1,e1 = i.split()
+    # dic[a] = a1
+    # dic[b] = b1
+    # dic[c] = c1
+    # dic[d] = d1
+    # dic[e] = e1
+    dic = {a:a1,b:b1,c:c1,d:d1,e:e1}
+    lis.append(dic)
+print(lis)
