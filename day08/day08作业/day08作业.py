@@ -12,19 +12,19 @@
 #
 # ret = func1
 #
-# ret()
+# ret() # in func1
 #
 # ret1 = func2
 #
-# ret1()
+# ret1() # in func2
 #
 # ret2 = ret
 #
 # ret3 = ret2
 #
-# ret2()
+# ret2() # in func1
 #
-# ret3()
+# ret3() # in func1
 # 执行结果：
 #
 # 例二：
@@ -45,9 +45,9 @@
 #     y()
 #
 #
-# print(111)
-# func3(func2, func1)
-# print(222)
+# print(111) # 111
+# func3(func2, func1)  # in func2  in func3  in func1
+# print(222) #222
 # 执行结果：
 #
 # def func1():
@@ -65,10 +65,10 @@
 #
 #
 # ret = func2(func1)
-# ret()
+# ret()  # in func2 func1
 # ret2 = func3(func2)
 # ret3 = ret2(func1)
-# ret3()
+# ret3() # in func3  in func2  in func1
 # 执行结果：
 #
 # 看代码写结果：
@@ -85,13 +85,13 @@
 #     print(result)
 #
 #
-# run()
-# data = run()
-# print(data)
+# run() # ****和大家都是好朋友
+# data = run()  # ****和大家都是好朋友
+# print(data)   # None
 # 看代码写结果：
 #
 # 例五:
-#
+
 # data_list = []
 #
 #
@@ -100,8 +100,8 @@
 #
 #
 # data = func('绕不死你')
-# print(data)
-# print(data_list)
+# print(data) # None
+# print(data_list)  # ['绕不死你']
 # 看代码写结果：
 # 例六:
 #
@@ -114,8 +114,8 @@
 # func_list = [func, func, func]
 #
 # for item in func_list:
-#     val = item()
-#     print(val)
+#     val = item() #你好呀
+#     print(val)  #好你妹呀
 # 看代码写结果：
 # 例七:
 #
@@ -129,7 +129,7 @@
 #
 # for i in range(len(func_list)):
 #     val = func_list[i]()
-#     print(val)
+#     print(val)  #同上题
 # 看代码写结果：
 #
 # 例八:
@@ -148,7 +148,7 @@
 #
 #
 # result = base(func, bar)
-# print(result)
+# print(result) # '大烧饼吃煎饼'
 # 看代码写结果：
 #
 # 例九:
@@ -160,7 +160,7 @@
 #         return item
 #
 #
-# func()
+# func() # None
 # 看代码写结果：
 #
 # 例十:
@@ -173,7 +173,7 @@
 #
 #
 # func()
-# 看代码写结果：
+# 看代码写结果：  #None
 #
 # 例十一:
 #
@@ -192,7 +192,7 @@
 #
 #
 # func()
-# 看代码写结果：
+# 看代码写结果： # inner被重新赋值成数字 数字加括号 报错
 #
 # 例十二:
 #
@@ -207,7 +207,7 @@
 # print(func(1))
 # print(func(2))
 # print(func(3))
-# 看代码写结果：
+# 看代码写结果：  1 12 123
 #
 # 例十三:
 #
@@ -222,7 +222,7 @@
 # print(name)
 # func()
 # print(name)
-# 看代码写结果：
+# 看代码写结果： 宝元  男神
 # 例十四:
 #
 # name = '宝元'
@@ -233,7 +233,7 @@
 #
 #
 # func()
-# 看代码写结果：
+# 看代码写结果： 宝元
 # 例十五: (选做题)
 #
 # name = '宝元'
@@ -245,7 +245,7 @@
 #
 #
 # func()
-# 看代码写结果：
+# 看代码写结果：  报错 ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐
 # 例十六:
 #
 #
@@ -263,7 +263,7 @@
 #
 #
 # func()
-# 看代码写结果：
+# 看代码写结果： 1 2 2
 # 例十七: (选做题)
 #
 #
@@ -279,15 +279,17 @@
 # print('list1=%s' % list1)
 # print('list2=%s' % list2)
 # print('list3=%s' % list3)
-# 看代码写结果：
+# 看代码写结果： # list1=[10, 'a']  # list2=[123]  #list3=[10, 'a']
+
+
 # 例十八:
 #
 #
-# def extendList(val, list=[]):
-#     list.append(val)
-#     return list
-#
-#
-# print('list1=%s' % extendList(10))
-# print('list2=%s' % extendList(123, []))
-# print('list3=%s' % extendList('a'))
+def extendList(val, list=[]):
+    list.append(val)
+    return list
+
+
+print('list1=%s' % extendList(10))  # list1=[10]
+print('list2=%s' % extendList(123, [])) # list2=[123]
+print('list3=%s' % extendList('a')) # list3=[10, 'a']
