@@ -1007,11 +1007,2802 @@ def func(arg):
     return 9 # 返回值为9
 ```
 
+### 一.函数的动态参数
+
+之前我们说过传参,如果我们在传参数的时候不很清楚有哪些的时候,或者说给一个函数传了很多参数,我们就要写很多,很麻烦怎么办呢,我们可以考虑使用动态参数
+
+形参的第三种:动态参数
+
+首先我们来回顾下位置参数
+
+```
+def eat(a,b,c):
+
+    print('我想吃%s%s%s'%(a,b,c))
+
+eat('大米饭','中米饭','小米饭')
+```
+
+现在有个问题,你们看我这体型也知道吃的不止这些,数量也没有写,这时我们就要用到动态参数　　
+
+#### 1.1 动态接收位置参数
+
+
+
+在参数位置用*表示接受任意参数
+
+```
+def eat(*args):
+
+    print('我想吃',args)
+
+eat('大米饭','中米饭','小米饭')  # 收到的结果是一个tuple元祖
+```
+
+动态接收参数的时候要注意: 动态参数必须在位置参数后面
+
+```
+def eat(*args,a,b):
+
+    print('我想吃',args,a,b)
+
+eat('大米饭','中米饭','小米饭')
+
+结果:
+
+TypeError: eat() missing 2 required keyword-only arguments: 'a' and 'b'
+# eat函数在调用的时候发现缺少俩个位置参数没有进行传递
+```
+
+通过上述代码发现一个问题就是,我们明明给了多个参数,为什么还会提示参数未传递呢?
+
+原因就是因为这个*在搞鬼* *把所有的位置参数都给接受了,所有会报错.我们尝试着把a,b放在*的前面试试
+
+```
+def eat(a,b,*args):
+
+    print('我想吃',args,a,b)
+
+eat('大米饭','中米饭','小米饭')
+
+结果:
+
+我想吃 ('小米饭',) 大米饭 中米饭
+```
+
+动态接收参数的时候要注意:动态参数必须在位置参数后面
+
+那默认值参数呢?
+
+```
+def eat(a,b,c='白菜',*args):
+
+    print('我想吃',a,b,c,args)
+
+eat('豆腐','粉条','猪肉','大葱')
+
+结果:
+
+我想吃 豆腐 粉条 猪肉 ('大葱',)  # 我们定义好的白菜没有生效,被猪肉给覆盖了
+```
+
+我们发现默认值参数写在动态参数前面,默认值的参数是不会生效的
+
+```
+def eat(a,b,*args,c='白菜'):
+
+    print('我想吃',a,b,args,c)
+
+eat('猪肉','粉条','豆腐','大葱')
+
+结果:
+
+我想吃 猪肉 粉条 ('豆腐', '大葱') 白菜  # 这样默认参数就生效了
+```
+
+这个时候如果你不给出关键字传参,那么你的默认值是永远都生效的　　
+
+注意: 形参的顺序: 位置参数 , 动态参数 , 默认参数
+
+#### 1.2 动态接收关键字参数
+
+在python中可以动态的位置参数,但是*这种情况只能接收位置参数无法接收关键字参数,在python中使用**来接收动态关键字参数
+
+```
+def func(**kwargs):
+
+    print(kwargs)     
+
+func(a=1, b=2, c=3)
+
+结果:
+
+{'a': 1, 'b': 2, 'c': 3}
+```
+
+动态关键字参数最后获取的是一个dict字典形式　　
+
+顺序的问题, 在函数调用的时候, 如果先给出关键字参数, 则整个参数列表会报错.
+
+```
+def func(a,b,c,d):
+
+    print(a,b,c,d)
+
+func(1,2,c=3,4)
+
+结果:
+
+  File "D:/python_object/path2/test.py", line 806
+
+    func(1,2,c=3,4)              ^
+
+SyntaxError: positional argument follows keyword argument
+```
+
+关键参数必须要放在位置参数后边,由于实参是这个顺序,所以形参接收的时候也是这个顺序.也就是说位置参数必须在关键字参数前面.动态接收关键字参数也要在后面
+
+最终顺序:
+
+　　位置参数 > *args(动态位置参数) > 默认值参数 > **kwargs(动态默认参数)
+
+　　这四种参数可以任意的使用
+
+如果想接收所有的参数:
+
+```
+def func(*args,**kwargs):
+
+    print(args,kwargs)
+
+func(1,23,5,a=1,b=6)
+```
+
+动态参数还可以这样传参:
+
+```
+lst = [1,4,7]
+
+# 方法一
+
+def func(*args):
+
+    print(args)
+
+func(lst[0],lst[1],lst[2])
+
+
+
+# 方法二
+
+def func(*args):
+
+    print(args)
+
+func(*lst)  
+# 在实参的位置上用*将lst(可迭代对象)按照顺序打散
+
+# 在形参的位置上用*把收到的参数组合成一个元祖
+```
+
+字典也可以进行打散,不过需要**
+
+```
+dic = {'a':1,'b':2}
+
+def func(**kwargs):
+
+    print(kwargs)
+
+func(**dic)
+```
+
+### 二. 函数的注释
+
+```
+def eat(food,drink):
+
+    '''
+
+    这里描述这个函数是做什么的.例如这函数eat就是吃
+
+    :param food:  food这个参数是什么意思
+
+    :param drink: drink这个参数是什么意思
+
+    :return:  执行完这个函数想要返回给调用者什么东西
+
+    '''
+
+    print(food,drink)
+
+eat('麻辣烫','肯德基')
+```
+
+在外部查看函数的注释 函数名._*doc_*
+
+```
+print(eat.__doc__)  #函数名.__doc__
+
+结果:
+    这里描述这个函数是做什么的.例如这函数eat就是吃
+
+    :param food:  food这个参数是什么意思
+
+    :param drink: drink这个参数是什么意思
+
+    :return:  执行完这个函数想要返回给调用者什么东西
+```
+
+### 三 .名称空间
+
+在python解释器开始执行之后, 就会在内存中开辟一个空间, 每当遇到一个变量的时候, 就把变量名和值之间的关系记录下来, 但是当遇到函数定义的时候, 解释器只是把函数名读入内存, 表示这个函数存在了, 至于函数内部的变量和逻辑, 解释器是不关心的. 也就是说一开始的时候函数只是加载进来, 仅此而已, 只有当函数被调用和访问的时候, 解释器才会根据函数内部声明的变量来进行开辟变量的内部空间. 随着函数执行完毕, 这些函数内部变量占用的空间也会随着函数执行完毕而被清空.
+
+```
+def fun():   
+    a = 10   
+    print(a)
+fun()
+print(a)    # a不存在了已经..
+```
+
+ 我们给存放名字和值的关系的空间起一个名字叫: 命名空间. 我们的变量在存储的时候就 是存储在这片空间中的.
+
+ 命名空间分类:
+
+ 1. 全局命名空间--> 我们直接在py文件中, 函数外声明的变量都属于全局命名空间
+
+ 2. 局部命名空间--> 在函数中声明的变量会放在局部命名空间
+
+ 3. 内置命名空间--> 存放python解释器为我们提供的名字, list, tuple, str, int这些都是内置命名空间　　
+
+**加载顺序:**
+
+　　1. 内置命名空间
+
+　　2. 全局命名空间
+
+ 3. 局部命名空间(函数被执行的时候)
+
+**取值顺序:**
+
+ 1. 局部命名空间
+
+ 2. 全局命名空间
+
+ 3. 内置命名空间
+
+```
+a = 10
+def func():  
+    a = 20   
+    print(a)
+
+func()  # 20
+```
+
+作用域: 作用域就是作用范围, 按照生效范围来看分为 全局作用域 和 局部作用域
+
+　　 全局作用域: 包含内置命名空间和全局命名空间. 在整个文件的任何位置都可以使用(遵循 从上到下逐⾏执行).
+
+　　 局部作用域: 在函数内部可以使用.
+
+作⽤域命名空间:
+
+```
+ 　　1. 全局作⽤用域:    全局命名空间 + 内置命名空间  
+ 　　2. 局部作⽤用域:    局部命名空间   
+```
+
+我们可以通过globals()函数来查看全局作⽤用域中的内容,也可以通过locals()来查看局部作 ⽤用域中的变量量和函数信息
+
+```
+a = 10
+def func():   
+    a = 40   
+    b = 20   
+    print("哈哈")   
+    print(a, b)        
+    print(globals())    # 打印全局作用域中的内容   
+    print(locals())     # 打印局部作用域中的内容
+func()
+```
+
+![img](https://guobaoyuan.gitee.io/new_book/assets/1-1548388202066.gif)
+
+### 四. 函数的嵌套
+
+1. 只要遇见了()就是函数的调用. 如果没有()就不是函数的调用
+2. 函数的执行顺序
+
+```
+def fun1():   
+    print(111)  
+def fun2():   
+    print(222)   
+    fun1()   
+fun2()
+print(111)
+```
+
+![1548388589142](https://guobaoyuan.gitee.io/new_book/assets/1548388589142.png)
+
+```
+def fun2():   
+    print(222)   
+    def fun3():       
+        print(666)   
+    print(444)   
+    fun3()   
+    print(888)
+print(33)
+fun2()
+print(555)
+```
+
+![1548388743478](https://guobaoyuan.gitee.io/new_book/assets/1548388743478.png)
+
+### 五 .gloabal、nonlocal
+
+首先我们写这样一个代码, 首先在全局声明一个变量, 然后再局部调用这个变量, 并改变这 个变量的值
+
+```
+a = 100
+def func():   
+    global a    # 加了个global表示不再局部创建这个变量了. 而是直接使用全局的a   
+    a = 28   
+print(a)
+func()
+print(a)
+```
+
+global表示. 不再使用局部作用域中的内容了. 而改用全局作用域中的变量
+
+#### 5.1global 宗旨
+
+在函数内部修改全局的变
+
+量,如果全局中不存在就创建一个变量
+
+```
+lst = ["麻花藤", "刘嘉玲", "詹姆斯"]
+def func():   
+    lst.append("⻢云")   
+    # 对于可变数据类型可以直接进⾏访问
+　　 print(lst)
+func()
+print(lst)
+```
+
+#### 5.2 nonlocal宗旨
+
+nonlocal 只修改上一层变量,如果上一层中没有变量就往上找一层,只会找到函数的最外层,不会找到全局进行修改
+
+```
+a = 10
+def func1():   
+    a = 20   
+    def func2():
+        nonlocal a       
+        a = 30       
+        print(a)  
+    func2()   
+    print(a)
+func1()
+
+
+结果:
+加了nonlocal
+30
+30
+
+不加nonlocal
+30
+20
+```
+
+再看, 如果嵌套了很多层, 会是一种什么效果:
+
+```
+a = 1
+def fun_1():   
+    a = 2   
+    def fun_2():       
+        nonlocal a       
+        a = 3       
+        def fun_3():           
+            a = 4           
+            print(a)       
+        print(a)       
+        fun_3()       
+        print(a)   
+    print(a)   
+    fun_2()   
+    print(a)
+print(a)
+fun_1()
+print(a)
+```
+
+这样的程序如果能分析明白. 那么作用域, global, nonlocal就没问题了
+
+### 匿名函数
+
+匿名函数，顾名思义就是没有名字的函数，那么什么函数没有名字呢？这个就是我们以后面试或者工作中经常用匿名函数 lambda，也叫一句话函数。
+
+现在有一个需求：你们写一个函数，此函数接收两个int参数，返回和值。
+
+```
+def func(a,b):
+    return a+b
+print(func(3,4))
+```
+
+那么接下来我们用匿名函数完成上面的需求：
+
+```
+func = lambda a,b: a+b
+print(func(3, 4))  # 7
+```
+
+我们分析一下上面的代码：
+
+语法:
+
+　　函数名 = lambda 参数:返回值
+
+ 1）此函数不是没有名字，他是有名字的，他的名字就叫做lambda
+
+ 2）lambda 是定义匿名函数的关键字，相当于函数的def.
+
+ 3）lambda 后面直接加形参，形参加多少都可以，只要用逗号隔开就行。
+
+```
+func = lambda a,b,*args,sex= 'alex',c,**kwargs: kwargs
+print(func(3, 4,c=666,name='alex'))  # {'name': 'alex'}
+# 所有类型的形参都可以加，但是一般使用匿名函数只是加位置参数，其他的用不到。
+```
+
+ 4）返回值在冒号之后设置，返回值和正常的函数一样,可以是任意数据类型。(但是想要返回多个元素要以容器的形式返回)
+
+ 5）匿名函数不管多复杂.只能写一行.且逻辑结束后直接返回数据
+
+接下来做几个匿名函数的小题：
+
+写匿名函数：接收一个可切片的数据，返回索引为0与2的对应的元素（元组形式）。
+
+```
+func = lambda x:(x[0],x[2])
+print(func('afafasd'))
+```
+
+写匿名函数：接收两个int参数，将较大的数据返回。
+
+```
+func = lambda x,y: x if x > y else y
+print(func(3,100))
+```
+
+### 内置函数I
+
+ 本节我们讲内置函数。 首先来说，函数就是以功能为导向，一个函数封装一个功能，那么Python将一些常用的功能（比如len）给我们封装成了一个一个的函数，供我们使用，他们不仅效率高（底层都是用C语言写的），而且是拿来即用，避免重复早轮子，那么这些函数就称为内置函数，到目前为止python给我们提供的内置函数一共是68个，由于时间关系以及考虑这些函数的不同重要性我们会挑常用的重要的内置函数去讲，就是下面红色黄色背景的内置函数，剩下的内置函数你们参照着我的博客自己课下练习一下即可。
+
+ 由于我们这没有表格的功能，我把这些内置函数进行分类：
+
+黄色一带而过：all() any() bytes() callable() chr() complex() divmod() eval() exec() frozenset() globals() hash() help() id() input() int() iter() locals() next() oct() ord() pow() repr() round()
+
+红色重点讲解：abs() format()enumerate() filter() map() max() min() open() range() print() len() list() dict() str() float() reversed() set() sorted() sum() tuple() type() zip() dir()
+
+蓝色未来会讲： classmethod() delattr() getattr() hasattr() issubclass() isinstance() object() property() setattr() staticmethod() super()
+
+上面的黄色，红色的内置函数是在这两天讲完的（讲过的就不讲了），蓝色的讲完面向对象会给大家补充，剩余还有一些课上就不讲了，课下练习一下就可以。
+
+eval：执行字符串类型的代码，并返回最终结果。
+
+```
+eval('2 + 2')  # 4
+n=81
+eval("n + 4")  # 85
+eval('print(666)')  # 666
+```
+
+exec:执行字符串类型的代码。
+
+```
+s = '''
+for i in [1,2,3]:
+    print(i)
+'''
+exec(s)
+```
+
+以上两个内置函数很强大 工作中禁止使用
+
+hash：获取一个对象（可哈希对象：int，str，Bool，tuple）的哈希值。
+
+```
+print(hash(12322))
+print(hash('123'))
+print(hash('arg'))
+print(hash('alex'))
+print(hash(True))
+print(hash(False))
+print(hash((1,2,3)))
+
+'''
+-2996001552409009098
+-4637515981888139739
+1
+2528502973977326415
+'''
+```
+
+help：函数用于查看函数或模块用途的详细说明。
+
+```
+print(help(list))
+print(help(str.split))
+```
+
+callable：函数用于检查一个对象是否是可调用的。如果返回True，仍然可能调用失败；但如果返回False，调用对象ojbect绝对不会成功。
+
+```
+name = 'alex'
+def func():
+    pass
+print(callable(name))  # False
+print(callable(func))  # True
+```
+
+int：函数用于将一个字符串或数字转换为整型。
+
+```
+print(int())  # 0
+print(int('12'))  # 12
+print(int(3.6))  # 3
+print(int('0100',base=2))  # 将2进制的 0100 转化成十进制。结果为 4
+```
+
+float：函数用于将整数和字符串转换成浮点数。
+
+complex：函数用于创建一个值为 real + imag * j 的复数或者转化一个字符串或数为复数。如果第一个参数为字符串，则不需要指定第二个参数。。
+
+```
+print(float(3))  # 3.0
+print(complex(1,2))  # (1+2j)
+```
+
+bin：将十进制转换成二进制并返回。
+
+oct：将十进制转化成八进制字符串并返回。
+
+hex：将十进制转化成十六进制字符串并返回。
+
+```
+print(bin(10),type(bin(10)))  # 0b1010 <class 'str'>
+print(oct(10),type(oct(10)))  # 0o12 <class 'str'>
+print(hex(10),type(hex(10)))  # 0xa <class 'str'>
+```
+
+divmod：计算除数与被除数的结果，返回一个包含商和余数的元组(a // b, a % b)。
+
+round：保留浮点数的小数位数，默认保留整数。
+
+pow：求x**y次幂。（三个参数为x**y的结果对z取余）
+
+```
+print(divmod(7,2))  # (3, 1)
+print(round(7/3,2))  # 2.33
+print(round(7/3))  # 2
+print(round(3.32567,3))  # 3.326
+print(pow(2,3))  # 两个参数为2**3次幂
+print(pow(2,3,3))  # 三个参数为2**3次幂，对3取余。
+```
+
+bytes：用于不同编码之间的转化。
+
+```
+# s = '你好'
+# bs = s.encode('utf-8')
+# print(bs)
+# s1 = bs.decode('utf-8')
+# print(s1)
+# bs = bytes(s,encoding='utf-8')
+# print(bs)
+# b = '你好'.encode('gbk')
+# b1 = b.decode('gbk')
+# print(b1.encode('utf-8'))
+```
+
+ord:输入字符找当前字符编码的位置
+
+chr:输入当前编码的位置数字找出其对应的字符
+
+```
+# ord 输入字符找该字符编码的位置
+# print(ord('a'))
+# print(ord('中'))
+
+# chr 输入位置数字找出其对应的字符
+# print(chr(97))
+# print(chr(20013))
+```
+
+repr:返回一个对象的string形式（原形毕露）。
+
+```
+# %r  原封不动的写出来
+# name = 'taibai'
+# print('我叫%r'%name)
+
+# repr 原形毕露
+print(repr('{"name":"alex"}'))
+print('{"name":"alex"}')
+```
+
+all：可迭代对象中，全都是True才是True
+
+any：可迭代对象中，有一个True 就是True
+
+```
+# all  可迭代对象中，全都是True才是True
+# any  可迭代对象中，有一个True 就是True
+# print(all([1,2,True,0]))
+# print(any([1,'',0]))
+```
+
+### 内置函数Ⅱ
+
+**红色重点讲解**：enumerate() open() range() len() str() list() tuple() dict() set() print() sum() abs() dir() zip() format() reversed() filter() map() sorted() max() min() reduce()
+
+昨天，我们已经比较重要的内置函数讲完了，那么今天我们要讲的是最重要的内置函数和高阶函数，这些内置函数是面试与工作中经常用到的，所以，今天的这些内置函数，我们一定要全部记住，并且熟练使用。
+
+#### 内置函数:
+
+**str() 将字节转换成字符串**
+
+```python
+byte_str = bytes("你好",encoding="utf")
+print(byte_str)
+print(str(byte_str,encoding="utf-8"))
+```
+
+**list() 将可迭代对象转换成列表**
+
+```python
+print(list("alex"))
+```
+
+**tuple() 将可迭代对象转换成元组**
+
+```python
+print(tuple([1,2,3,4]))
+```
+
+**dict() 将元组和列表转换成字典**
+
+```python
+print(dict([(1,2),(3,4)]))
+print(dict(((1,2),(3,4))))
+```
+
+**set() 将可迭代对象转换成一个集合**
+
+```python
+print(set("alex"))
+```
+
+**print() 屏幕输出。**
+
+```python
+''' 源码分析
+def print(self, *args, sep=' ', end='\n', file=None): # known special case of print
+    """
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    file:  默认是输出到屏幕，如果设置为文件句柄，输出到文件
+    sep:   打印多个值之间的分隔符，默认为空格
+    end:   每一次打印的结尾，默认为换行符
+    flush: 立即把内容输出到流文件，不作缓存
+    """
+'''
+print(111,222,333,sep='*')  # 111*222*333
+print(111,end='')
+print(222)  #两行的结果 111222
+
+f = open('log','w',encoding='utf-8')
+print('写入文件',fle=f,flush=True)
+```
+
+**sum() 求和**
+
+sum求和必须是可迭代对象,对象中的元素必须都为整型,字符串类型不能使用
+
+```python
+print(sum([1,2,3]))
+print(sum([1,2,3],100))  100是起始值,就是从100开始进行求和
+```
+
+**abs() 返回绝对值**
+
+```
+i = -5
+print(abs(i))  # 5
+```
+
+**dir() 查看当前对象具有什么方法**
+
+```Python
+print(dir(list))
+```
+
+**zip() 拉链方法。**函数用于将可迭代的对象作为参数,将对象中对应的元素打包成一个个元组,
+
+然后返回由这些元祖组成的内容,如果各个迭代器的元素个数不一致,则按照长度最短的返回，
+
+```python
+lst1 = [1,2,3]
+lst2 = ['a','b','c','d']
+lst3 = (11,12,13,14,15)
+for i in zip(lst1,lst2,lst3):
+    print(i)
+
+结果:
+(1, 'a', 11)
+(2, 'b', 12)
+(3, 'c', 13)
+```
+
+**format() 格式转换**
+
+```python
+# 对齐方式:
+print(format(122,">20")) 
+print(format(122,"<20"))
+print(format(122,"^20"))
+
+# 进制转换:
+将十进制转换成二进制
+print(format(12,"b"))
+print(format(12,"08b"))
+
+将十进制转换成八进制
+print(format(12,"o"))
+print(format(12,"08o"))
+
+将二进制转换成十进制
+print(format(0b11001,"d"))
+
+将十进制转换成十六进制
+print(format(17,"x"))
+print(format(17,"08x"))
+```
+
+**reversed() 将一个序列翻转, 返回翻转序列的迭代器 reversed 示例:**
+
+```
+l = reversed('你好')  # l 获取到的是一个生成器
+print(list(l))
+ret = reversed([1, 4, 3, 7, 9])
+print(list(ret))  # [9, 7, 3, 4, 1]
+```
+
+#### 高阶函数:
+
+**filter**筛选过滤
+
+```
+语法: filter(function,iterable)
+
+function: 用来筛选的函数,在filter中会自动的把iterable中的元素传递给function,然后根据function返回的True或者False来判断是否保留此项数据
+
+iterable:可迭代对象
+
+lst = [{'id':1,'name':'alex','age':18},
+        {'id':1,'name':'wusir','age':17},
+        {'id':1,'name':'taibai','age':16},]
+
+ls = filter(lambda e:e['age'] > 16,lst)
+
+print(list(ls))
+
+结果:
+[{'id': 1, 'name': 'alex', 'age': 18},
+ {'id': 1, 'name': 'wusir', 'age': 17}]
+```
+
+**map映射**
+
+```
+映射函数
+
+语法: map(function,iterable) 可以对可迭代对象中的每一个元素进映射,分别取执行function
+
+计算列表中每个元素的平方,返回新列表
+
+lst = [1,2,3,4,5]
+
+def func(s):
+
+    return  s*s
+
+mp = map(func,lst)
+
+print(mp)
+
+print(list(mp))
+
+
+
+
+改写成lambda
+
+lst = [1,2,3,4,5]
+
+print(list(map(lambda s:s*s,lst)))
+
+
+
+
+计算两个列表中相同位置的数据的和
+
+lst1 = [1, 2, 3, 4, 5]
+
+lst2 = [2, 4, 6, 8, 10]
+
+print(list(map(lambda x, y: x+y, lst1, lst2)))
+
+结果:
+
+[3, 6, 9, 12, 15]
+```
+
+**sorted**排序函数
+
+```
+语法:sorted(iterable,key=None,reverse=False)
+
+iterable : 可迭代对象
+
+key: 排序规则(排序函数),在sorted内部会将可迭代对象中的每一个元素传递给这个函数的参数.根据函数运算的结果进行排序
+
+reverse :是否是倒序,True 倒序 False 正序
+
+lst = [1,3,2,5,4]
+lst2 = sorted(lst)
+print(lst)    #原列表不会改变
+print(lst2)   #返回的新列表是经过排序的
+
+
+lst3 = sorted(lst,reverse=True)
+print(lst3)   #倒叙
+
+结果:
+[1, 3, 2, 5, 4]
+[1, 2, 3, 4, 5]
+[5, 4, 3, 2, 1]
+
+字典使用sorted排序
+
+dic = {1:'a',3:'c',2:'b'}
+print(sorted(dic))   # 字典排序返回的就是排序后的key
+
+结果:
+[1,2,3]
+
+
+
+
+和函数组合使用
+
+# 定义一个列表,然后根据一元素的长度排序
+lst = ['天龙八部','西游记','红楼梦','三国演义']
+
+# 计算字符串的长度
+def func(s):
+    return len(s)
+print(sorted(lst,key=func))
+
+# 结果:
+# ['西游记', '红楼梦', '天龙八部', '三国演义']
+
+
+和lambda组合使用
+
+lst = ['天龙八部','西游记','红楼梦','三国演义']
+
+print(sorted(lst,key=lambda s:len(s)))
+
+结果:
+['西游记', '红楼梦', '天龙八部', '三国演义']
+
+
+lst = [{'id':1,'name':'alex','age':18},
+    {'id':2,'name':'wusir','age':17},
+    {'id':3,'name':'taibai','age':16},]
+
+# 按照年龄对学生信息进行排序
+
+print(sorted(lst,key=lambda e:e['age']))
+
+结果:
+[{'id': 3, 'name': 'taibai', 'age': 16}, {'id': 2, 'name': 'wusir', 'age': 17}, {'id': 1, 'name': 'alex', 'age': 18}]
+```
+
+**max() 最大值与最小值用法相同**
+
+**min() 求最小值**
+
+```
+print(min([1,2,3]))  # 返回此序列最小值
+
+ret = min([1,2,-5,],key=abs)  # 按照绝对值的大小，返回此序列最小值
+print(ret)
+# 加key是可以加函数名，min自动会获取传入函数中的参数的每个元素，然后通过你设定的返回值比较大小，返回最小的传入的那个参数。
+print(min(1,2,-5,6,-3,key=lambda x:abs(x)))  # 可以设置很多参数比较大小
+dic = {'a':3,'b':2,'c':1}
+print(min(dic,key=lambda x:dic[x]))
+
+# x为dic的key，lambda的返回值（即dic的值进行比较）返回最小的值对应的键
+```
+
+**reduce 累计算**
+
+```
+from functools import reduce
+def func(x,y):
+    return x + y
+
+# reduce 的使用方式:
+# reduce(函数名,可迭代对象)  # 这两个参数必须都要有,缺一个不行
+
+ret = reduce(func,[3,4,5,6,7])
+print(ret)  # 结果 25
+reduce的作用是先把列表中的前俩个元素取出计算出一个值然后临时保存着,
+接下来用这个临时保存的值和列表中第三个元素进行计算,求出一个新的值将最开始
+临时保存的值覆盖掉,然后在用这个新的临时值和列表中第四个元素计算.依次类推
+
+注意:我们放进去的可迭代对象没有更改
+以上这个例子我们使用sum就可以完全的实现了.我现在有[1,2,3,4]想让列表中的数变成1234,就要用到reduce了.
+普通函数版
+from functools import reduce
+
+def func(x,y):
+
+    return x * 10 + y
+    # 第一次的时候 x是1 y是2  x乘以10就是10,然后加上y也就是2最终结果是12然后临时存储起来了
+    # 第二次的时候x是临时存储的值12 x乘以10就是 120 然后加上y也就是3最终结果是123临时存储起来了
+    # 第三次的时候x是临时存储的值123 x乘以10就是 1230 然后加上y也就是4最终结果是1234然后返回了
+
+l = reduce(func,[1,2,3,4])
+print(l)
+
+
+匿名函数版
+l = reduce(lambda x,y:x*10+y,[1,2,3,4])
+print(l)
+
+
+在Python2.x版本中recude是直接 import就可以的, Python3.x版本中需要从functools这个包中导入
+
+龟叔本打算将 lambda 和 reduce 都从全局名字空间都移除, 舆论说龟叔不喜欢lambda 和 reduce
+
+最后lambda没删除是因为和一个人给龟叔写了好多封,进行交流然后把lambda保住了.
+```
+
+参考资料:
+
+https://www.processon.com/view/link/5b4ee15be4b0edb750de96ac
+
+### 闭包
+
+由于闭包这个概念比较难以理解，尤其是初学者来说，相对难以掌握，所以我们通过示例去理解学习闭包。
+
+给大家提个需求，然后用函数去实现：完成一个计算不断增加的系列值的平均值的需求。
+
+例如：整个历史中的某个商品的平均收盘价。什么叫平局收盘价呢？就是从这个商品一出现开始，每天记录当天价格，然后计算他的平均值：平均值要考虑直至目前为止所有的价格。
+
+比如大众推出了一款新车：小白轿车。
+
+第一天价格为：100000元，平均收盘价：100000元
+
+第二天价格为：110000元，平均收盘价：（100000 + 110000）/2 元
+
+第三天价格为：120000元，平均收盘价：（100000 + 110000 + 120000）/3 元
+
+........
+
+```
+series = []
+def make_averager(new_value):
+    series.append(new_value)
+    total = sum(series)
+    return total / len(series)
+
+print(make_averager(100000))
+print(make_averager(110000))
+print(make_averager(120000))
+```
+
+从上面的例子可以看出，基本上完成了我们的要求，但是这个代码相对来说是不安全的，因为你的这个series列表是一个全局变量，只要是全局作用域的任何地方，都可能对这个列表进行改变。
+
+```
+series = []
+def make_averager(new_value):
+    series.append(new_value)
+    total = sum(series)
+    return total / len(series)
+
+print(make_averager(100000))
+print(make_averager(110000))
+series.append(666)  # 如果对数据进行相应改变，那么你的平均收盘价就会出现很大的问题。
+print(make_averager(120000))
+```
+
+那么怎么办呢？有人说，你把他放在函数中不就行了，这样不就是局部变量了么？数据不就相对安全了么？
+
+```
+def make_averager(new_value):
+    series = []
+    series.append(new_value)
+    total = sum(series)
+    return total / len(series)
+
+
+print(make_averager(100000))  # 100000.0
+print(make_averager(110000))  # 110000.0
+print(make_averager(120000))  # 120000.0
+```
+
+这样计算的结果是不正确的,那是因为执行函数，会开启一个临时的名称空间，随着函数的结束而消失，所以你每次执行函数的时候，都是重新创建这个列表，那么这怎么做呢？这种情况下，就需要用到我们讲的闭包了，我们用闭包的思想改一下这个代码。
+
+```
+def make_averager():
+
+    series = []
+    def averager(new_value):
+        series.append(new_value)
+        total = sum(series)
+        return total/len(series)
+
+    return averager
+
+avg = make_averager()
+print(avg(100000))
+print(avg(110000))
+print(avg(120000))
+```
+
+**大家仔细看一下这个代码，我是在函数中嵌套了一个函数。那么avg 这个变量接收的实际是averager函数名，也就是其对应的内存地址，我执行了三次avg 也就是执行了三次averager这个函数。那么此时你们有什么问题？**
+
+肯定有学生就会问，那么我的make_averager这个函数只是执行了一次，为什么series这个列表没有消失？反而还可以被调用三次呢？这个就是最关键的地方，也是闭包的精华所在。我给大家说一下这个原理，以图为证：
+
+![img](http://crm.pythonav.com/media/uploads/2019/04/12/IMAGE.PNG)
+
+ 上面被红色方框框起来的区域就是闭包，被蓝色圈起来的那个变量应该是make_averager()函数的局部变量，它应该是随着make_averager()函数的执行结束之后而消失。但是他没有，是因为此区域形成了闭包，series变量就变成了一个叫自由变量的东西，averager函数的作用域会延伸到包含自由变量series的绑定。也就是说，每次我调用avg对应的averager函数 时，都可以引用到这个自用变量series，这个就是闭包。
+
+**闭包的定义：**
+
+1. 闭包是嵌套在函数中的函数。
+2. 闭包必须是内层函数对外层函数的变量（非全局变量）的引用。
+
+如何判断判断闭包？举例让同学回答：
+
+```
+# 例一：
+def wrapper():
+    a = 1
+    def inner():
+        print(a)
+    return inner
+ret = wrapper()
+
+# 例二：
+a = 2
+def wrapper():
+    def inner():
+        print(a)
+    return inner
+ret = wrapper()
+
+
+# 例三：
+
+def wrapper(a,b):
+    def inner():
+        print(a)
+        print(b)
+    return inner
+a = 2
+b = 3
+ret = wrapper(a,b)
+```
+
+以上三个例子，最难判断的是第三个，其实第三个也是闭包，如果我们每次去研究代码判断其是不是闭包，有一些不科学，或者过于麻烦了，那么有一些函数的属性是可以获取到此函数是否拥有自由变量的，如果此函数拥有自由变量，那么就可以侧面证明其是否是闭包函数了（**了解**）：
+
+```
+def make_averager():
+
+    series = []
+    def averager(new_value):
+        series.append(new_value)
+        total = sum(series)
+        return total/len(series)
+
+    return averager
+avg = make_averager()
+# 函数名.__code__.co_freevars 查看函数的自由变量
+print(avg.__code__.co_freevars)  # ('series',)
+当然还有一些参数，仅供了解：
+
+# 函数名.__code__.co_freevars 查看函数的自由变量
+print(avg.__code__.co_freevars)  # ('series',)
+# 函数名.__code__.co_varnames 查看函数的局部变量
+print(avg.__code__.co_varnames)  # ('new_value', 'total')
+# 函数名.__closure__ 获取具体的自由变量对象，也就是cell对象。
+# (<cell at 0x0000020070CB7618: int object at 0x000000005CA08090>,)
+# cell_contents 自由变量具体的值
+print(avg.__closure__[0].cell_contents)  # []
+```
+
+**闭包的作用**：保存局部信息不被销毁，保证数据的安全性。
+
+**闭包的应用**：
+
+1. 可以保存一些非全局变量但是不易被销毁、改变的数据。
+2. 装饰器。
+
+### 推导式
+
+本节我们讲列表推导式,生成器表达式以及其他推导式，我认为推导式就是构建比较有规律的列表,生成器，字典等一种简便的方式。那么他如何简便呢？看下面的例题：
+
+#### 列表推导式
+
+**这里让学生自己做一下**，首先我们先看一下这样的代码,给出一个列表,通过循环,想列表中添加1~10:
+
+```
+li = []
+
+for i in range(10):
+
+    li.append(i)
+
+print(li)
+```
+
+那么按照上面的要求我们用列表推导式写一下：
+
+```
+ls = [i for i in range(10)]
+
+print(ls)
+```
+
+怎么样？一行搞定，上面这个代码就是列表推导式，接下来我们将列表推导式进行一个分类：
+
+**列表推导式分为两种模式：**
+
+ 1.循环模式：[变量(加工的变量) for 变量 in iterable]
+
+ 2.筛选模式: [变量(加工的变量) for 变量 in iterable if 条件]
+
+当然还有多层循环的，这个我们一会就会讲到，那么我们先来看循环模式。
+
+##### 循环模式
+
+刚才我们看到的就是循环模式，那么有同学会问到，什么叫' 加工的变量'? 这个也比较简单，接下来我们做几道题：
+
+1. 将10以内所有整数的平方写入列表。
+
+```
+l1 = [i*i for i in range(1,11)]
+print(l1)
+```
+
+1. 100以内所有的偶数写入列表.
+
+```
+l1 = [i for i in range(2,101,2)]
+print(l1)
+```
+
+1. 从python1期到python24期写入列表lst
+
+```
+lst = [f'python{i}' % i for i in range(1,25)]
+
+print(lst)
+```
+
+上面那个格式化输出的变量f'python{i}'，就是加工的变量。
+
+上面做的那三个就是循环模式，比较简单，接下来我们研究筛选模式。
+
+##### 筛选模式
+
+筛选模式就是在上面的基础上加上一个判断条件，将满足条件的变量留到列表中。
+
+**带着同学们做一个题：**
+
+将这个列表中大于3的元素留下来。
+
+```
+l1 = [4, 3, 2, 6, 5, 5, 7, 8] 
+print([i for i in l1 if i > 3])
+```
+
+通过我给大家的演示，大家做几道题：
+
+1. 三十以内可以被三整除的数。
+
+   ```
+    multiples = [i for i in range(30) if i % 3 is 0]
+    print(multiples)
+   ```
+
+2. 过滤掉长度小于3的字符串列表，并将剩下的转换成大写字母
+
+   ```
+    l = ['wusir', 'laonanhai', 'aa', 'b', 'taibai']
+    # print([i.upper() for i in l if len(i) > 3])
+   ```
+
+3. 找到嵌套列表中名字含有两个‘e’的所有名字（**有难度**）
+
+   ```
+    names = [['Tom', 'Billy', 'Jefferson', 'Andrew', 'Wesley', 'Steven', 'Joe'],
+             ['Alice', 'Jill', 'Ana', 'Wendy', 'Jennifer', 'Sherry', 'Eva']]
+   
+    print([name for lst in names for name in lst if name.count('e') >= 2])  
+    # 注意遍历顺序，这是实现的关键
+   ```
+
+列表推导式基本上讲完了，当然今天会做一些有关列表推导式的题，让大家更加深入的了解。
+
+##### 生成器表达式
+
+生成器表达式和列表推导式的语法上一模一样,只是把[]换成()就行了。比如将十以内所有数的平方放到一个生成器表达式中
+
+```
+gen = (i**2 for i in range(10))
+print(gen)
+# 结果: <generator object <genexpr> at 0x0000026046CAEBF8>
+```
+
+生成器表达式也可以进行筛选
+
+```
+# 获取1-100内能被3整除的数
+gen = (i for i in range(1,100) if i % 3 == 0)
+for num in gen:
+    print(num)
+```
+
+**生成器表达式和列表推导式的区别:**
+
+1. 列表推导式比较耗内存,所有数据一次性加载到内存。而生成器表达式遵循迭代器协议，逐个产生元素。
+2. 得到的值不一样,列表推导式得到的是一个列表.生成器表达式获取的是一个生成器
+3. 列表推导式一目了然，生成器表达式只是一个内存地址。
+
+ 无论是生成器表达式，还是列表推导式，他只是Python给你提供了一个相对简单的构造方式，因为使用推导式非常简单，所以大多数都会为之着迷，这个一定要慎重，推导式只能构建相对复杂的并且有规律的对象，对于没有什么规律，而且嵌套层数比较多（for循环超过三层）这样就不建议大家用推导式构建。
+
+生成器的惰性机制: 生成器只有在访问的时候才取值,说白了.你找他要才给你值.不找他要.他是不会执行的.
+
+##### 其他相关的推导式（了解）
+
+#### 字典推导式
+
+根据名字应该也能猜到,推到出来的是字典
+
+```
+lst1 = ['jay','jj','meet']
+lst2 = ['周杰伦','林俊杰','郭宝元']
+dic = {lst1[i]:lst2[i] for i in range(len(lst1))}
+print(dic)
+```
+
+#### 集合推导式
+
+集合推导式可以帮我们直接生成一个集合,集合的特点;无序,不重复 所以集合推导式自带去重功能
+
+```
+lst = [1,2,3,-1,-3,-7,9]
+s = {abs(i) for i in lst}
+print(s)
+```
+
+### 迭代器
+
+#### 可迭代对象
+
+##### 可迭代对象定义
+
+ 对于迭代器来说，我们更熟悉的应该是可迭代对象，之前无论是源码还是讲课中或多或少我们提到过可迭代对象这个词。之前为了便于大家理解可迭代对象，可能解释的不是很正确，所以今天我们正式的聊一聊什么是可迭代对象。从字面意思来说，我们先对其进行拆解：什么是对象？Python中一切皆对象，之前我们讲过的一个变量，一个列表，一个字符串，文件句柄，函数名等等都可称作一个对象，其实一个对象就是一个实例，就是一个实实在在的东西。那么什么叫迭代？其实我们在日常生活中经常遇到迭代这个词儿，更新迭代等等，迭代就是一个重复的过程，但是不能是单纯的重复（如果只是单纯的重复那么他与循环没有什么区别）每次重复都是基于上一次的结果而来。比如你爹生你，你生你爹，哦不对，你生你儿子，你儿子生你孙子等等，每一代都是不一样的；还有你使用过得app，微信，抖音等，隔一段时间就会基于上一次做一些更新，那么这就是迭代。可迭代对象从字面意思来说就是一个可以重复取值的实实在在的东西。
+
+ 那么刚才我们是从字面意思分析的什么是可迭代对象，到目前为止我们接触到的可迭代对象有哪些呢？
+
+ str list tuple dic set range 文件句柄等，那么int，bool这些为什么不能称为可迭代对象呢？虽然在字面意思这些看着不符合，但是我们要有一定的判断标准或者规则去判断该对象是不是可迭代对象。
+
+ **在python中，但凡内部含有\**iter\**方法的对象，都是可迭代对象**。
+
+##### 查看对象内部方法
+
+ 该对象内部含有什么方法除了看源码还有什么其他的解决方式么？当然有了， 可以通过dir() 去判断一个对象具有什么方法
+
+```
+s1 = 'alex'
+print(dir(s1))
+```
+
+dir()会返回一个列表，这个列表中含有该对象的以字符串的形式所有方法名。这样我们就可以判断python中的一个对象是不是可迭代对象了：
+
+```
+s1 = 'alex'
+i = 100
+print('__iter__' in dir(i))  # False
+print('__iter__' in dir(s1))  # True
+```
+
+##### 小结
+
+ 从字面意思来说：可迭代对象就是一个可以重复取值的实实在在的东西。
+
+ 从专业角度来说：但凡内部含有__iter__方法的对象，都是可迭代对象。
+
+ 可迭代对象可以通过判断该对象是否有__iter__方法来判断。
+
+ 可迭代对象的优点：
+
+ 可以直观的查看里面的数据。
+
+ 可迭代对象的缺点：
+
+ 1.占用内存。
+
+ 2.可迭代对象不能迭代取值（除去索引，key以外）。
+
+ 那么这个缺点有人就提出质疑了，即使抛去索引,key以外，这些我可以通过for循环进行取值呀！对，他们都可以通过for循环进行取值，其实for循环在底层做了一个小小的转化，就是先将可迭代对象转化成迭代器，然后在进行取值的。那么接下来，我们就看看迭代器是个什么鬼。
+
+#### 迭代器
+
+##### 迭代器的定义
+
+ 从字面意思来说迭代器，是一个可以迭代取值的工具，器：在这里当做工具比较合适。
+
+ 从专业角度来说：迭代器是这样的对象：实现了无参数的__next__方法，返回序列中的下一个元素，如果没有元素了，那么抛出StopIteration异常.python中的迭代器还实现了__iter__方法，因此迭代器也可以迭代。 出自《流畅的python》
+
+ 那么对于上面的解释有一些超前，和难以理解，不用过于纠结，我们简单来说：**在python中，内部含有__Iter__方法并且含有__next__方法的对象就是迭代器。**
+
+##### 如何判断该对象是否是迭代器
+
+ ok，那么我们有了这个定义，我们就可以判断一些对象是不是迭代器或者可迭代对象了了，请判断这些对象：str list tuple dict set range 文件句柄 哪个是迭代器，哪个是可迭代对象：
+
+```python
+o1 = 'alex'
+o2 = [1, 2, 3]
+o3 = (1, 2, 3)
+o4 = {'name': '宝元','age': 18}
+o5 = {1, 2, 3}
+f = open('file',encoding='utf-8', mode='w')
+print('__iter__' in dir(o1))  # True
+print('__iter__' in dir(o2))  # True
+print('__iter__' in dir(o3))  # True
+print('__iter__' in dir(o4))  # True
+print('__iter__' in dir(o5))  # True
+print('__iter__' in dir(f))  # True
+
+print('__next__' in dir(o1))  # False
+print('__next__' in dir(o2))  # False
+print('__next__' in dir(o3))  # False
+print('__next__' in dir(o4))  # False
+print('__next__' in dir(o5))  # False
+print('__next__' in dir(f))  # True
+f.close()
+```
+
+通过以上代码可以验证，之前我们学过的这些对象，只有文件句柄是迭代器，剩下的那些数据类型都是可迭代对象。
+
+##### 可迭代对象如何转化成迭代器：
+
+```python
+l1 = [1, 2, 3, 4, 5, 6]
+obj = l1.__iter__()
+# <list_iterator object at 0x000002057FE1A3C8>
+# 或
+obj = iter(l1)
+print(obj)
+# <list_iterator object at 0x102cc67f0>
+```
+
+##### 迭代器取值：
+
+ 可迭代对象是不可以一直迭代取值的（除去用索引，切片以及Key），但是转化成迭代器就可以了，迭代器是利用__next__()进行取值：
+
+```
+l1 = [1, 2, 3,]
+obj = l1.__iter__()  # 或者 iter(l1)
+# print(obj)  # <list_iterator object at 0x000002057FE1A3C8>
+ret = obj.__next__()
+print(ret)
+ret = obj.__next__()
+print(ret)
+ret = obj.__next__()
+print(ret)
+ret = obj.__next__()  # StopIteration
+print(ret)
+# 迭代器利用next取值：一个next取对应的一个值，如果迭代器里面的值取完了，还要next，
+# 那么就报StopIteration的错误。
+```
+
+##### while模拟for的内部循环机制：
+
+ 刚才我们提到了，for循环的循环对象一定要是可迭代对象，但是这不意味着可迭代对象就可以取值，因为for循环的内部机制是：将可迭代对象转换成迭代器，然后利用next进行取值，最后利用异常处理处理StopIteration抛出的异常。
+
+```
+l1 = [1, 2, 3, 4, 5, 6]
+# 1 将可迭代对象转化成迭代器
+obj = iter(l1)
+# 2,利用while循环，next进行取值
+while 1:
+    # 3,利用异常处理终止循环
+    try:
+        print(next(obj))
+    except StopIteration:
+        break
+```
+
+##### 小结：
+
+ 从字面意思来说：迭代器就是可以迭代取值的工具。
+
+ 从专业角度来说：在python中，内部含有__Iter__方法并且含有__next__方法的对象就是迭代器。
+
+ 迭代器的优点：
+
+ 节省内存。 迭代器在内存中相当于只占一个数据的空间：因为每次取值都上一条数据会在内存释放，加载当前的此条数据。
+
+ 惰性机制。 next一次，取一个值，绝不过多取值。
+
+ 有一个迭代器模式可以很好的解释上面这两条：迭代是数据处理的基石。扫描内存中放不下的数据集时，我们要找到一种惰性获取数据项的方式，即按需一次获取一个数据项。这就是迭代器模式。
+
+ 迭代器的缺点：
+
+ 不能直观的查看里面的数据。
+
+ 取值时不走回头路，只能一直向下取值。
+
+```python
+l1 = [1, 2, 3, 4, 5, 6]
+obj = iter(l1)
+
+for i in range(2):
+    print(next(obj))
+
+for i in range(2):
+    print(next(obj))
+```
+
+#### 可迭代对象与迭代器对比
+
+ 我们今天比较深入的了解了可迭代对象与迭代器，接下来我们说一下这两者之间比较与应用：
+
+ **可迭代对象：**
+
+ 是一个私有的方法比较多，操作灵活（比如列表，字典的增删改查，字符串的常用操作方法等）,比较直观，但是占用内存，而且不能直接通过循环迭代取值的这么一个数据集。
+
+ **应用**：当你侧重于对于数据可以灵活处理，并且内存空间足够，将数据集设置为可迭代对象是明确的选择。
+
+ **迭代器：**
+
+ 是一个非常节省内存，可以记录取值位置，可以直接通过循环+next方法取值，但是不直观，操作方法比较单一的数据集。
+
+ **应用**：当你的数据量过大，大到足以撑爆你的内存或者你以节省内存为首选因素时，将数据集设置为迭代器是一个不错的选择。（可参考为什么python把文件句柄设置成迭代器）。
+
+### 生成器
+
+#### 初识生成器
+
+什么是生成器？这个概念比较模糊，各种文献都有不同的理解，但是核心基本相同。生成器的本质就是迭代器，在python社区中，大多数时候都把迭代器和生成器是做同一个概念。不是相同么？为什么还要创建生成器？生成器和迭代器也有不同，唯一的不同就是：迭代器都是Python给你提供的已经写好的工具或者通过数据转化得来的，（比如文件句柄，iter([1,2,3])。生成器是需要我们自己用python代码构建的工具。最大的区别也就如此了。
+
+#### 生成器的构建方式
+
+在python中有三种方式来创建生成器：
+
+1. 通过生成器函数
+2. 通过生成器推导式
+3. python内置函数或者模块提供（其实1,3两种本质上差不多，都是通过函数的形式生成，只不过1是自己写的生成器函数，3是python提供的生成器函数而已）
+
+#### 生成器函数
+
+**我们先来研究通过生成器函数构建生成器。**
+
+首先,我们先看一个很简单的函数:
+
+```python
+def func():
+    print(11)
+    return 22
+ret = func()
+print(ret)
+# 运行结果:
+11
+22
+```
+
+将函数中的return换成yield，这样func就不是函数了，而是一个生成器函数
+
+```
+def func():
+    print(11)
+    yield 22
+```
+
+我们这样写没有任何的变化,这是为什么呢? 我们来看看函数名加括号获取到的是什么?
+
+```
+def func():
+    print(11)
+    yield 22
+ret = func()
+print(ret)
+
+# 运行结果:
+<generator object func at 0x000001A575163888>
+```
+
+为什么在函数中添加了yield在调用函数的时候就发现结果不是我们预想的结果呢,是因为当我们调用函数的时候函数体里的代码会进行执行当执行到yield的关键字的时候,发现我们是想声明一个生成器.程序就会返回一个生成器给咱们
+
+那么生成器对象如何取值呢？
+
+之前我们说了，生成器的本质就是迭代器.迭代器如何取值，生成器就如何取值。所以我们可以直接执行**next**()来执行以下生成器
+
+```python
+def func():
+     print("111")
+     yield 222
+gener = func() # 这个时候函数不会执⾏. ⽽是获取到⽣成器
+ret = gener.__next__() # 这个时候函数才会执⾏
+print(ret)  # 并且yield会将func生产出来的数据 222 给了 ret。  
+
+结果:
+111
+222
+```
+
+并且我的生成器函数中可以写多个yield。
+
+```
+def func():
+
+    print("111")
+
+    yield 222
+
+    print("333")
+
+    yield 444
+
+gener = func()
+
+ret = gener.__next__()
+
+print(ret)
+
+ret2 = gener.__next__()
+
+print(ret2)
+
+ret3 = gener.__next__()
+
+# 最后⼀个yield执⾏完毕. 再次__next__()程序报错
+print(ret3)
+```
+
+当程序运行完最后一个yield,那么后面继续运行**next**()程序会报错，一个yield对应一个next，next超过yield数量，就会报错，与迭代器一样。
+
+ **yield与return的区别：**
+
+ return一般在函数中只设置一个，他的作用是终止函数，并且给函数的执行者返回值。
+
+ yield在生成器函数中可设置多个，他并不会终止函数，next会获取对应yield生成的元素。
+
+**举例：**
+
+我们来看一下这个需求：老男孩向楼下卖包子的老板订购了10000个包子.包子铺老板非常实在，一下就全部都做出来了　
+
+```
+def eat():
+
+    lst = []
+
+    for i in range(1,10000):
+
+        lst.append('包子'+str(i))
+
+    return lst
+
+e = eat()
+
+print(e)
+```
+
+这样做没有问题，但是我们由于学生没有那么多，只吃了2000个左右，剩下的8000个，就只能占着一定的空间，放在一边了。如果包子铺老板效率够高，我吃一个包子，你做一个包子，那么这就不会占用太多空间存储了，完美。
+
+```
+def eat():
+
+    for i in range(1,10000):
+
+        yield '包子'+str(i)
+
+e = eat()
+
+for i in range(200):
+    next(e)
+```
+
+**这两者的区别:**
+
+ 第一种是直接把包子全部做出来，占用内存。
+
+ 第二种是吃一个生产一个，非常的节省内存，而且还可以保留上次的位置。
+
+```
+def eat():
+
+    for i in range(1,10000):
+
+        yield '包子'+str(i)
+
+e = eat()
+
+for i in range(200):
+    next(e)
+
+for i in range(300):
+    next(e)
+# 多次next包子的号码是按照顺序记录的。
+```
+
+#### send 方法（了解,不讲）
+
+接下来我们再来认识一个新的东西,send方法
+
+```
+# next只能获取yield生成的值，但是不能传递值。
+def gen(name):
+    print(f'{name} ready to eat')
+    while 1:
+        food = yield
+        print(f'{name} start to eat {food}')
+
+dog = gen('alex')
+next(dog)
+next(dog)
+next(dog)
+
+
+# 而使用send这个方法是可以的。
+def gen(name):
+    print(f'{name} ready to eat')
+    while 1:
+        food = yield 222
+        print(f'{name} start to eat {food}')
+
+dog = gen('alex')
+next(dog)  # 第一次必须用next让指针停留在第一个yield后面
+# 与next一样，可以获取到yield的值
+ret = dog.send('骨头')
+print(ret)
+
+
+def gen(name):
+    print(f'{name} ready to eat')
+    while 1:
+        food = yield
+        print(f'{name} start to eat {food}')
+
+dog = gen('alex')
+next(dog)
+# 还可以给上一个yield发送值
+dog.send('骨头')
+dog.send('狗粮')
+dog.send('香肠')
+```
+
+**send和next()区别:**
+
+ 相同点：
+
+ send 和 next()都可以让生成器对应的yield向下执行一次。
+
+ 都可以获取到yield生成的值。
+
+ 不同点：
+
+ 第一次获取yield值只能用next不能用send（可以用send(None)）。
+
+ send可以给上一个yield置传递值。
+
+#### yield from
+
+在python3中提供一种可以直接把可迭代对象中的每一个数据作为生成器的结果进行返回
+
+```python
+# 对比yield 与 yield from 
+def func():
+    lst = ['卫龙','老冰棍','北冰洋','牛羊配']
+    yield lst
+g = func()
+print(g)
+print(next(g))  # 只是返回一个列表
+
+def func():
+    lst = ['卫龙','老冰棍','北冰洋','牛羊配']
+    yield from lst
+g = func()
+print(g)
+# 他会将这个可迭代对象(列表)的每个元素当成迭代器的每个结果进行返回。
+print(next(g))
+print(next(g))
+print(next(g))
+print(next(g))
+'''
+yield from ['卫龙','老冰棍','北冰洋','牛羊配'] 
+等同于：
+    yield '卫龙'
+    yield '老冰棍'
+    yield '北冰洋'
+    yield '牛羊配'
+```
+
+#### yield from 小坑
+
+```python
+def func():
+    lst1 = ['卫龙', '老冰棍', '北冰洋', '牛羊配']
+    lst2 = ['馒头', '花卷', '豆包', '大饼']
+    yield from lst1
+    yield from lst2
+
+
+g = func()
+for i in g:
+    print(i)
+```
+
+返回的结果是将第一个列表的元素全部返回后,在返回第二个列表
+
+### 装饰器
+
+在讲解装饰器之前的时候我们先讲解一下开放封闭原则
+
+#### 1. 开放封闭原则
+
+ 什么是开放封闭原则？有的同学问开放，封闭这是两个反义词这还能组成一个原则么？这不前后矛盾么？其实不矛盾。开放封闭原则是分情况讨论的。
+
+ 我们的软件一旦上线之后（比如你的软件主要是多个函数组成的）,那么这个软件对功能的扩展应该是开放的，比如你的游戏一直在迭代更新，推出新的玩法，新功能。但是对于源代码的修改是封闭的。你就拿函数举例，如果你的游戏源代码中有一个函数是闪躲的功能，那么你这个函数肯定是被多个地方调用的，比如对方扔手雷，对方开枪，对方用刀，你都会调用你的闪躲功能，那么如果你的闪躲功能源码进行改变了，或者调用方式改变了，当对方发起相应的动作，你在调用你的闪躲功能，就会发生问题。所以，开放封闭原则具体定义是这样：
+
+ 1.对扩展是开放的
+
+ 我们说，任何一个程序，不可能在设计之初就已经想好了所有的功能并且未来不做任何更新和修改。所以我们必须允许代码扩展、添加新功能。
+
+ 2.对修改是封闭的
+
+ 就像我们刚刚提到的，因为我们写的一个函数，很有可能已经交付给其他人使用了，如果这个时候我们对函数内部进行修改，或者修改了函数的调用方式，很有可能影响其他已经在使用该函数的用户。OK，理解了开封封闭原则之后，我们聊聊装饰器。
+
+ 什么是装饰器？从字面意思来分析，先说装饰，什么是装饰? 装饰就是添加新的，
+
+ 比如我现在不会飞，怎么才能让我会飞？给我额外增加一个翅膀，我就能飞了。那么你给我加一个翅膀，它会改变我原来的行为么？我之前的吃喝拉撒睡等生活方式都不会改变。它就是在我原来的基础上，添加了一个新的功能。
+
+今天我们讲的装饰器（翅膀）是以功能为导向的，就是一个函数。
+
+被装饰的对象：我本人，其实也是一个函数。
+
+**所以装饰器最终最完美的定义就是：在不改变原被装饰的函数的源代码以及调用方式下，为其添加额外的功能。**
+
+#### 2. 初识装饰器
+
+接下来，我们通过一个例子来为大家讲解这个装饰器：
+
+需求介绍：你现在xx科技有限公司的开发部分任职，领导给你一个业务需求让你完成：让你写代码测试小明同学写的函数的执行效率。
+
+```
+def index():
+    print('欢迎访问博客园主页')
+```
+
+**版本1：**
+
+ 需求分析：你要想测试此函数的执行效率，你应该怎么做？应该在此函数执行前记录一个时间， 执行完毕之后记录一个时间，这个时间差就是具体此函数的执行效率。那么执行时间如何获取呢？ 可以利用time模块，有一个time.time()功能。
+
+```
+import time
+print(time.time())
+```
+
+ 此方法返回的是格林尼治时间，是此时此刻距离1970年1月1日0点0分0秒的时间秒数。也叫时间戳，他是一直变化的。所以要是计算index的执行效率就是在执行前后计算这个时间戳的时间，然后求差值即可。
+
+```python
+import time
+def index():
+    print('欢迎访问博客园主页')
+
+start_time = time.time()
+index()
+end_time = time.time()
+print(f'此函数的执行效率为{end_time-start_time}')
+```
+
+由于index函数只有一行代码，执行效率太快了，所以我们利用time模块的一个sleep模拟一下
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+
+start_time = time.time()
+index()
+end_time = time.time()
+print(f'此函数的执行效率为{end_time-start_time}')
+```
+
+**版本1分析**：你现在已经完成了这个需求，但是有什么问题没有？ 虽然你只写了四行代码，但是你完成的是一个测试其他函数的执行效率的功能，如果让你测试一下，小张，小李，小刘的函数效率呢？ 你是不是全得复制：
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园首页')
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+
+start_time = time.time()
+index()
+end_time = time.time()
+print(f'此函数的执行效率为{end_time-start_time}')
+
+start_time = time.time()
+home('太白')
+end_time = time.time()
+print(f'此函数的执行效率为{end_time-start_time}')
+```
+
+重复代码太多了，所以要想解决重复代码的问题，怎么做？我们是不是学过函数，函数就是以功能为导向，减少重复代码，好我们继续整改。
+
+**版本2：**
+
+```python
+import time
+
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+
+def inner():
+    start_time = time.time()
+    index()
+    end_time = time.time()
+    print(f'此函数的执行效率为{end_time-start_time}')
+
+inner()
+```
+
+但是你这样写也是有问题的，你虽然将测试功能的代码封装成了一个函数，但是这样，你只能测试小明同学的的函数index，你要是测试其他同事的函数呢？你怎么做？
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+
+def inner():
+    start_time = time.time()
+    index()
+    home('太白')
+    end_time = time.time()
+    print(f'此函数的执行效率为{end_time-start_time}')
+
+timer()
+```
+
+你要是像上面那么做，每次测试其他同事的代码还需要手动改，这样是不是太low了？所以如何变成动态测试其他函数？我们是不是学过函数的传参？能否将被装饰函数的函数名作为函数的参数传递进去呢？
+
+**版本3：**
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+
+def timmer(func):  # func == index 函数
+    start_time = time.time()
+    func()  # index()
+    end_time = time.time()
+    print(f'此函数的执行效率为{end_time-start_time}')
+
+timmer(index)
+```
+
+这样我将index函数的函数名作为参数传递给timmer函数，然后在timmer函数里面执行index函数，这样就变成动态传参了。好，你们现在将版本3的代码快速练一遍。 大家练习完了之后，发现有什么问题么？ 对比着开放封闭原则说： 首先，index函数除了完成了自己之前的功能，还增加了一个测试执行效率的功能，对不？所以也符合开放原则。 其次，index函数源码改变了么？没有，但是执行方式改变了，所以不符合封闭原则。 原来如何执行？ index() 现在如何执行？ inner(index),这样会造成什么问题？ 假如index在你的项目中被100处调用，那么这相应的100处调用我都得改成inner(index)。 非常麻烦，也不符合开放封闭原则。
+
+**版本4：**实现真正的开放封闭原则：装饰器。
+
+这个也很简单，就是我们昨天讲过的闭包，只要你把那个闭包的执行过程整清楚，那么这个你想不会都难。
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+```
+
+你将上面的inner函数在套一层最外面的函数timer，然后将里面的inner函数名作为最外面的函数的返回值，这样简单的装饰器就写好了，一点新知识都没有加，这个如果不会就得多抄几遍，抄的时候要理解一下代码。
+
+```python
+def timer(func):  # func = index
+    def inner():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+# f = timer(index)
+# f()
+```
+
+我们分析一下，代码，代码执行到这一行：f = timer(index) 先执行谁？看见一个等号先要执行等号右边， timer(index) 执行timer函数将index函数名传给了func形参。内层函数inner执行么？不执行，inner函数返回 给f变量。所以我们执行f() 就相当于执行inner闭包函数。 f(),这样既测试效率又执行了原函数，有没有问题？当然有啦！！版本4你要解决原函数执行方式不改变的问题，怎么做？ 所以你可以把 f 换成 index变量就完美了！ index = timer(index) index()带着同学们将这个流程在执行一遍，特别要注意 函数外面的index实际是inner函数的内存地址而不是index函数。让学生们抄一遍，理解一下，这个timer就是最简单版本装饰器，在不改变原index函数的源码以及调用方式前提下，为其增加了额外的功能，测试执行效率。
+
+#### 3. 带返回值的装饰器
+
+ 你现在这个代码，完成了最初版的装饰器，但是还是不够完善，因为你被装饰的函数index可能会有返回值，如果有返回值，你的装饰器也应该不影响，开放封闭原则嘛。但是你现在设置一下试试：
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+    return '访问成功'
+
+def timer(func):  # func = index
+    def inner():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+index = timer(index)
+print(index())  # None
+```
+
+加上装饰器之后，他的返回值为None，为什么？因为你现在的index不是函数名index，这index实际是inner函数名。所以index() 等同于inner() 你的 '访问成功'返回值应该返回给谁？应该返回给index，这样才做到开放封闭，实际返回给了谁？实际返回给了func，所以你要更改一下你的装饰器代码，让其返回给外面的index函数名。 所以：你应该这么做：
+
+```python
+def timer(func):  # func = index
+    def inner():
+        start_time = time.time()
+        ret = func()
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+        return ret
+    return inner
+
+index = timer(index)  # inner
+print(index())  # print(inner())
+```
+
+借助于内层函数inner，你将func的返回值，返回给了inner函数的调用者也就是函数外面的index，这样就实现了开放封闭原则，index返回值，确实返回给了'index'。
+
+让同学们；练习一下。
+
+#### 4. 被装饰函数带参数的装饰器
+
+到目前为止，你的被装饰函数还是没有传参呢？按照我们的开放封闭原则，加不加装饰器都不能影响你被装饰函数的使用。所以我们看一下。
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+    return '访问成功'
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+
+def timer(func):  # func = index
+    def inner():
+        start_time = time.time()
+        func()
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+# 要想timer装饰home函数怎么做？
+home = timer(home)
+home('太白')
+```
+
+上面那么做，显然报错了，为什么？ 你的home这个变量是谁？是inner，home('太白')实际是inner('太白')但是你的'太白'这个实参应该传给谁？ 应该传给home函数，实际传给了谁？实际传给了inner，所以我们要通过更改装饰器的代码，让其将实参'太白'传给home.
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+    return '访问成功'
+
+def home(name):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(f'欢迎访问{name}主页')
+
+def timer(func):  # func = home
+    def inner(name):
+        start_time = time.time()
+        func(name)  # home(name) == home('太白')
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+# 要想timer装饰home函数怎么做？
+home = timer(home)
+home('太白')
+```
+
+这样你就实现了，还有一个小小的问题，现在被装饰函数的形参只是有一个形参，如果要是多个怎么办？有人说多少个我就写多少个不就行了，那不行呀，你这个装饰器可以装饰N多个不同的函数，这些函数的参数是不统一的。所以你要有一种可以接受不定数参数的形参接受他们。这样，你就要想到*args，**kwargs。
+
+```python
+import time
+def index():
+    time.sleep(2)  # 模拟一下网络延迟以及代码的效率
+    print('欢迎访问博客园主页')
+    return '访问成功'
+
+def home(name,age):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(name,age)
+    print(f'欢迎访问{name}主页')
+
+def timer(func):  # func = home
+    def inner(*args,**kwargs):  # 函数定义时，*代表聚合：所以你的args = ('太白',18)
+        start_time = time.time()
+        func(*args,**kwargs)  # 函数的执行时，*代表打散：所以*args --> *('太白',18)--> func('太白',18)
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+home = timer(home)
+home('太白',18)
+```
+
+这样利用*的打散与聚合的原理，将这些实参通过inner函数的中间完美的传递到给了相应的形参。
+
+好将上面的代码在敲一遍。
+
+#### 5. 标准版装饰器
+
+代码优化：语法糖
+
+根据我的学习，我们知道了，如果想要各给一个函数加一个装饰器应该是这样：
+
+```python
+def home(name,age):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(name,age)
+    print(f'欢迎访问{name}主页')
+
+def timer(func):  # func = home
+    def inner(*args,**kwargs):
+        start_time = time.time()
+        func(*args,**kwargs)
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+home = timer(home)
+home('太白',18)
+```
+
+如果你想给home加上装饰器，每次执行home之前你要写上一句：home = timer(home)这样你在执行home函数 home('太白',18) 才是真生的添加了额外的功能。但是每次写这一句也是很麻烦。所以，Python给我们提供了一个简化机制，用一个很简单的符号去代替这一句话。
+
+```python
+def timer(func):  # func = home
+    def inner(*args,**kwargs):
+        start_time = time.time()
+        func(*args,**kwargs)
+        end_time = time.time()
+        print(f'此函数的执行效率为{end_time-start_time}')
+    return inner
+
+@timer  # home = timer(home)
+def home(name,age):
+    time.sleep(3)  # 模拟一下网络延迟以及代码的效率
+    print(name,age)
+    print(f'欢迎访问{name}主页')
+
+home('太白',18)
+```
+
+你看此时我调整了一下位置，你要是不把装饰器放在上面，timer是找不到的。home函数如果想要加上装饰器那么你就在home函数上面加上@home，就等同于那句话 home = timer(home)。这么做没有什么特殊意义，就是让其更简单化，比如你在影视片中见过野战军的作战时由于不方便说话，用一些简单的手势代表一些话语，就是这个意思。
+
+**至此标准版的装饰器就是这个样子：**
+
+```
+def wrapper(func):
+    def inner(*args,**kwargs):
+        '''执行被装饰函数之前的操作'''
+        ret = func
+        '''执行被装饰函数之后的操作'''
+        return ret
+    return inner
+```
+
+这个就是标准的装饰器，完全符合代码开放封闭原则。这几行代码一定要背过，会用。
+
+**此时我们要利用这个装饰器完成一个需求：简单版模拟博客园登录。** 此时带着学生们看一下博客园，说一下需求： 博客园登陆之后有几个页面，diary，comment，home，如果我要访问这几个页面，必须验证我是否已登录。 如果已经成功登录，那么这几个页面我都可以无阻力访问。如果没有登录，任何一个页面都不可以访问，我必须先登录，登录成功之后，才可以访问这个页面。我们用成功执行函数模拟作为成功访问这个页面，现在写三个函数，写一个装饰器，实现上述功能。
+
+```python
+login_status = {
+    'username': None,
+    'status': False,
+}
+
+def auth(func):
+    def inner(*args,**kwargs):
+        if login_status['status']:
+            ret = func()
+            return ret
+        username = input('请输入用户名：').strip()
+        password = input('请输入密码：').strip()
+        if username == '太白' and password == '123':
+            login_status['status'] = True
+            ret = func()
+            return ret
+    return inner
+
+@auth
+def diary():
+    print('欢迎访问日记页面')
+
+@auth
+def comment():
+    print('欢迎访问评论页面')
+
+@auth
+def home():
+    print('欢迎访问博客园主页')
+
+diary()
+comment()
+home()
+```
+
+### 带参数的装饰器
+
+我们看，装饰器其实就是一个闭包函数，再说简单点就是两层的函数。那么是函数，就应该具有函数传参功能。
+
+```
+login_status = {
+    'username': None,
+    'status': False,
+}
+
+def auth(func):
+    def inner(*args,**kwargs):
+        if login_status['status']:
+            ret = func()
+            return ret
+        username = input('请输入用户名：').strip()
+        password = input('请输入密码：').strip()
+        if username == '太白' and password == '123':
+            login_status['status'] = True
+            ret = func()
+            return ret
+    return inner
+```
+
+**你看我上面的装饰器，不要打开，他可以不可在套一层：**
+
+```
+def auth(x):
+    def auth2(func):
+        def inner(*args,**kwargs):
+            if login_status['status']:
+                ret = func()
+                return ret
+            username = input('请输入用户名：').strip()
+            password = input('请输入密码：').strip()
+            if username == '太白' and password == '123':
+                login_status['status'] = True
+                ret = func()
+                return ret
+        return inner
+    return auth
+```
+
+ 举例说明：抖音：绑定的是微信账号密码。 皮皮虾：绑定的是qq的账号密码。 你现在要完成的就是你的装饰器要分情况去判断账号和密码，不同的函数用的账号和密码来源不同。 但是你之前写的装饰器只能接受一个参数就是函数名，所以你写一个可以接受参数的装饰器。
+
+```
+def auth2(func):
+    def inner(*args, **kwargs):
+        if login_status['status']:
+            ret = func()
+            return ret
+        if 微信:
+            username = input('请输入用户名：').strip()
+            password = input('请输入密码：').strip()
+            if username == '太白' and password == '123':
+                login_status['status'] = True
+                ret = func()
+                return ret
+        elif 'qq':
+            username = input('请输入用户名：').strip()
+            password = input('请输入密码：').strip()
+            if username == '太白' and password == '123':
+                login_status['status'] = True
+                ret = func()
+                return ret
+    return inner
+
+@auth2
+def jitter():
+    print('记录美好生活')
+
+
+@auth2
+def pipefish():
+    print('期待你的内涵神评论')
+```
+
+**解决方式:**
+
+```
+def auth(x):
+    def auth2(func):
+        def inner(*args, **kwargs):
+            if login_status['status']:
+                ret = func()
+                return ret
+
+            if x == 'wechat':
+                username = input('请输入用户名：').strip()
+                password = input('请输入密码：').strip()
+                if username == '太白' and password == '123':
+                    login_status['status'] = True
+                    ret = func()
+                    return ret
+            elif x == 'qq':
+                username = input('请输入用户名：').strip()
+                password = input('请输入密码：').strip()
+                if username == '太白' and password == '123':
+                    login_status['status'] = True
+                    ret = func()
+                    return ret
+        return inner
+    return auth2
+
+@auth('wechat')  
+def jitter():
+    print('记录美好生活')
+
+@auth('qq')
+def pipefish():
+    print('期待你的内涵神评论')
+```
+
+@auth('wechat') :分两步：
+
+ **第一步先执行auth('wechat')函数，得到返回值auth2**
+
+ **第二步@与auth2结合，形成装饰器@auth2 然后在依次执行。**
+
+这样就是带参数的装饰器，参数可以传入多个，一般带参数的装饰器在以后的工作中都是给你提供的， 你会用就行，但是自己也一定要会写，面试经常会遇到
+
+
+
 
 
 ## 第六章 模块
 
+### RE 正则表达式
 
+**正则就是用一些具有特殊含义的符号组合到一起（称为正则表达式）来描述字符或者字符串的方法。或者说：正则就是用来描述一类事物的规则。**（在Python中）它内嵌在Python中，并通过 re 模块实现。正则表达式模式被编译成一系列的字节码，然后由用 C 编写的匹配引擎执行。
+
+| 元字符                                                       | 匹配内容                                                     |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| \w                                                           | 匹配字母（包含中文）或数字或下划线                           |
+| \W                                                           | 匹配非字母（包含中文）或数字或下划线                         |
+| \s                                                           | 匹配任意的空白符                                             |
+| \S                                                           | 匹配任意非空白符                                             |
+| \d                                                           | 匹配数字                                                     |
+| \D                                                           | 匹配非数字                                                   |
+| \A                                                           | 从字符串开头匹配                                             |
+| \z                                                           | 匹配字符串的结束，如果是换行，只匹配到换行前的结果           |
+| \n                                                           | 匹配一个换行符                                               |
+| \t                                                           | 匹配一个制表符                                               |
+| ^                                                            | 匹配字符串的开始                                             |
+| $                                                            | 匹配字符串的结尾                                             |
+| .                                                            | 匹配任意字符，除了换行符，当re.DOTALL标记被指定时，则可以匹配包括换行符的任意字符。 |
+| [...]                                                        | 匹配字符组中的字符                                           |
+| [...](https://guobaoyuan.gitee.io/new_book/Python/19-1 re.html#fn_...) | 匹配除了字符组中的字符的所有字符                             |
+| *                                                            | 匹配0个或者多个左边的字符。                                  |
+| +                                                            | 匹配一个或者多个左边的字符。                                 |
+| ？                                                           | 匹配0个或者1个左边的字符，非贪婪方式。                       |
+| {n}                                                          | 精准匹配n个前面的表达式。                                    |
+| {n,m}                                                        | 匹配n到m次由前面的正则表达式定义的片段，贪婪方式             |
+| ab                                                           | 匹配a或者b                                                   |
+| ()                                                           | 匹配括号内的表达式，也表示一个组                             |
+
+**------------------------------------------------匹配模式----------------------------------------------------**
+
+我们现在配合着[正则表达式](https://tool.chinaz.com/regex)来进行测试
+
+1.字符串的常用操作：一对一匹配
+
+```python
+s1 = 'meet郭宝元'
+print(s1.find('宝元'))
+```
+
+2.正则匹配
+
+**\w** 匹配中文,字母,数字,下划线
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\w",name))
+#结果
+['宝', '元', 'm', 'e', 'e', 't', '_', '1', '2', '3']
+```
+
+**\W** 不匹配中文,字母,数字,下划线
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\W",name))
+# 结果
+['-',' ']
+```
+
+**\s** 匹配任意的空白符
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\s",name))
+# 结果
+[' ']
+```
+
+**\S** 匹配不是任意的空白符
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\s",name))
+# 结果
+['宝', '元', '-', 'm', 'e', 'e', 't', '_', '1', '2', '3']
+```
+
+**\d** 匹配数字
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\d",name))
+# 结果
+['1', '2', '3']
+```
+
+**\D** 匹配非数字
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\D",name))
+# 结果
+['宝', '元', '-', 'm', 'e', 'e', 't', '_', ' ']
+```
+
+**\A 与 ^** 从字符串开头匹配
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("\A宝元",name))
+# 结果
+['宝元']
+
+import re
+name = "宝元-meet_123 "
+print(re.findall("\A宝元",name))
+# 结果
+['宝元']
+```
+
+**\Z 与 \z 与 $** 字符串结尾匹配
+
+```python
+import re
+name = "宝元-meet_123 "
+print(re.findall("123 \Z",name))
+# 结果
+['123 ']
+
+import re
+name = "宝元-meet_123 "
+print(re.findall("123 \Z",name))
+# 结果
+['123 ']
+
+import re
+name = "宝元-meet_123 "
+print(re.findall("123 $",name))
+# 结果
+['123 ']
+```
+
+**\n 与 \t** 匹配换行符合制表符
+
+```python
+import re
+name = "宝元-meet_123\t \n"
+print(re.findall("\n",name))
+# 结果
+['\n']
+
+import re
+name = "宝元-meet_123\t \n"
+print(re.findall("\t",name))
+# 结果
+['\t']
+```
+
+**------------------------------------------------匹配方式----------------------------------------------------**
+
+**.** 匹配任意字符(换行符除外)
+
+```python
+import re
+name = "宝元-meet_123\t \n"
+print(re.findall(".",name))
+# 结果
+['宝', '元', '-', 'm', 'e', 'e', 't', '_', '1', '2', '3', '\t', ' ']
+```
+
+**.** 匹配任意字符
+
+```python
+import re
+name = "宝元-meet_123\t \n"
+print(re.findall(".",name,re.DOTALL))
+# 结果
+['宝', '元', '-', 'm', 'e', 'e', 't', '_', '1', '2', '3', '\t', '\n']
+```
+
+**?** 匹配?前元素0个或1个
+
+```python
+import re
+name = "m-e-me-meet-meet_123\t \n"
+print(re.findall("me?",name))
+# 结果
+['m', 'me', 'me', 'me']
+```
+
+***** 匹配 * 前面元素0个或多个 [贪婪匹配]
+
+```python
+import re
+name = "m-e-me-meet-meet_123\t \n"
+print(re.findall("*",name))
+# 结果
+['m', 'me', 'mee', 'mee']
+```
+
+**+** 匹配 +前面元素1个或多个 [贪婪匹配]
+
+```python
+import re
+name = "m-e-me-meet-meet_123\t \n"
+print(re.findall("me+",name))
+# 结果
+['me', 'mee', 'mee']
+```
+
+**{n,m}** 匹配n到m个元素
+
+```python
+import re
+name = "m-e-me-meet-meet_123\t \n"
+print(re.findall("e{1,2}",name))
+# 结果
+['e', 'e', 'ee', 'ee']
+```
+
+**.\*** 任意内容0个或多个
+
+```python
+import re
+name = "m-e-me-meet-meet_123\t \n"
+print(re.findall(".*",name))
+# 结果
+['m-e-me-meet-meet_123', '']
+```
+
+**.\*?** 任意内容0个或1个
+
+```python
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("m.*?e",name))
+# 结果
+['m-e', 'me', 'mee', 'mee']
+
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("m.?e",name))
+# 结果
+['m-e', 'me', 'mee', 'mee']
+```
+
+**[]** 获取括号中的内容
+
+```python
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[1-9]",name))
+# 结果
+['1', '2', '3']
+# []中的-是什么至什么不会匹配-
+
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[a-z]",name))
+# 结果
+['m', 'e', 'm', 'e', 'm', 'e', 'e', 't', 'm', 'e', 'e', 't']
+
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[A-z]",name))
+# 结果
+['m', 'e', 'm', 'e', 'm', 'e', 'e', 't', 'm', 'e', 'e', 't', '_']
+# 是按照ascii码表位进行匹配的
+
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[a-zA-Z]",name))
+# 结果
+['m', 'e', 'm', 'e', 'm', 'e', 'e', 't', 'm', 'e', 'e', 't']
+
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[^A-z]",name))
+# 结果
+['-', '-', '-', '-', '1', '2', '3']
+# [^A-z] 有上尖号就是取反,获取不是字母和特定的几个字符
+
+如果想要匹配到-,就需要进行如下操作(将-号放到最前面)
+import re
+name = "m-e-me-meet-meet_123"
+print(re.findall("[-+*/]",name))
+# 结果
+['-', '-', '-', '-']
+```
+
+**练习**
+
+有如下字符串:'alex_sb ale123_sb wu12sir_sb wusir_sb ritian_sb' 的 alex wusir '
+
+找到所有带_sb的内容
+
+**()** 分组 定制一个匹配规则
+
+```python
+import re
+print(re.findall('(.*?)_sb', 'alex_sb wusir_sb 日天_sb'))
+# 结果
+['alex', ' wusir', ' 日天']
+
+# 应用举例:
+print(re.findall('href="(.*?)"','<a href="http://www.baidu.com">点击</a>')
+# 结果
+['http://www.baidu.com']
+```
+
+**|** 匹配 左边或者右边
+
+```python
+import re
+print(re.findall('alex|宝元|wusir', 'alex宝元wusiraleeeex宝宝元odlb'))
+# 结果
+['alex', '宝元', 'wusir', '宝元']
+
+import re
+print(re.findall('compan(day|morrow)','Work harder today than yesterday, and the day after tomorrow will be better'))
+# 结果
+['day', 'morrow']
+
+import re
+print(re.findall('compan(?:day|morrow)','Work harder today than yesterday, and the day after tomorrow will be better'))
+# 结果
+['today', 'tomorrow']
+# 分组() 中加入?: 表示将整体匹配出来而不只是()里面的内容。
+```
+
+**------------------------------------------------常用方法----------------------------------------------------**
+
+**findall** 全部找到返回一个列表
+
+```python
+import re
+print(re.findall("alex","alexdsb,alex_sb,alexnb,al_ex"))
+# 结果
+['alex', 'alex', 'alex']
+```
+
+**search** 从字符串中任意位置进行匹配查找到一个就停止了,返回的是一个对象. 获取匹配的内容必须使用.group()进行获取
+
+```py
+import re
+print(re.search("sb|nb","alexdsb,alex_sb,alexnb,al_ex").group())
+# 结果
+sb
+```
+
+**match** 从字符串开始位置进行匹配
+
+```python
+import re
+print(re.match('meet', 'meet alex wusir 日天').group())
+# 结果
+meet
+
+import re
+print(re.match('alex', 'meet alex wusir 日天'))
+# 结果
+None
+```
+
+**split** 分隔 可按照任意分隔符进行分隔
+
+```python
+import re
+print(re.split('[ ：:,;；，]','alex wusir,日天，太白;女神;肖锋：吴超'))
+# 结果
+['alex', 'wusir', '日天', '太白', '女神', '肖锋', '吴超']
+```
+
+**sub** 替换
+
+```python
+import re
+print(re.sub('barry', 'meet', 'barry是最好的讲师，barry就是一个普通老师，请不要将barry当男神对待。'))
+# 结果
+meet是最好的讲师，meet就是一个普通老师，请不要将meet当男神对待。
+```
+
+**compile** 定义匹配规则
+
+```python
+import re
+obj = re.compile('\d{2}')
+print(obj.findall("alex12345"))
+# 结果
+['12', '34']
+
+import re
+['12', '34']
+obj = re.compile('\d{2}')
+print(obj.search("alex12345").group())
+# 结果
+12
+```
+
+**finditer** 返回一个迭代器
+
+```python
+import re
+g = re.finditer('al',"alex_alsb,al22,aladf")
+print(next(g).group())
+print([i.group() for i in g])
+# 结果
+al
+['al','al','al']
+```
+
+给分组起名字
+
+```python
+import re
+ret = re.search("<(?P<tag_name>\w+)>\w+</\w+>","<h1>hello</h1>")
+print(ret.group("tag_name"))
+print(ret.group())
+# 结果
+h1
+<h1>hello</h1>
+
+import re
+ret = re.search(r"<(\w+)>\w+</\1>","<h1>hello</h1>")
+print(ret.group(1))
+print(ret.group())
+```
+
+相关练习:
+
+```python
+1 "1-2*(60+(-40.35/5)-(-4*3))"
+1.1 匹配所有的整数
+print(re.findall('\d+',"1-2*(60+(-40.35/5)-(-4*3))"))
+1.2 匹配所有的数字（包含小数）
+print(re.findall(r'\d+\.?\d*|\d*\.?\d+', "1-2*(60+(-40.35/5)-(-4*3))"))
+1.3 匹配所有的数字（包含小数包含负号）
+print(re.findall(r'-?\d+\.?\d*|\d*\.?\d+', "1-2*(60+(-40.35/5)-(-4*3))"))
+
+2,匹配一段你文本中的每行的邮箱
+http://blog.csdn.net/make164492212/article/details/51656638 匹配所有邮箱
+
+3，匹配一段你文本中的每行的时间字符串 这样的形式：'1995-04-27'
+
+s1 = '''
+时间就是1995-04-27,2005-04-27
+1999-04-27 老男孩教育创始人
+老男孩老师 alex 1980-04-27:1980-04-27
+2018-12-08
+'''
+print(re.findall('\d{4}-\d{2}-\d{2}', s1))
+
+4 匹配 一个浮点数
+print(re.findall('\d+\.\d*','1.17'))
+
+5 匹配qq号：腾讯从10000开始：
+print(re.findall('[1-9][0-9]{4,}', '2413545136'))
+
+s1 = '''
+<div id="cnblogs_post_body" class="blogpost-body"><h3><span style="font-family: 楷体;">python基础篇</span></h3>
+<p><span style="font-family: 楷体;">&nbsp; &nbsp;<strong><a href="http://www.cnblogs.com/guobaoyuan/p/6847032.html" target="_blank">python 基础知识</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/p/6627631.html" target="_blank">python 初始python</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<strong><a href="http://www.cnblogs.com/guobaoyuan/articles/7087609.html" target="_blank">python 字符编码</a></strong></strong></span></p>
+<p><span style="font-family: 楷体;"><strong><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/6752157.html" target="_blank">python 类型及变量</a></strong></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/p/6847663.html" target="_blank">python 字符串详解</a></strong></span></p>
+<p><span style="font-family: 楷体;">&nbsp; &nbsp;<strong><a href="http://www.cnblogs.com/guobaoyuan/p/6850347.html" target="_blank">python 列表详解</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/p/6850496.html" target="_blank">python 数字元祖</a></strong></span></p>
+<p><span style="font-family: 楷体;">&nbsp; &nbsp;<strong><a href="http://www.cnblogs.com/guobaoyuan/p/6851820.html" target="_blank">python 字典详解</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<strong><a href="http://www.cnblogs.com/guobaoyuan/p/6852131.html" target="_blank">python 集合详解</a></strong></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/7087614.html" target="_blank">python 数据类型</a>&nbsp;</strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/p/6752169.html" target="_blank">python文件操作</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/p/8149209.html" target="_blank">python 闭包</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/6705714.html" target="_blank">python 函数详解</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/7087616.html" target="_blank">python 函数、装饰器、内置函数</a></strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/7087629.html" target="_blank">python 迭代器 生成器</a>&nbsp;&nbsp;</strong></span></p>
+<p><span style="font-family: 楷体;"><strong>&nbsp; &nbsp;<a href="http://www.cnblogs.com/guobaoyuan/articles/6757215.html" target="_blank">python匿名函数、内置函数</a></strong></span></p>
+</div>
+'''
+1,找到所有的span标签的内容
+ret = re.findall('<span(.*?)>', s1)
+print(ret)
+
+2,找到所有a标签对应的url
+print(re.findall('<a href="(.*?)".*?</a>',s1))
+```
 
 ## 第七章 面向对象
 
