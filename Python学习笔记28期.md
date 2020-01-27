@@ -3320,6 +3320,488 @@ def pipefish():
 
 ## 第六章 模块
 
+
+
+### 1. 模块的定义与分类
+
+#### 模块是什么？
+
+ 这几天，我们进入模块的学习。在学习模块之前，我们首先要知道，什么是模块？
+
+ 一个函数封装一个功能，你使用的软件可能就是由n多个函数组成的（先不考虑面向对象）。比如抖音这个软件，不可能将所有程序都写入一个文件，所以咱们应该将文件划分，这样其组织结构要好并且代码不冗余。假如分了10个文件，每个文件里面可能都有相同的功能（函数），怎么办？所以将这些相同的功能封装到一个文件中，那么这个存储着很多常用的功能的py文件，就是模块。 模块就是文件，存放一堆常用的函数，比如：我要在大草原上策马奔腾，应该怎么样？我应该骑马，你也要去浪，你是不是也要骑马。我们说一个函数就是一个功能，那么把一些常用的函数放在一个py文件中，这个文件就称之为模块，模块，就是一些列常用功能的集合体。
+
+#### 为什么要使用模块?
+
+1. 从文件级别组织程序，更方便管理, 随着程序的发展，功能越来越多，为了方便管理，我们通常将程序分成一个个的文件，这样做程序的结构更清晰，这时我们不仅仅可以把这些文件当做脚本去执行，还可以把他们当做模块来导入到其他的模块中，实现了功能的重复利用
+
+2. 拿来主义，提升开发效率 同样的原理，我们也可以下载别人写好的模块然后导入到自己的项目中使用，这种拿来主义，可以极大地提升我们的开发效率，避免重复造轮子.
+
+   **人们常说的脚本是什么？**
+
+如果你在终端上编写的代码运行完后,退出python解释器然后重新进入，那么你之前定义的函数或者变量都将丢失，因此我们通常将程序写到文件中以便永久保存下来，需要时就通过python test.py方式去执行，此时test.py被称为脚本script。
+
+所以，脚本就是一个python文件，比如你之前写的购物车，模拟博客园登录系统的文件等等。
+
+#### 模块的分类
+
+Python语言中，模块分为三类。
+
+ 第一类：内置模块，也叫做**标准库**。此类模块就是python解释器给你提供的，比如我们之前见过的time模块,os模块。标准库的模块非常多（200多个，每个模块又有很多功能），我们这几天就讲常用的十几种，后面课程中还会陆续的讲到。
+
+ 第二类：第三方模块，第三方库。一些python大神写的非常好用的模块，必须通过pip install 指令安装的模块，比如BeautfulSoup, Django,等等。大概有6000多个。
+
+ 第三类：自定义模块。我们自己在项目中定义的一些模块。
+
+这几天，我们先学第一类和第三类模块，第二类模块会在我们并发编程开始逐渐的接触学习。
+
+今天，我们先讲第三类，自定义模块。
+
+我们先定义一个模块，定义一个模块其实很简单就是写一个文件，里面写一些代码（变量，函数）即可。此文件的名字为meet.py，文件内容如下：
+
+```python
+print('from the meet.py')
+name = '郭宝元'
+
+def read1():
+    print('meet模块：',name)
+
+def read2():
+    print('meet模块')
+    read1()
+
+def change():
+    global name
+    name = "宝浪"
+```
+
+### 2. import
+
+#### 2.1 import 使用
+
+import 翻译过来是一个导入的意思。
+
+这里一定要给同学强调哪个文件执行文件，和哪个文件是被执行模块。
+
+ 模块可以包含可执行的语句和函数的定义，这些语句的目的是初始化模块，它们只在模块名第一次遇到导入import语句时才执行（import语句是可以在程序中的任意位置使用的,且针对同一个模块import很多次,为了防止你重复导入，python的优化手段是：第一次导入后就将模块名加载到内存了，后续的import语句仅是对已经加载到内存中的模块对象增加了一次引用，不会重新执行模块内的语句），如下 import meet 只在第一次导入时才执行meet.py内代码,此处的显式效果是只打印一次'from the meet.py',当然其他的顶级代码也都被执行了,只不过没有显示效果.
+
+```python
+import meet
+import meet
+import meet
+import meet
+import meet
+
+执行结果：只是打印一次：
+from the meet.py
+```
+
+**重复导入会直接引用内存中已经加载好的结果**
+
+#### 2.2 第一次导入模块执行三件事
+
+ 1.创建一个以模块名命名的名称空间。
+
+ 2.执行这个名称空间（即导入的模块）里面的代码。
+
+ 3.通过此模块名. 的方式引用该模块里面的内容（变量，函数名，类名等）。 这个名字和变量名没什么区别，都是‘第一类的’，且使用meet名字的方式可以访问meet.py文件中定义的名字，meet.名字与test.py中的名字来自两个完全不同的地方。
+
+#### 2.3 被导入模块有独立的名称空间
+
+ 每个模块都是一个独立的名称空间，定义在这个模块中的函数，把这个模块的名称空间当做全局名称空间，这样我们在编写自己的模块时，就不用担心我们定义在自己模块中全局变量会在被导入时，与使用者的全局变量冲突。
+
+示例：
+
+```python
+当前是test.py
+
+import meet
+name = 'alex'
+print(name)
+print(meet.name)
+
+'''
+运行结果:
+from the meet.py
+alex
+郭宝元
+'''
+
+def read1():
+    print(666)
+meet.read1()
+
+'''
+运行结果:
+from the meet.py
+meet模块： 郭宝元
+'''
+
+name = '日天'
+meet.change()
+print(name)
+print(meet.name)
+
+'''
+运行结果:
+from the meet.py
+日天
+宝浪
+'''
+```
+
+**让同学们将上面的代码练习一下。**
+
+#### 2.4 为模块起别名
+
+别名其实就是一个外号,我们小的时候，都喜欢给学生们起外号对吧。
+
+**1. 好处可以将很长的模块名改成很短,方便使用.**
+
+```
+import tbjx as t
+t.read1()
+```
+
+**2. 有利于代码的扩展和优化。**
+
+```python
+#mysql.py
+def sqlparse():
+    print('from mysql sqlparse')
+#oracle.py
+def sqlparse():
+    print('from oracle sqlparse')
+#test.py
+db_type=input('>>: ')
+if db_type == 'mysql':
+    import mysql as db
+elif db_type == 'oracle':
+    import oracle as db
+
+db.sqlparse()
+```
+
+#### 2.5 导入多个模块
+
+ 我们以后再开发过程中，免不了会在一个文件中，导入多个模块，推荐写法是一个一个导入。
+
+```
+import os,sys,json   # 这样写可以但是不推荐
+
+推荐写法
+
+import os
+import sys
+import json
+```
+
+**多行导入：易于阅读 易于编辑 易于搜索 易于维护。**
+
+### 3 from ... import ...
+
+#### 3.1 from ... import ... 使用
+
+```
+from ... import ... 的使用示例。
+
+from meet import name, read1
+print(name)
+read1()
+'''
+执行结果：
+from the meet.py
+太白金星
+meet模块： 郭宝元
+'''
+```
+
+#### 3.2 from...import... 与import对比
+
+ 唯一的区别就是：使用from...import...则是将spam中的名字直接导入到当前的名称空间中，所以在当前名称空间中，直接使用名字就可以了、无需加前缀：tbjx.
+
+from...import...的方式有好处也有坏处
+
+ 好处：使用起来方便了
+
+ 坏处：容易与当前执行文件中的名字冲突
+
+示例演示：
+
+1. **执行文件有与模块同名的变量或者函数名，会有覆盖效果。**
+
+```python
+name = 'oldboy'
+from meet import name, read1, read2
+print(name)  
+'''
+执行结果：
+郭宝元
+'''
+----------------------------------------
+from meet import name, read1, read2
+name = 'oldboy'
+print(name)  
+
+'''
+执行结果：
+oldboy
+'''
+----------------------------------------
+def read1():
+    print(666)
+from meet import name, read1, read2
+read1()
+
+'''
+执行结果：
+meet模块： 郭宝元
+'''
+----------------------------------------
+
+from meet import name, read1, read2
+def read1():
+    print(666)
+read1()
+
+'''
+执行结果：
+meet模块： 666
+'''
+```
+
+**2. 当前位置直接使用read1和read2就好了，执行时，仍然以meet.py文件全局名称空间**
+
+```
+#测试一：导入的函数read1，执行时仍然回到meet.py中寻找全局变量 'alex'
+#test.py
+from meet import read1
+name = 'alex'
+read1()
+'''
+执行结果:
+from the meet.py
+meet->read1->name = '郭宝元'
+'''
+
+#测试二:导入的函数read2，执行时需要调用read1(),仍然回到meet.py中找
+#read1()
+
+#test.py
+from meet import read2
+def read1():
+    print('==========')
+read2()
+
+'''
+执行结果:
+from the meet.py
+meet模块
+meet模块： 郭宝元
+'''
+```
+
+from … import也支持as
+
+通过这种方式引用模块也可以对模块进行改名。
+
+```python
+from meet import read1 as read
+read()
+```
+
+#### 3.4 一行导入多个
+
+```
+from tbjx import read1,read2,name
+```
+
+#### 3.5 from ... import *
+
+ from meet import * 把meet中所有的不是以下划线(_)开头的名字都导入到当前位置
+
+ 大部分情况下我们的python程序不应该使用这种导入方式，因为*你不知道你导入什么名字，很有可能会覆盖掉你之前已经定义的名字。而且可读性极其的差，在交互式环境中导入时没有问题。
+
+可以使用**all**来控制*（用来发布新版本），在meet.py中新增一行
+
+```
+__all__=['name','read1'] #这样在另外一个文件中用from spam import *就这能导入列表中规定的两个名字
+```
+
+#### 3.6 模块循环导入问题(了解)
+
+ 模块循环/嵌套导入抛出异常的根本原因是由于在python中模块被导入一次之后，就不会重新导入，只会在第一次导入时执行模块内代码
+
+ 在我们的项目中应该尽量避免出现循环/嵌套导入，如果出现多个模块都需要共享的数据，可以将共享的数据集中存放到某一个地方在程序出现了循环/嵌套导入后的异常分析、解决方法如下（**了解，以后尽量避免**）
+
+示范文件内容如下
+
+```python
+#创建一个m1.py
+print('正在导入m1')
+from m2 import y
+x='m1
+
+#创建一个m2.py
+print('正在导入m2')
+from m1 import x
+y='m2'
+
+#创建一个run.py
+import m1
+
+#测试一
+执行run.py会抛出异常
+正在导入m1
+正在导入m2
+Traceback (most recent call last):
+  File "/python项目/run.py", line 1, in <module>
+    import m1
+  File "/python项目/m1.py", line 2, in <module>
+    from m2 import y
+  File "/python项目/m2.py", line 2, in <module>
+    from m1 import x
+ImportError: cannot import name 'x'
+
+#测试一结果分析
+先执行run.py--->执行import m1，开始导入m1并运行其内部代码--->打印内容"正在导入m1"
+--->执行from m2 import y 开始导入m2并运行其内部代码--->打印内容“正在导入m2”--->执行from m1 import x,由于m1已经被导入过了，所以不会重新导入，所以直接去m1中拿x，然而x此时并没有存在于m1中，所以报错
+
+#测试二:执行文件不等于导入文件，比如执行m1.py不等于导入了m1
+正在导入m1
+正在导入m2
+Traceback (most recent call last):
+正在导入m1
+  File "/python项目/m1.py", line 2, in <module>
+    from m2 import y
+  File "/python项目/m2.py", line 2, in <module>
+    from m1 import x
+  File "/python项目/m1.py", line 2, in <module>
+    from m2 import y
+ImportError: cannot import name 'y'
+
+
+#测试二分析
+执行m1.py，打印“正在导入m1”，执行from m2 import y ，导入m2进而执行m2.py内部代码--->打印"正在导入m2"，执行from m1 import x，此时m1是第一次被导入，执行m1.py并不等于导入了m1，于是开始导入m1并执行其内部代码--->打印"正在导入m1"，执行from m1 import y，由于m1已经被导入过了，所以无需继续导入而直接问m2要y，然而y此时并没有存在于m2中所以报错
+
+
+# 解决方法:
+方法一:导入语句放到最后
+#m1.py
+print('正在导入m1')
+
+x='m1'
+
+from m2 import y
+
+#m2.py
+print('正在导入m2')
+y='m2'
+
+from m1 import x
+
+方法二:导入语句放到函数中
+#m1.py
+print('正在导入m1')
+
+def f1():
+    from m2 import y
+    print(x,y)
+
+x = 'm1'
+
+# f1()
+#m2.py
+print('正在导入m2')
+
+def f2():
+    from m1 import x
+    print(x,y)
+
+y = 'm2'
+
+#run.py
+import m1
+
+m1.f1()
+```
+
+### 4. py文件的两种功能
+
+编写好的一个python文件可以有两种用途： 一：脚本，一个文件就是整个程序，用来被执行（比如你之前写的模拟博客园登录那个作业等） 二：模块，文件中存放着一堆功能，用来被导入使用python为我们内置了全局变量__name__， 当文件被当做脚本执行时：__name__ 等于'__main__' 当文件被当做模块导入时：__name__等于模块名作用：用来控制.py文件在不同的应用场景下执行不同的逻辑（或者是在模块文件中测试代码）
+
+```
+if __name__ == '__main__':
+print('from the meet.py')
+
+__all__ = ['name', 'read1',]
+
+name = '郭宝元'
+
+def read1():
+   print('meet模块：',name)
+
+def read2():
+   print('meet模块')
+   read1()
+
+def change():
+   global name
+   name = '宝浪'
+
+if __name__ == '__main__':  
+   # 在模块文件中测试read1()函数
+   # 此模块被导入时 __name__ == meet 所以不执行
+   read1()
+```
+
+### 5. 模块的搜索路径
+
+当你引用一个模块时，不见得每次都可以import到：
+
+当咱们导入同一个目录下的模块的时候就能够使用import成功,不是同一个目录下的导入就会报错
+
+![1](https://guobaoyuan.gitee.io/new_book/assets/1-3070560.gif)
+
+上面的示例可以得知，引用模块也是按照一定规则进行引用的。
+
+ Python中引用模块是按照一定的规则以及顺序去寻找的，这个查询顺序为：先从内存中已经加载的模块进行寻找找不到再从内置模块中寻找，内置模块如果也没有，最后去sys.path中路径包含的模块中寻找。它只会按照这个顺序从这些指定的地方去寻找，如果最终都没有找到，那么就会报错。
+
+ **内存中已经加载的模块->内置模块->sys.path路径中包含的模块**
+
+**模块的查找顺序**
+
+1. 在第一次导入某个模块时（比如meet），会先检查该模块是否已经被加载到内存中（当前执行文件的名称空间对应的内存），如果有则直接引用（ps：python解释器在启动时会自动加载一些模块到内存中，可以使用sys.modules查看）
+2. 如果没有，解释器则会查找同名的内置模块
+3. 如果还没有找到就从sys.path给出的目录列表中依次寻找meet.py文件。
+
+**需要特别注意的是：我们自定义的模块名不应该与系统内置模块重名。虽然每次都说，但是仍然会有人不停的犯错**
+
+```python
+#在初始化后，python程序可以修改sys.path,路径放到前面的优先于标准库被加载。
+
+> > > import sys
+> > > sys.path.append('/a/b/c/d')
+> > > sys.path.insert(0,'/x/y/z') #排在前的目录，优先被搜索
+> > > 注意：搜索时按照sys.path中从左到右的顺序查找，位于前的优先被查找，sys.path中还可能包含.zip归档文件和.egg文件，python会把.zip归档文件当成一个目录去处理，
+
+#首先制作归档文件：zip module.zip foo.py bar.py 
+import sys
+sys.path.append('module.zip')
+import foo,bar
+
+#也可以使用zip中目录结构的具体位置
+sys.path.append('module.zip/lib/python')
+
+#windows下的路径不加r开头，会语法错误
+sys.path.insert(0,r'C:\Users\Administrator\PycharmProjects\a')
+
+#至于.egg文件是由setuptools创建的包，这是按照第三方python库和扩展时使用的一种常见格式，.egg文件实际上只是添加了额外元数据(如版本号，依赖项等)的.zip文件。
+
+#需要强调的一点是：只能从.zip文件中导入.py，.pyc等文件。使用C编写的共享库和扩展块无法直接从.zip文件中加载（此时setuptools等打包系统有时能提供一种规避方法），且从.zip中加载文件不会创建.pyc或者.pyo文件，因此一定要事先创建他们，来避免加载模块是性能下降。
+```
+
+明天我们就开始讲解Python常用的内置模块，由于Python常用的模块非常多，我们不可能将所有的模块都讲完， 所以只针对于工作中经常用到模块进行讲解。剩下的模块可以在课余时间自学。
+
 ### RE 正则表达式
 
 **正则就是用一些具有特殊含义的符号组合到一起（称为正则表达式）来描述字符或者字符串的方法。或者说：正则就是用来描述一类事物的规则。**（在Python中）它内嵌在Python中，并通过 re 模块实现。正则表达式模式被编译成一系列的字节码，然后由用 C 编写的匹配引擎执行。
@@ -3803,6 +4285,547 @@ print(ret)
 2,找到所有a标签对应的url
 print(re.findall('<a href="(.*?)".*?</a>',s1))
 ```
+
+### 模块和包
+
+我们今天来讲解一下模块和包,模块我们已经知道是什么东西了,我们现在来看看这个包是个什么? 我说的包可不是女同胞一看见就走不动的包,而是程序中一种组织文件的形式.
+
+只要文件夹下含有__init__.py文件就是一个包,包是干什么的呢?
+
+回想一下,之前我们没有学习模块的时候将一个整体的功能写入到文件中,为了能够充分的将某个功能进行重用 我们使用了模块,但是慢慢的模块就会越来越多.我们想提高程序的结构性可维护性,就使用包将模块进行统一管理
+
+包能够管理多个模块,我们想要使用包里的模块怎么办呢?
+
+使用import 和from xx import xx 现有如下结构
+
+```python
+bake            
+
+    ├── __init__.py       
+
+    ├── api               
+
+        ├── __init__.py
+
+        ├── policy.py
+
+        └── versions.py
+
+  ├── cmd             
+
+    ├── __init__.py
+
+    └── manage.py
+
+  └── db                
+
+      ├── __init__.py
+
+      └── models.py
+```
+
+我们在bake同级创建一个test.py进行导入policy.py 我们使用模块的import的时候只能将api添加到sys.path的路劲中,我们来看看包使用import导入
+
+```python
+import bake.api.policy
+bake.api.policy.get()
+```
+
+导入的太长了下边使用的时候还需要在重复写一遍,我们可以使用as起别名
+
+```python
+import bake.api.policy as p
+p.get()
+```
+
+这样的操作只支持包,普通的文件夹无效,有人一定在想我把bake拿过来然后一层一层的打开那拿工具就可以了
+
+```python
+import bake
+bake.api.policy.get()
+```
+
+不好使,这样导入是只将policy导入了,有人想怎么将api包下的模块全部导入不要急,先说单独导入的方式
+
+咱们能够使用import进行导入,在来看看from的导入方式
+
+```python
+from bake.api import policy
+policy.get()
+from bake import api
+print(api.versions.name)
+```
+
+还是不好使,通过这两个我们能够感觉都导入的时候指定要导入的内容,不能再导入后在进行开箱子
+
+我们现在说了单独导入一个模块,现在来说道说道怎么导入某个包下的所有模块,想要导入某个包下的所有的模块 我们就需要在包中的__init__.py做点手脚
+
+```python
+bake包下的__init__.py
+from . import api
+```
+
+.是当前路径,因为from的时候不能空着
+
+```python
+api包下的__init__.py
+from . import policy
+```
+
+我们将包下的__init__配置好,然后在test.py进行导入
+
+```python
+import bake
+bake.api.policy.get()
+```
+
+又好使了,这是为什么呢?我们import导入bake这个包,因为bake是一个文件夹不能进行任何操作,就让__init__.py代替它 去将api这包中的模块导入,api也是一个文件夹不能操作就需要让api下边的__init__.py去找api下边的两个模块
+
+这个和公司的上下级关系一样,打比方现在test.py就是一个ceo要和policy这个小员工谈话,ceo先把这个想法人事经理,人事经理就是 bake这个包,人事经理通知人事让人事查找一下policy在那个部门,人事查到后通知部门的负责人,部门的负责人在通知部门的主管,主管告诉policy这个员工, 说ceo要找你,部门的主管带着policy去找人事,人事带着policy,人事然后在带着policy去找ceo.最后成功的和ceo进行了一番交流
+
+如果在传达的时候中间一个环节忘记传递了,policy就不知道ceo在找他,ceo等了好久不来ceo就生气报错了
+
+使用的时候需要注意: 有的同学,想在policy文件中导入versions就是直接使用import,在policy文件使用没有问题,很美,很高兴.但是在test.py执行的时候就会报错 因为我们在test.py中执行的import versions 相当于在test.py文件进行查找,肯定不会找到,我们需要在policy文件中向sys.path添加了当前的路劲就可以了 具体操作如下:
+
+```python
+import os
+import sys
+sys.path.insert(os.path.dirname(__file__)
+```
+
+__file__获取的是当前文件的路径,这样我们就能在test中正常使用了,我们使用from也能够将某个包下所有的模块全都导入 比如我们现在想将cmd包下的所有的模块导入需要在bake包下的__init__.py进行设置
+
+```python
+from . import *
+```
+
+我们需要在api包下设置__init__.py
+
+```pyhton
+__all__ = ["policy","versions"]
+或
+from . import policy
+from . import versions
+```
+
+我们需要在db包下设置__init__.py
+
+```python
+__all__ = ["models"]
+或
+from . import models
+```
+
+我们需要在cmd包下设置__init__.py
+
+```python
+__all__ = ["manage"]
+或
+from . import manage
+```
+
+以上两种推荐使用下from . import manage 灵活,可读性高
+
+test.py调用如下:
+
+```python
+from bake.api import *
+print(versions.name)
+policy.get()
+
+from bake.db import *
+models.register_models(123)
+
+from bake.cmd import *
+print(manage.name)
+```
+
+在使用import有个注意点,python2中如果import包,没有__init__.py文件就会报错 python3 import没有__init__.py文件的包不会报错 from 包 import 包或者模块(在import后边不能在进行.操作)
+
+路径: 绝对路径:从最外层(bake)包.查找的就是绝对路径 相对路径:.就是相对路径, ..是上一级目录 例如：我们在bake/api/version.py中想要导入bake/cmd/manage.py
+
+```python
+# 绝对路径:
+from bake.cmd import manage
+manage.main()
+
+#相对路径:
+from ..cmd import manage
+manage.main()
+```
+
+注意在使用相对路径的时候一定要在于bake同级的文件中测试 我们需要在和bake同级的test.py中测试
+
+```python
+from bake.cmd import manage
+```
+
+### 软件的开发规范
+
+**什么是开发规范?为什么要有开发规范呢?**
+
+你现在包括之前写的一些程序，所谓的'项目'，都是在一个py文件下完成的，代码量撑死也就几百行，你认为没问题，挺好。但是真正的后端开发的项目，系统等，少则几万行代码，多则十几万，几十万行代码，你全都放在一个py文件中行么？当然你可以说，只要能实现功能即可。咱们举个例子，如果你的衣物只有三四件，那么你随便堆在橱柜里，没问题，咋都能找到，也不显得特别乱，但是如果你的衣物，有三四十件的时候，你在都堆在橱柜里，可想而知，你找你穿过三天的袜子，最终从你的大衣口袋里翻出来了，这是什么感觉和心情......
+
+　　软件开发，规范你的项目目录结构，代码规范，遵循PEP8规范等等，让你更加清晰滴，合理滴开发。
+
+那么接下来我们以博客园系统的作业举例，将我们之前在一个py文件中的所有代码，整合成规范的开发。
+
+首先我们看一下，这个是我们之前的目录结构（简化版）：
+
+![image-20190808184433407](https://guobaoyuan.gitee.io/new_book/assets/image-20190808184433407.png)
+
+py文件的具体代码如下：
+
+```python
+status_dic = {
+    'username': None,
+    'status': False,
+}
+flag = True
+
+def login():
+    i = 0
+    with open('register', encoding='utf-8') as f1:
+        dic = {i.strip().split('|')[0]: i.strip().split('|')[1] for i in f1}
+    while i < 3:
+        username = input('请输入用户名：').strip()
+        password = input('请输入密码：').strip()
+        if username in dic and dic[username] == password:
+            print('登录成功')
+            return True
+        else:
+            print('用户名密码错误，请重新登录')
+            i += 1
+
+
+def register():
+    with open('register', encoding='utf-8') as f1:
+        dic = {i.strip().split('|')[0]: i.strip().split('|')[1] for i in f1}
+    while 1:
+        print('\033[1;45m 欢迎来到注册页面 \033[0m')
+        username = input('请输入用户名：').strip()
+        if not username.isalnum():
+            print('\033[1;31;0m 用户名有非法字符，请重新输入 \033[0m')
+            continue
+        if username in dic:
+            print('\033[1;31;0m 用户名已经存在，请重新输入 \033[0m')
+            continue
+        password = input('请输入密码：').strip()
+        if 6 <= len(password) <= 14:
+            with open('register', encoding='utf-8', mode='a') as f1:
+                f1.write(f'\n{username}|{password}')
+            status_dic['username'] = str(username)
+            status_dic['status'] = True
+            print('\033[1;32;0m 恭喜您，注册成功！已帮您成功登录~ \033[0m')
+            return True
+        else:
+            print('\033[1;31;0m 密码长度超出范围，请重新输入 \033[0m')
+
+
+def auth(func):
+    def inner(*args, **kwargs):
+        if status_dic['status']:
+            ret = func(*args, **kwargs)
+            return ret
+        else:
+            print('\033[1;31;0m 请先进行登录 \033[0m')
+            if login():
+                ret = func(*args, **kwargs)
+                return ret
+
+    return inner
+
+
+@auth
+def article():
+    print(f'\033[1;32;0m 欢迎{status_dic["username"]}访问文章页面\033[0m')
+
+
+@auth
+def diary():
+    print(f'\033[1;32;0m 欢迎{status_dic["username"]}访问日记页面\033[0m')
+
+
+@auth
+def comment():
+    print(f'\033[1;32;0m 欢迎{status_dic["username"]}访问评论页面\033[0m')
+
+
+@auth
+def enshrine():
+    print(f'\033[1;32;0m 欢迎{status_dic["username"]}访问收藏页面\033[0m')
+
+
+def login_out():
+    status_dic['username'] = None
+    status_dic['status'] = False
+    print('\033[1;32;0m 注销成功 \033[0m')
+
+
+def exit_program():
+    global flag
+    flag = False
+    return flag
+
+
+choice_dict = {
+    1: login,
+    2: register,
+    3: article,
+    4: diary,
+    5: comment,
+    6: enshrine,
+    7: login_out,
+    8: exit_program,
+}
+
+
+while flag:
+    print('''
+    欢迎来到博客园首页
+    1:请登录
+    2:请注册
+    3:文章页面
+    4:日记页面
+    5:评论页面
+    6:收藏页面
+    7:注销
+    8:退出程序''')
+
+    choice = input('请输入您选择的序号:').strip()
+    if choice.isdigit():
+        choice = int(choice)
+        if 0 < choice <= len(choice_dict):
+            choice_dict[choice]()
+        else:
+            print('\033[1;31;0m 您输入的超出范围，请重新输入 \033[0m')
+
+    else:
+        print('\033[1;31;0m 您您输入的选项有非法字符，请重新输入 \033[0m')
+```
+
+此时我们是将所有的代码都写到了一个py文件中，如果代码量多且都在一个py文件中，那么对于代码结构不清晰，不规范，运行起来效率也会非常低。所以我们接下来一步一步的修改：
+
+1. **程序配置.**
+
+![image-20190808183553328](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183553328.png)
+
+你项目中所有的有关文件的操作出现几处，都是直接写的register相对路径，如果说这个register注册表路径改变了，或者你改变了register注册表的名称，那么相应的这几处都需要一一更改，这样其实你就是把代码写死了，那么怎么解决？ 我要统一相同的路径，也就是统一相同的变量，在文件的最上面写一个变量指向register注册表的路径，代码中如果需要这个路径时，直接引用即可。
+
+![image-20190808183612322](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183612322.png)
+
+1. **划分文件**
+
+![image-20190808183637363](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183637363.png)
+
+一个项目的函数不能只是这些，我们只是举个例子，这个小作业函数都已经这么多了，那么要是一个具体的实际的项目，函数会非常多，所以我们应该将这些函数进行分类，然后分文件而治。在这里我划分了以下几个文件：
+
+**settings.py**: 配置文件，就是放置一些项目中需要的静态参数，比如文件路径，数据库配置，软件的默认设置等等
+
+类似于我们作业中的这个：
+
+![image-20190808183653259](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183653259.png)
+
+**common.py**:公共组件文件，这里面放置一些我们常用的公共组件函数，并不是我们核心逻辑的函数，而更像是服务于整个程序中的公用的插件，程序中需要即调用。比如我们程序中的装饰器auth，有些函数是需要这个装饰器认证的，但是有一些是不需要这个装饰器认证的，它既是何处需要何处调用即可。比如还有密码加密功能，序列化功能，日志功能等这些功能都可以放在这里。
+
+![image-20190808183706876](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183706876.png)
+
+**src.py**:这个文件主要存放的就是核心逻辑功能，你看你需要进行选择的这些核心功能函数，都应该放在这个文件中。
+
+![image-20190808183722810](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183722810.png)
+
+**start.py**:项目启动文件。你的项目需要有专门的文件启动，而不是在你的核心逻辑部分进行启动的，有人对这个可能不太理解，我为什么还要设置一个单独的启动文件呢？你看你生活中使用的所有电器基本都一个单独的启动按钮，汽车，热水器，电视，等等等等，那么为什么他们会单独设置一个启动按钮，而不是在一堆线路板或者内部随便找一个地方开启呢？ 目的就是放在显眼的位置，方便开启。你想想你的项目这么多py文件，如果src文件也有很多，那么到底哪个文件启动整个项目，你还得一个一个去寻找，太麻烦了，这样我把它单独拿出来，就是方便开启整个项目。
+
+那么我们写的项目开启整个项目的代码就是下面这段：
+
+![image-20190808183736591](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183736591.png)
+
+你把这些放置到一个文件中也可以，但是没有必要，我们只需要一个命令或者一个开启指令就行，就好比我们开启电视只需要让人很快的找到那个按钮即可，对于按钮后面的一些复杂的线路板，我们并不关心，所以我们要将上面这个段代码整合成一个函数，开启项目的''按钮''就是此函数的执行即可。
+
+![image-20190808183749056](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183749056.png)
+
+这个按钮要放到启动文件start.py里面。
+
+除了以上这几个py文件之外还有几个文件，也是非常重要的：
+
+**类似于register文件**：这个文件文件名不固定，register只是我们项目中用到的注册表，但是这种文件就是存储数据的文件，类似于**文本数据库**，那么我们一些项目中的数据有的是从数据库中获取的，有些数据就是这种文本数据库中获取的，总之，你的项目中有时会遇到将一些数据存储在文件中，与程序交互的情况，所以我们要单独设置这样的文件。
+
+**log文件**：log文件顾名思义就是存储log日志的文件。日志我们一会就会讲到，日志主要是供开发人员使用。比如你项目中出现一些bug问题，比如开发人员对服务器做的一些操作都会记录到日志中，以便开发者浏览，查询。
+
+至此，我们将这个作业原来的两个文件，合理的划分成了6个文件，但是还是有问题的，如果我们的项目很大，你的每一个部分相应的你一个文件存不下的，比如你的src主逻辑文件，函数很多，你是不是得分成：src1.py src2.py？
+
+你的文本数据库register这个只是一个注册表，如果你还有个人信息表，记录表呢？ 如果是这样，你的整个项目也是非常凌乱的：
+
+![image-20190808183851177](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183851177.png)
+
+**3. 划分具体目录**
+
+上面看着就非常乱了，那么如何整改呢？ 其实非常简单，原来你就是30件衣服放在一个衣柜里，那么你就得分类装，放外套的地方，放内衣的地方，放佩饰的地方等等，但是突然你的衣服编程300件了，那一个衣柜放不下，我就整多个柜子，分别放置不同的衣物。所以我们这可以整多个文件夹，分别管理不同的物品，那么标准版本的目录结构就来了：
+
+**为什么要设计项目目录结构？**
+
+"设计项目目录结构"，就和"代码编码风格"一样，属于个人风格问题。对于这种风格上的规范，一直都存在两种态度:
+
+1. 一类同学认为，这种个人风格问题"无关紧要"。理由是能让程序work就好，风格问题根本不是问题。
+2. 另一类同学认为，规范化能更好的控制程序结构，让程序具有更高的可读性。
+
+我是比较偏向于后者的，因为我是前一类同学思想行为下的直接受害者。我曾经维护过一个非常不好读的项目，其实现的逻辑并不复杂，但是却耗费了我非常长的时间去理解它想表达的意思。从此我个人对于提高项目可读性、可维护性的要求就很高了。"项目目录结构"其实也是属于"可读性和可维护性"的范畴，我们设计一个层次清晰的目录结构，就是为了达到以下两点:
+
+1. 可读性高: 不熟悉这个项目的代码的人，一眼就能看懂目录结构，知道程序启动脚本是哪个，测试目录在哪儿，配置文件在哪儿等等。从而非常快速的了解这个项目。
+2. 可维护性高: 定义好组织规则后，维护者就能很明确地知道，新增的哪个文件和代码应该放在什么目录之下。这个好处是，随着时间的推移，代码/配置的规模增加，项目结构不会混乱，仍然能够组织良好。
+
+所以，我认为，保持一个层次清晰的目录结构是有必要的。更何况组织一个良好的工程目录，其实是一件很简单的事儿。
+
+![image-20190808183906562](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183906562.png)
+
+上面那个图片就是较好的目录结构。
+
+#### 按照项目目录结构,规范博客园系统
+
+接下来，我就带领大家把具体的代码写入对应的文件中，并且将此项目启动起来，一定要跟着我的步骤一步一步去执行：
+
+1. **配置start.py文件**
+
+我们首先要配置启动文件，启动文件很简答就是将项目的启动执行放置start.py文件中，运行start.py文件可以成功启动项目即可。 那么项目的启动就是这个指令run() 我们把这个run()放置此文件中不就行了？
+
+![image-20190808184513416](https://guobaoyuan.gitee.io/new_book/assets/image-20190808184513416.png)
+
+这样你能执行这个项目么？肯定是不可以呀，你的starts.py根本就找不到run这个变量，肯定是会报错的。
+
+NameError: name 'run' is not defined 本文件肯定是找不到run这个变量也就是函数名的，不过这个难不倒我们，我们刚学了模块， 另个一文件的内容我们可以引用过来。但是你发现import run 或者 from src import run 都是报错的。为什么呢？ 骚年，遇到报错不要慌！我们说过你的模块之所以可以引用，那是因为你的模块肯定在这个三个地方：内存，内置，sys.path里面，那么core在内存中肯定是没有的，也不是内置，而且sys.path也不可能有，因为sys.path只会将你当前的目录（bin）加载到内存，所以你刚才那么引用肯定是有问题的，那么如何解决？内存，内置你是左右不了的，你只能将core的路径添加到sys.path中，这样就可以了。
+
+```python
+import sys
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog\core')
+from src import run
+run()
+```
+
+这样虽然解决了，但是你不觉得有问题么？你现在从这个start文件需要引用src文件，那么你需要手动的将src的工作目录添加到sys.path中，那么有没有可能你会引用到其他的文件？比如你的项目中可能需要引用conf，lib等其他py文件，那么在每次引用之前，或者是开启项目时，全部把他们添加到sys.path中么？
+
+```python
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog\core')
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog\conf')
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog\db')
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog\lib')
+```
+
+这样是不是太麻烦了？ 我们应该怎么做？我们应该把项目的工作路径添加到sys.path中，用一个例子说明：你想找张三，李四，王五，赵六等人，这些人全部都在一栋楼比如在汇德商厦，那么我就告诉你汇德商厦的位置：北京昌平区沙河镇汇德商厦。 你到了汇德商厦你在找具体这些人就可以了。所以我们只要将这个blog项目的工作目录添加到sys.path中，这样无论这个项目中的任意一个文件引用项目中哪个文件，就都可以找到了。所以：
+
+```Python
+import sys
+sys.path.append(r'D:\lnh.python\py project\teaching_show\blog')
+from core.src import run
+run()
+```
+
+上面还是差一点点，你这样写你的blog的路径就写死了，你的项目不可能只在你的电脑上，项目是共同开发的，你的项目肯定会出现在别人电脑上，那么你的路径就是问题了，在你的电脑上你的blog项目的路径是上面所写的，如果移植到别人电脑上，他的路径不可能与你的路径相同， 这样就会报错了，所以我们这个路径要动态获取，不能写死，所以这样就解决了：
+
+```python
+import sys
+import os
+# sys.path.append(r'D:\lnh.python\py project\teaching_show\blog')
+print(os.path.dirname(__file__))
+# 获取本文件的绝对路径  # D:/lnh.python/py project/teaching_show/blog/bin
+print(os.path.dirname(os.path.dirname(__file__)))
+# 获取父级目录也就是blog的绝对路径  # D:/lnh.python/py project/teaching_show/blog
+BATH_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BATH_DIR)
+from core.src import run
+run()
+```
+
+那么还差一个小问题，这个starts文件可以当做脚本文件进行直接启动，如果是作为模块，被别人引用的话，按照这么写，也是可以启动整个程序的，这样合理么？这样是不合理的，作为启动文件，是不可以被别人引用启动的，所以我们此时要想到 __name__了：
+
+```python
+import sys
+import os
+# sys.path.append(r'D:\lnh.python\py project\teaching_show\blog')
+# print(os.path.dirname(__file__))
+# 获取本文件的绝对路径  # D:/lnh.python/py project/teaching_show/blog/bin
+# print(os.path.dirname(os.path.dirname(__file__)))
+# 获取父级目录也就是blog的绝对路径  # D:/lnh.python/py project/teaching_show/blog
+BATH_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BATH_DIR)
+from core.src import run
+
+if __name__ == '__main__':
+    run()
+```
+
+这样，我们的starts启动文件就已经配置成功了。以后只要我们通过starts文件启动整个程序，它会先将整个项目的工作目录添加到sys.path中，然后在启动程序，这样我整个项目里面的任何的py文件想引用项目中的其他py文件，都是你可以的了。
+
+1. **配置settings.py文件。**
+
+接下来，我们就会将我们项目中的静态路径，数据库的连接设置等等文件放置在settings文件中。
+
+我们看一下，你的主逻辑src中有这样几个变量：
+
+```python
+status_dic = {
+    'username': None,
+    'status': False,
+}
+flag = True
+register_path = r'D:\lnh.python\py project\teaching_show\blog\register'
+```
+
+我们是不是应该把这几个变量都放置在settings文件中呢？不是！setttings文件叫做配置文件，其实也叫做配置静态文件，什么叫静态？ 静态就是一般不会轻易改变的，但是对于上面的代码status_dic ，flag这两个变量，由于在使用这个系统时会时长变化，所以不建议将这个两个变量放置在settings配置文件中，只需要将register_path放置进去就可以。
+
+```python
+register_path = r'D:\lnh.python\py project\teaching_show\blog\register'
+```
+
+![image-20190808185147957](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185147957.png)
+
+但是你将这个变量放置在settings.py之后，你的程序启动起来是有问题，为什么？
+
+```python
+with open(register_path, encoding='utf-8') as f1:
+NameError: name 'register_path' is not defined
+```
+
+因为主逻辑src中找不到register_path这个路径了，所以会报错，那么我们解决方式就是在src主逻辑中引用settings.py文件中的register_path就可以了。
+
+![image-20190808185220737](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185220737.png)
+
+这里引发一个问题：为什么你这样写就可以直接引用settings文件呢？我们在starts文件中已经说了，刚已启动blog文件时，我们手动将blog的路径添加到sys.path中了，这就意味着，我在整个项目中的任何py文件，都可以引用到blog项目目录下面的任何目录：bin,conf,core,db,lib,log这几个，所以，刚才我们引用settings文件才是可以的。
+
+1. **配置common.py文件**
+
+接下来，我们要配置我们的公共组件文件，在我们这个项目中，装饰器就是公共组件的工具，我们要把装饰器这个工具配置到common.py文件中。先把装饰器代码剪切到common.py文件中。这样直接粘过来，是有各种问题的：
+
+![image-20190808185244851](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185244851.png)
+
+所以我们要在common.py文件中引入src文件的这两个变量。
+
+![image-20190808185313895](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185313895.png)
+
+可是你的src文件中使用了auth装饰器，此时你的auth装饰器已经移动位置了，所以你要在src文件中引用auth装饰器，这样才可以使用上
+
+![image-20190808185333682](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185333682.png)
+
+![image-20190808185348147](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185348147.png)
+
+OK，这样你就算是将你之前写的模拟博客园登录的作业按照规范化目录结构合理的完善完成了，最后还有一个关于README文档的书写。
+
+#### 关于README的内容
+
+**这个我觉得是每个项目都应该有的一个文件**，目的是能简要描述该项目的信息，让读者快速了解这个项目。
+
+它需要说明以下几个事项:
+
+1. 软件定位，软件的基本功能。
+2. 运行代码的方法: 安装环境、启动命令等。
+3. 简要的使用说明。
+4. 代码目录结构说明，更详细点可以说明软件的基本原理。
+5. 常见问题说明。
+
+我觉得有以上几点是比较好的一个`README`。在软件开发初期，由于开发过程中以上内容可能不明确或者发生变化，并不是一定要在一开始就将所有信息都补全。但是在项目完结的时候，是需要撰写这样的一个文档的。
+
+可以参考Redis源码中[Readme](https://github.com/antirez/redis#what-is-redis)的写法，这里面简洁但是清晰的描述了Redis功能和源码结构。
+
+
 
 ## 第七章 面向对象
 
