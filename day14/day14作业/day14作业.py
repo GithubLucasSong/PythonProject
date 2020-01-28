@@ -72,8 +72,16 @@
 
 #
 # 4.使用re匹配验证码，验证码由字母，数学组成。
+# import re
+# s = 'a3sf ass3 sf3w sr3a WS2S s3F3 ssa sdf2f adsa_'
+# print(re.findall('[a-zA-Z0-9]{4,}',s))
+
 
 # 5.写一个正则表达式,匹配身份证号
 
+
 # 6.写一个正则表达式，使其能同时识别下面所有的字符串：'bat', 'bit', 'but', 'hat', 'hit', 'hut‘
-# s = "bat bta atb bii bit but btu bt2 hit hat hut htu"
+
+s = "bat bta atb bii bit but btu bt2 hit hat hut htu"
+import re
+print(re.findall("\w{2}t", s))
