@@ -640,7 +640,7 @@ lst = [1,2,3,[6,7,8]]
 
 我们在程序这样写,当成程序执行完这两行的时候,内容空间发生的变化就是下图:
 
-![image-20190624164715237](https://guobaoyuan.gitee.io/new_book/assets/image-20190624164715237.png)
+![image-20190624164715237](Python笔记.assets/image-20190624164715237.png)
 
 一个列表用两个标签,通过标签lst 找到的和标签lst1找到的是同一个,图中的那些一长串数字就是内存地址,Python中是通过内存地址来查看值
 
@@ -649,7 +649,7 @@ lst1 = lst
 lst[-1].append(9)
 ```
 
-![image-20190624164938391](https://guobaoyuan.gitee.io/new_book/assets/image-20190624164938391.png)
+![image-20190624164938391](Python笔记.assets/image-20190624164938391.png)
 
 我们通过lst这个标签找到这个列表然后添加一个9,再通过lst1找到这个列表也就多了一个9 因为lst和lst1都是贴在一个地方
 
@@ -663,7 +663,7 @@ lst = [1,2,3,[6,7,8]]
 lst2 = lst.copy()
 ```
 
-![image-20190624165932135](https://guobaoyuan.gitee.io/new_book/assets/image-20190624165932135.png)
+![image-20190624165932135](Python笔记.assets/image-20190624165932135-1580579098971.png)
 
 **图中橙色的是新开辟的空间,浅蓝色的是数字类型,红色的列表类型**
 
@@ -675,7 +675,7 @@ lst2 = lst[:]
 lst.append(9)
 ```
 
-![image-20190624170320641](https://guobaoyuan.gitee.io/new_book/assets/image-20190624170320641.png)
+![image-20190624170320641](Python笔记.assets/image-20190624170320641.png)
 
 为什么lst1中没有添加,是因为咱们先进行的浅拷贝,浅拷贝把原列表中有的内存地址复制了一份放到新开辟的空间中,后期对原列表添加的内容新列表是不会有的,再看看下边的例子
 
@@ -686,7 +686,7 @@ lst[1] = "22"
 
 ```
 
-![image-20190624170640334](https://guobaoyuan.gitee.io/new_book/assets/image-20190624170640334.png)
+![image-20190624170640334](Python笔记.assets/image-20190624170640334.png)
 
 我们修改成字符串"22" 就是在列表中将以前的内存地址更换成新开辟的空间地址
 
@@ -696,7 +696,7 @@ lst1 = lst.copy()
 lst[-1].append(9)
 ```
 
-![image-20190624171104866](https://guobaoyuan.gitee.io/new_book/assets/image-20190624171104866.png)
+![image-20190624171104866](Python笔记.assets/image-20190624171104866.png)
 
 因为我们对里边的列表进行修改,列表本身就是可变的数据类型,我们通过原列表修改最里层的小列表,小列表进行变化,新开辟的列表里存放就是小列表中的内存地址.在去查看的时候就有变动
 
@@ -709,7 +709,7 @@ lst2 = copy.deepcopy(lst)
 
 ```
 
-![image-20190624172845500](https://guobaoyuan.gitee.io/new_book/assets/image-20190624172845500.png)
+![image-20190624172845500](Python笔记.assets/image-20190624172845500.png)
 
 我们通过上图可以发现浅拷贝和深拷贝在最后列表的位置内存地址不一样,深拷贝是自己单独开辟了一个新的空间,我们现在修改原列表和新开辟的列表没有任何影响.
 
@@ -1274,7 +1274,7 @@ print(a)    # a不存在了已经..
 
   　　1. 内置命名空间
 
-  　　2. 全局命名空间
+    　　2. 全局命名空间
 
  　　3. 局部命名空间(函数被执行的时候)
 
@@ -1322,7 +1322,7 @@ def func():
 func()
 ```
 
-![img](https://guobaoyuan.gitee.io/new_book/assets/1-1548388202066.gif)
+![img](Python笔记.assets/1-1548388202066.gif)
 
 ### 四. 函数的嵌套
 
@@ -1339,7 +1339,7 @@ fun2()
 print(111)
 ```
 
-![1548388589142](https://guobaoyuan.gitee.io/new_book/assets/1548388589142.png)
+![1548388589142](Python笔记.assets/1548388589142.png)
 
 ```
 def fun2():   
@@ -1355,7 +1355,7 @@ print(555)
 
 ```
 
-![1548388743478](https://guobaoyuan.gitee.io/new_book/assets/1548388743478.png)
+![1548388743478](Python笔记.assets/1548388743478.png)
 
 ### 五 .gloabal、nonlocal
 
@@ -2121,7 +2121,7 @@ print(avg(120000))
 
 肯定有学生就会问，那么我的make_averager这个函数只是执行了一次，为什么series这个列表没有消失？反而还可以被调用三次呢？这个就是最关键的地方，也是闭包的精华所在。我给大家说一下这个原理，以图为证：
 
-![img](http://crm.pythonav.com/media/uploads/2019/04/12/IMAGE.PNG)
+![img](Python笔记.assets/IMAGE.PNG)
 
  上面被红色方框框起来的区域就是闭包，被蓝色圈起来的那个变量应该是make_averager()函数的局部变量，它应该是随着make_averager()函数的执行结束之后而消失。但是他没有，是因为此区域形成了闭包，series变量就变成了一个叫自由变量的东西，averager函数的作用域会延伸到包含自由变量series的绑定。也就是说，每次我调用avg对应的averager函数 时，都可以引用到这个自用变量series，这个就是闭包。
 
@@ -3873,7 +3873,7 @@ if __name__ == '__main__':
 
 当咱们导入同一个目录下的模块的时候就能够使用import成功,不是同一个目录下的导入就会报错
 
-![1](https://guobaoyuan.gitee.io/new_book/assets/1-3070560.gif)
+![1](Python笔记.assets/1-3070560.gif)
 
 上面的示例可以得知，引用模块也是按照一定规则进行引用的。
 
@@ -4632,7 +4632,7 @@ from bake.cmd import manage
 
 首先我们看一下，这个是我们之前的目录结构（简化版）：
 
-![image-20190808184433407](https://guobaoyuan.gitee.io/new_book/assets/image-20190808184433407.png)
+![image-20190808184433407](Python笔记.assets/image-20190808184433407.png)
 
 py文件的具体代码如下：
 
@@ -4769,15 +4769,15 @@ while flag:
 
 1. **程序配置.**
 
-![image-20190808183553328](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183553328.png)
+![image-20190808183553328](Python笔记.assets/image-20190808183553328-1580579834222.png)
 
 你项目中所有的有关文件的操作出现几处，都是直接写的register相对路径，如果说这个register注册表路径改变了，或者你改变了register注册表的名称，那么相应的这几处都需要一一更改，这样其实你就是把代码写死了，那么怎么解决？ 我要统一相同的路径，也就是统一相同的变量，在文件的最上面写一个变量指向register注册表的路径，代码中如果需要这个路径时，直接引用即可。
 
-![image-20190808183612322](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183612322.png)
+![image-20190808183612322](Python笔记.assets/image-20190808183612322.png)
 
 1. **划分文件**
 
-![image-20190808183637363](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183637363.png)
+![image-20190808183637363](Python笔记.assets/image-20190808183637363.png
 
 一个项目的函数不能只是这些，我们只是举个例子，这个小作业函数都已经这么多了，那么要是一个具体的实际的项目，函数会非常多，所以我们应该将这些函数进行分类，然后分文件而治。在这里我划分了以下几个文件：
 
@@ -4785,25 +4785,25 @@ while flag:
 
 类似于我们作业中的这个：
 
-![image-20190808183653259](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183653259.png)
+![image-20190808183653259](Python笔记.assets/image-20190808183653259-1580579918526.png)
 
 **common.py**:公共组件文件，这里面放置一些我们常用的公共组件函数，并不是我们核心逻辑的函数，而更像是服务于整个程序中的公用的插件，程序中需要即调用。比如我们程序中的装饰器auth，有些函数是需要这个装饰器认证的，但是有一些是不需要这个装饰器认证的，它既是何处需要何处调用即可。比如还有密码加密功能，序列化功能，日志功能等这些功能都可以放在这里。
 
-![image-20190808183706876](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183706876.png)
+![image-20190808183706876](Python笔记.assets/image-20190808183706876-1580579953237.png)
 
 **src.py**:这个文件主要存放的就是核心逻辑功能，你看你需要进行选择的这些核心功能函数，都应该放在这个文件中。
 
-![image-20190808183722810](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183722810.png)
+![image-20190808183722810](Python笔记.assets/image-20190808183722810.png)
 
 **start.py**:项目启动文件。你的项目需要有专门的文件启动，而不是在你的核心逻辑部分进行启动的，有人对这个可能不太理解，我为什么还要设置一个单独的启动文件呢？你看你生活中使用的所有电器基本都一个单独的启动按钮，汽车，热水器，电视，等等等等，那么为什么他们会单独设置一个启动按钮，而不是在一堆线路板或者内部随便找一个地方开启呢？ 目的就是放在显眼的位置，方便开启。你想想你的项目这么多py文件，如果src文件也有很多，那么到底哪个文件启动整个项目，你还得一个一个去寻找，太麻烦了，这样我把它单独拿出来，就是方便开启整个项目。
 
 那么我们写的项目开启整个项目的代码就是下面这段：
 
-![image-20190808183736591](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183736591.png)
+![image-20190808183736591](Python笔记.assets/image-20190808183736591.png)
 
 你把这些放置到一个文件中也可以，但是没有必要，我们只需要一个命令或者一个开启指令就行，就好比我们开启电视只需要让人很快的找到那个按钮即可，对于按钮后面的一些复杂的线路板，我们并不关心，所以我们要将上面这个段代码整合成一个函数，开启项目的''按钮''就是此函数的执行即可。
 
-![image-20190808183749056](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183749056.png)
+![image-20190808183749056](Python笔记.assets/image-20190808183749056.png)
 
 这个按钮要放到启动文件start.py里面。
 
@@ -4817,7 +4817,7 @@ while flag:
 
 你的文本数据库register这个只是一个注册表，如果你还有个人信息表，记录表呢？ 如果是这样，你的整个项目也是非常凌乱的：
 
-![image-20190808183851177](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183851177.png)
+![image-20190808183851177](Python笔记.assets/image-20190808183851177.png)
 
 **3. 划分具体目录**
 
@@ -4837,7 +4837,7 @@ while flag:
 
 所以，我认为，保持一个层次清晰的目录结构是有必要的。更何况组织一个良好的工程目录，其实是一件很简单的事儿。
 
-![image-20190808183906562](https://guobaoyuan.gitee.io/new_book/assets/image-20190808183906562.png)
+![image-20190808183906562](Python笔记.assets/image-20190808183906562-1580580133319.png)
 
 上面那个图片就是较好的目录结构。
 
@@ -4849,7 +4849,7 @@ while flag:
 
 我们首先要配置启动文件，启动文件很简答就是将项目的启动执行放置start.py文件中，运行start.py文件可以成功启动项目即可。 那么项目的启动就是这个指令run() 我们把这个run()放置此文件中不就行了？
 
-![image-20190808184513416](https://guobaoyuan.gitee.io/new_book/assets/image-20190808184513416.png)
+![image-20190808184513416](Python笔记.assets/image-20190808184513416.png)
 
 这样你能执行这个项目么？肯定是不可以呀，你的starts.py根本就找不到run这个变量，肯定是会报错的。
 
@@ -4944,7 +4944,7 @@ register_path = r'D:\lnh.python\py project\teaching_show\blog\register'
 
 ```
 
-![image-20190808185147957](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185147957.png)
+![image-20190808185147957](Python笔记.assets/image-20190808185147957.png)
 
 但是你将这个变量放置在settings.py之后，你的程序启动起来是有问题，为什么？
 
@@ -4956,7 +4956,7 @@ NameError: name 'register_path' is not defined
 
 因为主逻辑src中找不到register_path这个路径了，所以会报错，那么我们解决方式就是在src主逻辑中引用settings.py文件中的register_path就可以了。
 
-![image-20190808185220737](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185220737.png)
+![image-20190808185220737](Python笔记.assets/image-20190808185220737.png)
 
 这里引发一个问题：为什么你这样写就可以直接引用settings文件呢？我们在starts文件中已经说了，刚已启动blog文件时，我们手动将blog的路径添加到sys.path中了，这就意味着，我在整个项目中的任何py文件，都可以引用到blog项目目录下面的任何目录：bin,conf,core,db,lib,log这几个，所以，刚才我们引用settings文件才是可以的。
 
@@ -4964,17 +4964,17 @@ NameError: name 'register_path' is not defined
 
 接下来，我们要配置我们的公共组件文件，在我们这个项目中，装饰器就是公共组件的工具，我们要把装饰器这个工具配置到common.py文件中。先把装饰器代码剪切到common.py文件中。这样直接粘过来，是有各种问题的：
 
-![image-20190808185244851](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185244851.png)
+![image-20190808185244851](Python笔记.assets/image-20190808185244851.png)
 
 所以我们要在common.py文件中引入src文件的这两个变量。
 
-![image-20190808185313895](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185313895.png)
+![image-20190808185313895](Python笔记.assets/image-20190808185313895.png)
 
 可是你的src文件中使用了auth装饰器，此时你的auth装饰器已经移动位置了，所以你要在src文件中引用auth装饰器，这样才可以使用上
 
-![image-20190808185333682](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185333682.png)
+![image-20190808185333682](Python笔记.assets/image-20190808185333682.png)
 
-![image-20190808185348147](https://guobaoyuan.gitee.io/new_book/assets/image-20190808185348147.png)
+![image-20190808185348147](Python笔记.assets/image-20190808185348147.png)
 
 OK，这样你就算是将你之前写的模拟博客园登录的作业按照规范化目录结构合理的完善完成了，最后还有一个关于README文档的书写。
 
@@ -5306,7 +5306,7 @@ OK，这样你就算是将你之前写的模拟博客园登录的作业按照规
 
 - 一般来讲：我们把进程用来分配资源，线程用来具体执行（CPU调度）
 
-  ![image-20200102211619891](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20200102211619891.png)
+  ![image-20200102211619891](Python笔记.assets/image-20200102211619891.png)
 
 - python的thread模块是比较底层的模块，在各个操作系统中表现形式不同（低级模块）
 
@@ -5520,7 +5520,7 @@ if __name__ == '__main__':
 
 - 主机号0，255两个数不能使用（网络号，广播地址）
 
-  ![image-20191231115510702](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231115510702.png)
+  ![image-20191231115510702](Python笔记.assets/image-20191231115510702.png)
 
 - A类IP地址由1字节的网络地址和3字节的主机地址组成，网络地址的最高位必须是’0‘，地址范围1.0.0.1—126.255.255.254 可用的A类网络有126个，每个网络能容纳1677214个主机
 
@@ -5566,7 +5566,7 @@ if __name__ == '__main__':
 
 - 显然不能只靠IP地址，因为IP地址与网络服务的关系是一对多的关系。实际上是通过‘ip地址+端口号‘来区分不同的服务的。
 
-  ![image-20191231121448458](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231121448458.png)
+  ![image-20191231121448458](Python笔记.assets/image-20191231121448458.png)
 
 - 端口号是一个数字，只有整数，范围是从0到65535 （分为知名和动态两种）
 
@@ -5610,7 +5610,7 @@ if __name__ == '__main__':
     - 表示层
     - 应用层
 
-  ![image-20191231152654362](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231152654362.png)
+  ![image-20191231152654362](Python笔记.assets/image-20191231152654362.png)
 
 - 在早期，不同的公司都推出了属于自己的私有网络协议，相互之间不能兼容
 
@@ -5624,7 +5624,7 @@ if __name__ == '__main__':
 
 - 于是，实际使用时，按4层划分（5层划分非官方）
 
-- ![image-20191231153402691](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231153402691.png)
+- ![image-20191231153402691](Python笔记.assets/image-20191231153402691.png)
 
 - OSI七层协议，是英文Open System Interconnect的缩写，中文翻译开放系统互联
 
@@ -5649,7 +5649,7 @@ if __name__ == '__main__':
 
 - Socket的英文愿义是’插孔’。通常也称作‘套接字’
 
-  ![image-20191231154310722](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231154310722.png)
+  ![image-20191231154310722](Python笔记.assets/image-20191231154310722.png)
 
 - Socket本质是编程接口（API）：Socket是对TCP/IP协议的封装，Socket只是个编程接口不是协议，通过Socket我们才能使用TCP/IP协议簇（程序员层面）
 
@@ -5778,11 +5778,11 @@ if __name__ == '__main__':
 
   如果信息没有绑定，每发送一次信息，系统会随机分配一个端口
 
-  ![image-20191231212602235](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231212602235.png)
+  ![image-20191231212602235](Python笔记.assets/image-20191231212602235.png)
 
 - 还要避免同一台计算机上的不同进程端口号相同的问题
 
-  ![image-20191231212643038](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20191231212643038.png)
+  ![image-20191231212643038](Python笔记.assets/image-20191231212643038.png)
 
   
 
@@ -5958,7 +5958,7 @@ if __name__ == '__main__':
 
   - 数据库 + 数据库管理系统 + 数据库应用程序 + 数据库管理员 + 最终用户
 
-    ![image-20200106202742869](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20200106202742869.png)
+    ![image-20200106202742869](Python笔记.assets/image-20200106202742869.png)
 
 #### 数据库的好处
 
@@ -6276,7 +6276,7 @@ if __name__ == '__main__':
 
   - 显示宽度和数据类型的取值范围是无关的（int unsigned）
 
-    ![image-20200109111333805](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20200109111333805.png)
+    ![image-20200109111333805](Python笔记.assets/image-20200109111333805.png)
 
 #### 小数
 
@@ -6284,7 +6284,7 @@ if __name__ == '__main__':
 
 - MySQL中使用浮点数和定点数来表示小数。它们都可以用（m，n）来表示，其中m称为精度，表示总共的位数；n称为标度，是表示小数的位数（四舍五入）
 
-  ![image-20200109111640820](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20200109111640820.png)
+  ![image-20200109111640820](Python笔记.assets/image-20200109111640820.png)
 
 #### 日期
 
@@ -6294,7 +6294,7 @@ if __name__ == '__main__':
 
 - 插入值时 values （now（））代表当前时间
 
-  ![image-20200109111954576](C:\Users\MrAme\AppData\Roaming\Typora\typora-user-images\image-20200109111954576.png)
+  ![image-20200109111954576](Python笔记.assets/image-20200109111954576.png)
 
   ```mysql
   create table t_5(
@@ -7110,16 +7110,6 @@ UPDATE t_user SET birthday = NOW() WHERE uname = '吕布'
 #### 1 缩进错误
 
 #### 2 键错误
-
-
-
-
-
-
-
-
-
-
 
 
 
