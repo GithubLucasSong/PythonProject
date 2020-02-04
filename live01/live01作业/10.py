@@ -63,7 +63,7 @@ elif int(cardtype) == 2:
             ccard.deposit(int(data))
         elif int(data) == 2:
             data = input('请输入金额')
-            ccard.draw(int(data))
+            ccard.draw(int(data))l
 
 
 
