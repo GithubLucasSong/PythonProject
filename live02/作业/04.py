@@ -1,6 +1,6 @@
 # 4.
 # 下列选项中，与class
-# Person等价的是（A）。
+# Person等价的是（c）。
 #
 # A.
 #
