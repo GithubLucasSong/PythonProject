@@ -12,6 +12,7 @@ def func1(name):
 
 
 if __name__ == '__main__':
+    print(names)
     for i in range(20):
         names['p'+str(i)] = Process(target=func1,args=(f"p{i}",))
         lis.append(names['p'+str(i)])
