@@ -3,7 +3,7 @@ import pygame
 import time
 
 s = socket(AF_INET,SOCK_STREAM)
-ser_addr = ('192.168.14.153',5268)
+ser_addr = ('192.168.1.7',5268)
 s.connect(ser_addr)
 redata = s.recv(1024)
 if len(redata):

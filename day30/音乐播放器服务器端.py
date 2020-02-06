@@ -28,7 +28,7 @@ def new_thread(new_socket,new_addr):
 def main():
     ser_socket = socket(AF_INET,SOCK_STREAM)
     ser_socket.setsockopt(SOL_SOCKET, SO_REUSEADDR , 1)
-    ser_addr = ('192.168.14.153',5268)
+    ser_addr = ('',5268)
     ser_socket.bind(ser_addr)
     ser_socket.listen(5)
     try:
