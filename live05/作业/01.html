@@ -1,0 +1,61 @@
+<!--1，实现全选/取消/反选按钮 （实在没有思路的话百度网盘有参考示例）-->
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" name="hobby" value="1" id="c1">唱
+<input type="checkbox" name="hobby" value="2" id="c2">跳
+<input type="checkbox" name="hobby" value="3" id="c3">rap
+<input type="checkbox" name="hobby" value="4" id="c4">篮球
+<input type="button" value="全选" id="b1">
+<input type="button" value="取消" id="b2">
+<input type="button" value="反选" id="b3">
+
+</body>
+<script src="..\..\..\jquery.js"></script>
+
+<script>
+    $("#b1").click(function () {
+        $("[type='checkbox']").prop("checked",true);
+
+    });
+
+    $("#b2").click(function () {
+        $("[type='checkbox']").prop("checked",false);
+
+    });
+
+    $('#b3').click(function () {
+        if($('#c1').prop('checked')==false){$('#c1').prop('checked',true)}
+        else if($('#c1').prop('checked')==true){$('#c1').prop('checked',false)}
+
+        if($('#c2').prop('checked')==false){$('#c2').prop('checked',true)}
+        else if($('#c2').prop('checked')==true){$('#c2').prop('checked',false)}
+
+        if($('#c3').prop('checked')==false){$('#c3').prop('checked',true)}
+        else if($('#c3').prop('checked')==true){$('#c3').prop('checked',false)}
+
+        if($('#c4').prop('checked')==false){$('#c4').prop('checked',true)}
+        else if($('#c4').prop('checked')==true){$('#c4').prop('checked',false)}
+
+    });
+
+    // $("#b3").click(function () {
+    //     var all_inp = $('[type="checkbox"]');
+    //     for (var i=0;i<all_inp.length;i++){
+    //         var status = all_inp.eq(i).prop('checked');
+    //         if (status){
+    //             all_inp.eq(i).prop('checked',false);
+    //         }
+    //         else{
+    //             all_inp.eq(i).prop('checked',true);
+    //         }
+    //     }
+    // })
+</script>
+</html>
