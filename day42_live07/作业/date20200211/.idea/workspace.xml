@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f6ef6e8b-071e-4984-ae83-ec4c2770b10a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a12a1990-d76c-4c3f-9ee3-fa6028861626.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date20200211/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date20200211/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date20200211/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date20200211/wsgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/car1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/e45bcdea59448cd82360662a331409fc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/line0401.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/search1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imgs/search2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="app01_user: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1XdvC46KH8Bry3GHFhsTawMDAjE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python s28\DjangoProject\date20200211\static\imgs" />
+      <recent name="D:\Python s28\DjangoProject\date20200211\date20200211" />
+      <recent name="D:\Python s28\DjangoProject\date20200211\static" />
+      <recent name="D:\Python s28\DjangoProject\date20200211" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python s28\DjangoProject\date20200211\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="date20200211" type="Python.DjangoServer" factoryName="Django server">
+      <module name="date20200211" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="date20200211.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f6ef6e8b-071e-4984-ae83-ec4c2770b10a" name="Default Changelist" comment="" />
+      <created>1581388654575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581388654575</updated>
+      <workItem from="1581388656462" duration="2614000" />
+      <workItem from="1581404460156" duration="6634000" />
+      <workItem from="1581432952675" duration="3979000" />
+      <workItem from="1581437379304" duration="19000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581435019092">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="233" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1581435019092" />
+    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581436449360">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581436449360" />
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom" timestamp="1581437397266">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
+    <state width="1238" height="136" key="GridCell.Tab.0.center" timestamp="1581437397266">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="136" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
+    <state width="1238" height="136" key="GridCell.Tab.0.left" timestamp="1581437397266">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="136" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
+    <state width="1238" height="136" key="GridCell.Tab.0.right" timestamp="1581437397266">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="136" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
+    <state width="214" height="477" key="HiddenNamespacesPopup" timestamp="1581433670858">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="214" height="477" key="HiddenNamespacesPopup/0.0.1280.760@0.0.1280.760" timestamp="1581433670858" />
+    <state x="371" y="188" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1581435328341">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="371" y="188" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1280.760@0.0.1280.760" timestamp="1581435328341" />
+    <state x="336" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1581432954161">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="336" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1581432954161" />
+  </component>
+</project>
