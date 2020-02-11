@@ -2,54 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6ef6e8b-071e-4984-ae83-ec4c2770b10a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a12a1990-d76c-4c3f-9ee3-fa6028861626.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/date20200211/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/date20200211/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/date20200211/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/date20200211/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/car1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/e45bcdea59448cd82360662a331409fc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/line0401.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/search1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/imgs/search2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/signin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +140,7 @@
       <workItem from="1581404460156" duration="6634000" />
       <workItem from="1581432952675" duration="3979000" />
       <workItem from="1581437379304" duration="19000" />
+      <workItem from="1581438613711" duration="426000" />
     </task>
     <servers />
   </component>
