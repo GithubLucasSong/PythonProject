@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c10d223e-81d9-4f4d-b2d6-dae9cb707c6e" name="Default Changelist" comment="" />
+    <list default="true" id="c10d223e-81d9-4f4d-b2d6-dae9cb707c6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/bookmanager.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publisher_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publisher_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_list.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +57,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1XhHJYbuNc7U4QMMeKfXgqCz19g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -62,7 +72,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/bootstrap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -106,12 +116,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:bookmanager@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -130,7 +135,9 @@
       <updated>1581491334069</updated>
       <workItem from="1581491342610" duration="310000" />
       <workItem from="1581491753874" duration="5034000" />
-      <workItem from="1581501703726" duration="8595000" />
+      <workItem from="1581501703726" duration="8803000" />
+      <workItem from="1581517471175" duration="1043000" />
+      <workItem from="1581518613887" duration="43000" />
     </task>
     <servers />
   </component>
@@ -142,30 +149,30 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="468" y="30" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1581492419020" />
-    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581494156721">
+    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581517010384">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581494156721" />
-    <state width="1238" height="218" key="GridCell.Tab.0.bottom" timestamp="1581516949663">
+    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581517010384" />
+    <state width="1238" height="218" key="GridCell.Tab.0.bottom" timestamp="1581518656689">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1581516949663" />
-    <state width="1238" height="218" key="GridCell.Tab.0.center" timestamp="1581516949663">
+    <state width="1238" height="218" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1581518656689" />
+    <state width="1238" height="218" key="GridCell.Tab.0.center" timestamp="1581518656689">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1581516949663" />
-    <state width="1238" height="218" key="GridCell.Tab.0.left" timestamp="1581516949663">
+    <state width="1238" height="218" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1581518656689" />
+    <state width="1238" height="218" key="GridCell.Tab.0.left" timestamp="1581518656689">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1581516949663" />
-    <state width="1238" height="218" key="GridCell.Tab.0.right" timestamp="1581516949663">
+    <state width="1238" height="218" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1581518656689" />
+    <state width="1238" height="218" key="GridCell.Tab.0.right" timestamp="1581518656689">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="218" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1581516949663" />
-    <state x="197" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1581501704093">
+    <state width="1238" height="218" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1581518656689" />
+    <state x="197" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1581517472967">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="197" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1581501704093" />
+    <state x="197" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1581517472967" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
