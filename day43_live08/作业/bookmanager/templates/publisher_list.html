@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<table class="table table-striped">
+
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>id</th>
+        <th>出版社名称</th>
+        <th>操作 <a href="/publisher_add">新增</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in all_publishers %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ i.id }}</td>
+            <td>{{ i.name }}</td>
+            <td>
+                <a href="/publisher_del/?pk={{i.pk}}">删除</a>
+                <a href="/publisher_edit/?pk={{i.pk}}">编辑</a>
+            </td>
+
+        </tr>
+    {% endfor %}
+
+
+
+    </tbody>
+</table>
+
+</body>
+</html>

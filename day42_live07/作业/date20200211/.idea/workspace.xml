@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6ef6e8b-071e-4984-ae83-ec4c2770b10a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/PythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Test/2020年2月12日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../day41_live06/作业/web/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day41_live06/作业/web/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../day41_live06/作业/web/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day41_live06/作业/web/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../day41_live06/作业/web/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../day41_live06/作业/web/web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../day41_live06/作业/web/web/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +73,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -140,7 +146,8 @@
       <workItem from="1581404460156" duration="6634000" />
       <workItem from="1581432952675" duration="3979000" />
       <workItem from="1581437379304" duration="19000" />
-      <workItem from="1581438613711" duration="426000" />
+      <workItem from="1581438613711" duration="4160000" />
+      <workItem from="1581494319606" duration="49000" />
     </task>
     <servers />
   </component>
@@ -152,26 +159,26 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="233" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1581435019092" />
-    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581436449360">
+    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581474593537">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581436449360" />
-    <state width="1238" height="136" key="GridCell.Tab.0.bottom" timestamp="1581437397266">
+    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581474593537" />
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom" timestamp="1581474600274">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
-    <state width="1238" height="136" key="GridCell.Tab.0.center" timestamp="1581437397266">
+    <state width="1238" height="136" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1581474600274" />
+    <state width="1238" height="136" key="GridCell.Tab.0.center" timestamp="1581474600273">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="136" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
-    <state width="1238" height="136" key="GridCell.Tab.0.left" timestamp="1581437397266">
+    <state width="1238" height="136" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1581474600273" />
+    <state width="1238" height="136" key="GridCell.Tab.0.left" timestamp="1581474600273">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="136" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
-    <state width="1238" height="136" key="GridCell.Tab.0.right" timestamp="1581437397266">
+    <state width="1238" height="136" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1581474600273" />
+    <state width="1238" height="136" key="GridCell.Tab.0.right" timestamp="1581474600274">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="136" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1581437397266" />
+    <state width="1238" height="136" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1581474600274" />
     <state width="214" height="477" key="HiddenNamespacesPopup" timestamp="1581433670858">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
