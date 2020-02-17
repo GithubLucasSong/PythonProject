@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>参数6,2</h1>
+{% load mytags %}
+<span>加法</span>:
+{{ 6|add:2 }}
+<br>
+<span>减法</span>:
+{{ 6|subtract:2 }}
+<br>
+<span>乘法</span>:
+{{ 6|multiply:2 }}
+<br>
+<span>除法</span>:
+{{ 6|divide:2 }}
+<br>
+{{ '百度'|show_a:'www.baidu.com'|safe }}
+
+
+</body>
+</html>
