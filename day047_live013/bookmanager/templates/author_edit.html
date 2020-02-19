@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block main %}
+<h2 class="sub-header">修改作者</h2>
+            <div class="table-responsive">
+                <form action="" method="post" class="form-inline">
+                    <div class="{% if error %}form-group has-error{% endif %}" style="display: inline-block">
+                        {#                        <label for="d01">请输入要新增的作者姓名：</label>#}
+                        <input type="text" name="author_name" class="form-control" id="d01" placeholder={{author_obj.name}}>
+                    </div>
+                    <select name="book_all" id="" class="form-control" multiple>
+                        {% for book in book_all %}
+                            {% if book in author_obj.books.all %}
+                                <option selected value="{{ book.id }}">{{ book.name }}</option>
+                            {% else %}
+                                <option value="{{ book.id }}">{{ book.name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-default">提交</button>
+                    <h4>{{ error }}</h4>
+                </form>
+            </div>
+{% endblock %}
+{% block author_active %}
+    active
+{% endblock %}

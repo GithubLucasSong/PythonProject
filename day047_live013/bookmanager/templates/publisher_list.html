@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% block main %}
+    <h2 class="sub-header">出版社列表</h2><a class="btn btn-primary btn-block" href="/publisher_add">新增出版社</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>id</th>
+                <th>出版社名称</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in all_publishers %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" href="/publisher_del/?pk={{ i.pk }}">删除</a>
+                        <a class="btn btn-info btn-sm" href="/publisher_edit/?pk={{ i.pk }}">修改</a>
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+    {% load mytags %}
+    {% pagination 10 %}
+{% endblock %}
+{% block pub_active %}
+    active
+{% endblock %}
