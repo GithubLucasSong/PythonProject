@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block main %}
+    <h2 class="sub-header">修改书籍</h2>
+    <div class="table-responsive">
+        <form action="" method="post" class="form-inline">
+            <div class="{% if error %}form-group has-error{% endif %}" style="display: inline-block">
+                <label for="d01">请修改书籍的信息：</label>
+                <input type="text" name="book_name" class="form-control" id="d01"
+                       placeholder="{{ book_obj.name }}">
+            </div>
+            <select name="pub_all" id="" class="form-control">
+                {% for pub in pub_all %}
+                    {% if book_obj.publisher == pub %}
+                        <option selected value="{{ pub.pk }}">{{ pub.name }}</option>
+                    {% else %}
+                        <option value="{{ pub.pk }}">{{ pub.name }}</option>
+                    {% endif %}
+
+                {% endfor %}
+            </select>
+            <button class="btn btn-default">提交</button>
+            <h4>{{ error }}</h4>
+        </form>
+    </div>
+{% endblock %}
+{% block book_active %}
+    active
+{% endblock %}
