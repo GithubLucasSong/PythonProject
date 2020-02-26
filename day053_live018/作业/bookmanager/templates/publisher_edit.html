@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block main %}
+    <h2 class="sub-header">编辑出版社</h2>
+    <div class="table-responsive">
+        <form action="" method="post" class="form-inline">
+            <div class="{% if error %}form-group has-error{% endif %}" style="display: inline-block">
+                <label for="d01">请编辑出版社名称：</label>
+                <input type="text" name="pub_name" placeholder="{{ pub_obj.name }}" id="d01"
+                       class="form-control">
+            </div>
+            <button class="btn btn-default">提交</button>
+            <h4>{{ error }}</h4>
+        </form>
+    </div>
+{% endblock %}
+{% block pub_active %}
+    active
+{% endblock %}
