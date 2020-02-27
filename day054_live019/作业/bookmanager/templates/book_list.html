@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+{% block main %}
+    <h2 class="sub-header">书籍列表</h2><a class="btn btn-primary btn-block" href="{% url 'book_add' %}">新增书籍</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>书籍名称</th>
+                <th>出版社ID</th>
+                <th>出版社名称</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in all_books %}
+                <tr class="c{{i.pk}}">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.publisher.id }}</td>
+                    <td>{{ i.publisher.name }}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" id="{{ i.pk }}">删除</button>
+                        <a class="btn btn-info btn-sm" href="{% url 'book_edit' i.pk %}">修改</a>
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+    {% load mytags %}
+    {% pagination 10 %}
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script>
+    {% for i in all_books %}
+        $('#{{ i.pk }}').click(function () {
+            $.ajax({
+                    url: '/book_js_del/',
+                    type: 'post',
+                    data: {
+                        'book_id':{{ i.pk }},
+                    },
+                    success: function (data) {
+                        if (data=='OK'){
+                            {#alert(data);#}
+                            document.getElementsByClassName('c{{ i.pk }}')[0].remove()
+                        }
+
+                    }
+                }
+            )
+
+        })
+    {% endfor %}
+    </script>
+
+
+{% endblock %}
+
+{% block book_active %}
+    active
+{% endblock %}
+
