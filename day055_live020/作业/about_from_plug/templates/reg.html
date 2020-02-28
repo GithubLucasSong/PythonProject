@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+    <p>
+        <label for="{{ form_obj.user.id_for_label }}">{{ form_obj.user.label }}</label>
+        {{ form_obj.user }}
+        <span>{{ form_obj.user.errors.0 }}</span>
+    </p>
+
+    <p>
+        <label for="{{ form_obj.pwd.id_for_label }}">{{ form_obj.pwd.label }}</label>
+        {{ form_obj.pwd }}
+        <span>{{ form_obj.pwd.errors.0 }}</span>
+    </p>
+
+    <p>
+        <label for="{{ form_obj.re_pwd.id_for_label }}">{{ form_obj.re_pwd.label }}</label>
+        {{ form_obj.re_pwd }}
+        <span>{{ form_obj.re_pwd.errors.0 }}</span>
+    </p>
+
+    <p>
+        <label for="{{ form_obj.phone.id_for_label }}">{{ form_obj.phone.label }}</label>
+        {{ form_obj.phone }}
+        <span>{{ form_obj.phone.errors.0 }}</span>
+    </p>
+
+    <p>
+        <label for="{{ form_obj.name.id_for_label }}">{{ form_obj.name.label }}</label>
+        {{ form_obj.name }}
+        <span>{{ form_obj.name.errors.0 }}</span>
+    </p>
+
+    <p>
+        <label for="{{ form_obj.id.id_for_label }}">{{ form_obj.id.label }}</label>
+        {{ form_obj.id }}
+        <span>{{ form_obj.id.errors.0 }}</span>
+    </p>
+
+
+    <button class="btn btn-info btn-sm">注册</button>
+</form>
+</body>
+</html>
