@@ -1,0 +1,11 @@
+{% extends 'personal.html' %}
+{% block main %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>
+            <input type="text" name="article_detail" value="{{ article_obj.detail.content }}" style="height: 500px;width: 1000px">
+        </label>
+        <br>
+        <button>提交</button>
+    </form>
+{% endblock %}
