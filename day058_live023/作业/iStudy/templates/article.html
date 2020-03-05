@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block main %}
+    <div class="blog-header">
+        <h1 class="blog-title">{{ article_obj.title }}</h1>
+    </div>
+{% endblock %}
+
+{% block main1 %}
+    <p>{{ article_obj.detail.content |safe }}</p>
+
+{% endblock %}
+
+{% block main2 %}
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>评论内容</h4>
+        {% for comment in comment_all %}
+            <div class="comment">
+                <p style="font-size: 10px;">{{ comment.author.username }},{{ comment.time }}</p>
+                <p>{{ comment.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>发表评论</h4>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="comment">
+            <button>提交</button>
+        </form>
+    </div>
+{% endblock %}

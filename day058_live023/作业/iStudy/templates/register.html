@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>注册丨iStudy</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<body>
+<div class="register-container">
+    <h1>iStudy</h1>
+    <div class="connect">
+        <p>欢迎注册iStudy</p>
+    </div>
+    <form action="" method="post" id="registerForm" novalidate>
+        {% csrf_token %}
+        <div>
+            {{ form_obj.company }}
+        </div>
+        <div>
+            {% if form_obj.username.errors %}
+                <input type="text" name="username" placeholder="{{ form_obj.username.errors.0 }}" minlength="6"
+                       required="" id="id_username">
+            {% else %}
+                {{ form_obj.username }}
+            {% endif %}
+
+            {#            <span>{{ form_obj.username.errors.0 }}</span>#}
+        </div>
+        <div>
+            {% if form_obj.password.errors %}
+                <input type="text" name="password" placeholder="{{ form_obj.password.errors.0 }}" minlength="6"
+                       required="" id="id_username">
+            {% else %}
+                {{ form_obj.password }}
+            {% endif %}
+        </div>
+        <div>
+            {% if form_obj.re_password.errors %}
+                <input type="text" name="re_password" placeholder="{{ form_obj.re_password.errors.0 }}" minlength="6"
+                       required="" id="id_username">
+            {% else %}
+                {{ form_obj.re_password }}
+            {% endif %}
+        </div>
+        <div>
+            {% if form_obj.position.errors %}
+                <input type="text" name="position" placeholder="{{ form_obj.position.errors.0 }}" minlength="6"
+                       required="" id="id_username">
+            {% else %}
+                {{ form_obj.position }}
+            {% endif %}
+        </div>
+        <div>
+            {% if form_obj.phone.errors %}
+                <input type="text" name="phone" placeholder="{{ form_obj.phone.errors.0 }}" minlength="6" required=""
+                       id="id_username">
+            {% else %}
+                {{ form_obj.phone }}
+            {% endif %}
+        </div>
+
+
+        {#        'placeholder': '#}
+        {#        {% if form_obj.username.errors %}#}
+        {#            {{ form_obj.phone.errors.0 }}#}
+        {#        {% else %}#}
+        {#            请输入用户名#}
+        {#        {% endif %}#}
+        {#        '#}
+
+        <button id="submit" type="submit">注 册</button>
+    </form>
+    <a href={% url 'login' %}>
+        <button type="button" class="register-tis">已经有账号？</button>
+    </a>
+</div>
+</body>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/supersized.3.2.7.min.js' %}"></script>
+<script src="{% static 'js/supersized-init.js' %}"></script>
+{#<script src="{% static 'js/jquery.validate.min.js' %}"></script>#}
+
+</html>
