@@ -1,0 +1,32 @@
+{% extends 'personal.html' %}
+{% block main %}
+                <h2 class="sub-header">我发表的评论</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>评论内容</th>
+                            <th>评论的文章</th>
+                            <th>发表时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user_comment in user_comment_all %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ user_comment.content }}</td>
+                                <td><a href="{% url 'article' user_comment.article.pk%}">{{ user_comment.article.title }}</a></td>
+                                <td>{{ user_comment.time }}</td>
+                                <td>
+                                    <a class="btn btn-danger btn-sm" href="#">删除</a>
+                                    <a class="btn btn-info btn-sm" href="#">编辑</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% endblock %}
+{% block personal_comment %}active{% endblock %}
