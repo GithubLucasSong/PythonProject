@@ -71,12 +71,7 @@
                     </div><!-- /.blog-post -->
                 {% endfor %}
             {% endblock %}
-            <nav>
-                <ul class="pager">
-                    <li><a href="#">Previous</a></li>
-                    <li><a href="#">Next</a></li>
-                </ul>
-            </nav>
+            {{ page_html|safe }}
 
 
         </div><!-- /.blog-main -->

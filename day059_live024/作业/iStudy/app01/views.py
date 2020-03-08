@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect, reverse
 from app01 import models
 from app01.forms import RegFrom,ArticleForm,ArticleDetailForm
 import hashlib
+from utils.pagination import Pagination
 
 
 # Create your views here.
@@ -48,6 +49,9 @@ def logout(request):
 def index(request):
     # 查询所有的文章
     article_all = models.Article.objects.all()
+    page = Pagination(request, article_all.count(), 5)
+    article_all = article_all[page.start:page.end]
+    page_html = page.page_html
     # user_obj = models.User.objects.filter(username=request.session.get('username')).first()
     # is_login = request.session.get('is_login')
     # username = request.session.get('username')
@@ -122,6 +126,9 @@ def backend(request):
 
 def article_list(request):
     all_article = models.Article.objects.filter(author=request.user_obj)
+    page = Pagination(request,all_article.count(),5)
+    all_article = all_article[page.start:page.end]
+    page_html = page.page_html
     return render(request, 'article_list.html', locals())
 
 
@@ -158,62 +165,7 @@ def article_edit(request,pk):
 
 
 users = [{'name':f'alex-{i}','password':'123'} for i in range(1,446)]
+
 def user_list(request):
-    try:
-        page = int(request.GET.get('page',1))
-        if page <= 0:
-            page = 1
-    except Exception:
-        page = 1
-    print(page,type(page))
-    # 每页显示的数据条数
-    per_num = 10
-
-    # 总的页码数
-    total_num,more = divmod(len(users),per_num,)
-    if more:
-        total_num +=1
-    # 要显示的页码数
-    max_show = 11
-    half_show = max_show //2
-
-    if total_num <= max_show:
-        # 页码的起始值
-        page_start = 1
-        # 页码的终止值
-        page_end = total_num
-
-    else:
-        # 处理左边的极值
-        if page - half_show <= 0:
-            page_start = 1
-            page_end = max_show
-
-        elif page + half_show >= total_num:
-            page_start = total_num - max_show + 1
-            page_end = total_num
-
-        else:
-            # 页码的起始值
-            page_start = page - half_show
-            # 页码的终止值
-            page_end = page + half_show
-
-
-    page_list = []
-    page_list.append('<li><a href="?page={}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>'.format(page-1))
-    for i in range(page_start,page_end + 1):
-        if i == page:
-            page_list.append('<li class="active"><a href="?page={}">{}</a></li>'.format(i, i))
-        else:
-            page_list.append('<li><a href="?page={}">{}</a></li>'.format(i,i))
-    page_list.append(
-        '<li><a href="?page={}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>'.format(page + 1))
-
-    page_html = ''.join(page_list)
-
-
-    start = (page-1)*per_num
-    end = page*per_num
-
-    return render(request,'user_list.html',{'users':users[start:end],'total_num':range(page_start,page_end+1),'page_html':page_html})
+    page = Pagination(request,len(users))
+    return render(request,'user_list.html',{'users':users[page.start:page.end],'page_html':page.page_html})
