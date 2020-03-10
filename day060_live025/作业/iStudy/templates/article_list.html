@@ -1,0 +1,41 @@
+{% extends 'dashboard.html' %}
+{% block main %}
+    <h1>文章列表</h1>
+    <a class="btn btn-primary btn-sm" href="{% url 'article_add' %}"><i class="fa fa-plus"></i></a>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <td>序号</td>
+            <td>文章ID</td>
+            <td>文章标题</td>
+            <td>分类</td>
+            <td>创建时间</td>
+            <td>发布状态</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in article_all %}
+            <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ article.pk }}</td>
+            <td>{{ article.title }}</td>
+            <td>{{ article.category.title | default:'-' }}</td>
+            <td>{{ article.create_time }}</td>
+            <td>{{ article.show_publish_status|safe}}</td>
+{#            <td><a href="{% url 'article_edit' article.pk %}"><i class="fa fa-edit"></i></a></td>#}
+                {% load my_tags %}
+            <td><a href="{% reverse_url request 'article_edit' article.pk %}"><i class="fa fa-edit"></i></a></td>
+            </tr>
+
+        {% endfor %}
+        
+        </tbody>
+    </table>
+
+    {{ page_html|safe }}
+{% endblock %}
+
+{% block article_list_active %}
+    class="active"
+{% endblock %}

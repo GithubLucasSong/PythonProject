@@ -1,0 +1,33 @@
+{% extends 'dashboard.html' %}
+{% block main %}
+    <h1>分类列表</h1>
+    <a class="btn btn-primary btn-sm" href="{% url 'category_add' %}"><i class="fa fa-plus"></i></a>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <td>序号</td>
+            <td>分类ID</td>
+            <td>分类标题</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for category in category_all %}
+            <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ category.pk }}</td>
+            <td>{{ category.title }}</td>
+            <td><a href="{% url 'category_edit' category.pk %}"><i class="fa fa-edit"></i></a></td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+    {{ page_html|safe }}
+{% endblock %}
+
+{% block category_list_active %}
+    class="active"
+{% endblock %}
