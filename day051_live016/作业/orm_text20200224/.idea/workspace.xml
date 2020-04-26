@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f8068b0-3570-4973-9b15-0e99456ddece" name="Default Changelist" comment="" />
+    <list default="true" id="7f8068b0-3570-4973-9b15-0e99456ddece" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +47,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1YFrUniVHuStjTL6OwR4zLHUrgH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -54,6 +61,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -126,27 +134,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:orm_test20200224@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@34c3096b" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@38eefd9e" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:orm_test20200224@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@461c38f6" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:orm_test20200224@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@5e41eb2f" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:orm_test20200224@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@c5009af" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:orm_test20200224@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@13986607" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@279df3b9" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -166,6 +159,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582549201949</updated>
       <workItem from="1582549204491" duration="8024000" />
+      <workItem from="1583879713760" duration="708000" />
     </task>
     <servers />
   </component>
@@ -177,22 +171,22 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="233" y="42" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1582549946439" />
-    <state width="1238" height="190" key="GridCell.Tab.0.bottom" timestamp="1582557234686">
+    <state width="0" height="0" key="GridCell.Tab.0.bottom" timestamp="1583879734966">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1582557234686" />
-    <state width="1238" height="190" key="GridCell.Tab.0.center" timestamp="1582557234686">
+    <state width="0" height="0" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1583879734966" />
+    <state width="0" height="0" key="GridCell.Tab.0.center" timestamp="1583879734966">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1582557234686" />
-    <state width="1238" height="190" key="GridCell.Tab.0.left" timestamp="1582557234686">
+    <state width="0" height="0" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1583879734966" />
+    <state width="0" height="0" key="GridCell.Tab.0.left" timestamp="1583879734966">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1582557234686" />
-    <state width="1238" height="190" key="GridCell.Tab.0.right" timestamp="1582557234686">
+    <state width="0" height="0" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1583879734966" />
+    <state width="0" height="0" key="GridCell.Tab.0.right" timestamp="1583879734966">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1582557234686" />
+    <state width="0" height="0" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1583879734966" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/orm_text20200224$.coverage" NAME="作业 Coverage Results" MODIFIED="1582557186215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/orm_test" />

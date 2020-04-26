@@ -2,8 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8146b51a-cb35-4c97-b207-926dcd9932c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/2020年3月8日/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/Monaco.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/03.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/04.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/dongdiqiu_e991bad6a2fe51ffcdaf1db6d5cb0e36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月23日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月23日/02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/1.runTest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/10.生成测试报告.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/11. 将测试报告发邮件.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/2. 断言和main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/3. TestSuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/4.unittest.makeSuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/5.TestLoad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/ff_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/db/ff_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/ff_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/login/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/reg/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_parametrize.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月3日/0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/day051_live016.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day064_live003/tracer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day066_live005/作业/tracer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +63,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1XgdF7Mg0WtNI56urKU9m4T0dCb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,7 +72,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/2020年4月25日" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,7 +80,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Python.1">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python s28\PythonProject\Test\2020年3月17日" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日\scripts\index\db" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日\scripts\index" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in 01.py">
     <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -46,12 +99,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年2月12日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月23日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年2月12日/01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月23日/01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -60,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -68,12 +121,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年3月8日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月23日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年3月8日/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月23日/02.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +135,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="03" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,25 +143,64 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年3月8日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月22日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年3月8日/2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月22日/03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="04" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月22日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月22日/04.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in 01.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月26日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Test/2020年4月26日/01.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.1" />
-        <item itemvalue="Python.2" />
+        <item itemvalue="Python tests.Unittests in 01.py" />
+        <item itemvalue="Python.02 (1)" />
         <item itemvalue="Python.01" />
+        <item itemvalue="Python.04" />
+        <item itemvalue="Python.03" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +232,25 @@
       <workItem from="1583634940735" duration="240000" />
       <workItem from="1583744789950" duration="644000" />
       <workItem from="1583781830196" duration="1256000" />
+      <workItem from="1583879452626" duration="208000" />
+      <workItem from="1583975885823" duration="1204000" />
+      <workItem from="1583978175589" duration="1476000" />
+      <workItem from="1584257332615" duration="1066000" />
+      <workItem from="1584258804023" duration="115000" />
+      <workItem from="1584413943949" duration="949000" />
+      <workItem from="1584433575076" duration="1564000" />
+      <workItem from="1584556512856" duration="1231000" />
+      <workItem from="1585899812135" duration="284000" />
+      <workItem from="1585983281602" duration="17000" />
+      <workItem from="1585993460271" duration="2882000" />
+      <workItem from="1586066477377" duration="28000" />
+      <workItem from="1587565006612" duration="12249000" />
+      <workItem from="1587650190806" duration="8765000" />
+      <workItem from="1587862904106" duration="4667000" />
+      <workItem from="1587914450429" duration="2347000" />
+      <workItem from="1587917370177" duration="2831000" />
+      <workItem from="1587920261708" duration="2761000" />
+      <workItem from="1587923092878" duration="809000" />
     </task>
     <servers />
   </component>
@@ -147,30 +258,50 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1581813343045">
+    <state x="0" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587565758321">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1581813343045" />
-    <state width="1238" height="190" key="GridCell.Tab.0.bottom" timestamp="1583783689112">
+    <state x="0" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1587565758321" />
+    <state x="115" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587915990963">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1583783689112" />
-    <state width="1238" height="190" key="GridCell.Tab.0.center" timestamp="1583783689112">
+    <state x="115" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.760@0.0.1280.760" timestamp="1587915990963" />
+    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1587920191575">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1583783689112" />
-    <state width="1238" height="190" key="GridCell.Tab.0.left" timestamp="1583783689112">
+    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1587920191575" />
+    <state width="432" height="186" key="GridCell.Tab.0.bottom" timestamp="1587833101712">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1583783689112" />
-    <state width="1238" height="190" key="GridCell.Tab.0.right" timestamp="1583783689112">
+    <state width="432" height="186" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
+    <state width="432" height="186" key="GridCell.Tab.0.center" timestamp="1587833101712">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="190" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1583783689112" />
+    <state width="432" height="186" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
+    <state width="432" height="186" key="GridCell.Tab.0.left" timestamp="1587833101712">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="432" height="186" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
+    <state width="432" height="186" key="GridCell.Tab.0.right" timestamp="1587833101712">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="432" height="186" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
+    <state x="336" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1587923093726">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="336" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1587923093726" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonProject$01.coverage" NAME="01 Coverage Results" MODIFIED="1581476746662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年2月12日" />
+    <SUITE FILE_PATH="coverage/PythonProject$01.coverage" NAME="01 Coverage Results" MODIFIED="1587652810281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月23日" />
+    <SUITE FILE_PATH="coverage/PythonProject$02__1_.coverage" NAME="02 (1) Coverage Results" MODIFIED="1587659593432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月23日" />
+    <SUITE FILE_PATH="coverage/PythonProject$Unittests_in_01_py.coverage" NAME="Unittests in 01.py Coverage Results" MODIFIED="1587833099782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月26日" />
     <SUITE FILE_PATH="coverage/PythonProject$2.coverage" NAME="2 Coverage Results" MODIFIED="1583744823258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月8日" />
+    <SUITE FILE_PATH="coverage/PythonProject$0__1_.coverage" NAME="0 (1) Coverage Results" MODIFIED="1585997412379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月3日" />
+    <SUITE FILE_PATH="coverage/PythonProject$01__1_.coverage" NAME="01 (1) Coverage Results" MODIFIED="1587572115861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
     <SUITE FILE_PATH="coverage/PythonProject$1.coverage" NAME="1 Coverage Results" MODIFIED="1583781849925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月8日" />
+    <SUITE FILE_PATH="coverage/PythonProject$02.coverage" NAME="02 Coverage Results" MODIFIED="1587569194026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
+    <SUITE FILE_PATH="coverage/PythonProject$04.coverage" NAME="04 Coverage Results" MODIFIED="1587581533515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
+    <SUITE FILE_PATH="coverage/PythonProject$0.coverage" NAME="0 Coverage Results" MODIFIED="1584434018758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月17日" />
+    <SUITE FILE_PATH="coverage/PythonProject$03.coverage" NAME="03 Coverage Results" MODIFIED="1587579388232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
   </component>
 </project>
