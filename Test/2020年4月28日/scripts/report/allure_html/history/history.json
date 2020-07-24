@@ -1,0 +1,117 @@
+{
+  "31a7a91a214d43c880f0af5758dbd169" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2be81476614dd674",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588154415113,
+        "stop" : 1588154415708,
+        "duration" : 595
+      }
+    } ]
+  },
+  "dff2449a58932380454c49d88e11fc4e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9d1c14e6b6e980b2",
+      "status" : "skipped",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588055026109,
+        "stop" : 1588055026752,
+        "duration" : 643
+      }
+    } ]
+  },
+  "f0c302811f5ee7962fe64cbe6e9aba48" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5c6a7dee618a4ba2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588154409130,
+        "stop" : 1588154413897,
+        "duration" : 4767
+      }
+    } ]
+  },
+  "ef22d10a2795179037468b116c68ddb3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b6bf3a1b3a6ba263",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588154413900,
+        "stop" : 1588154414652,
+        "duration" : 752
+      }
+    } ]
+  },
+  "c7e3e383402087ebcce0e7a7ac63d400" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "de831ca59b5bc4ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588154415711,
+        "stop" : 1588154416262,
+        "duration" : 551
+      }
+    } ]
+  },
+  "1504d5215a16f214a49acf56198a5ed1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f2f5abbb57a51983",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588154414655,
+        "stop" : 1588154415110,
+        "duration" : 455
+      }
+    } ]
+  }
+}

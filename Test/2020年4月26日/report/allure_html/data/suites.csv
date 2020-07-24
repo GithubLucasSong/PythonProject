@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","0","scripts","test_allure","TestLogin","","","登录用例3",""
+"passed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","0","scripts","test_allure","TestRegister","","","注册用例2",""
+"passed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","0","scripts","test_allure","TestLogin","","","登录用例1",""
+"failed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","1","scripts","test_allure","TestRegister","","","注册用例3",""
+"failed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","0","scripts","test_allure","TestRegister","","","注册用例1",""
+"failed","Mon Apr 27 03:19:46 CST 2020","Mon Apr 27 03:19:46 CST 2020","0","scripts","test_allure","TestLogin","","","登录用例2",""

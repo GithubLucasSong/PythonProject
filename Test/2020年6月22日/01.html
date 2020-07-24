@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var method = 'GETDETAIL';
+    var param = {};
+    param.city = city;
+    param.type = type;
+    param.startTime = startTime;
+    param.endTime = endTime;
+    getServerData(method, param, function (obj) {
+        data = obj.data;
+        if (data.total > 0) {
+            dataAQI.splice(0, dataAQI.length);
+            dataPM25.splice(0, dataPM25.length);
+            dataPM10.splice(0, dataPM10.length);
+            dataCO.splice(0, dataCO.length);
+            dataNO2.splice(0, dataNO2.length);
+            dataO3.splice(0, dataO3.length);
+            dataSO2.splice(0, dataSO2.length);
+            dataRank.splice(0, dataRank.length);
+            for (i = 0; i < data.rows.length; i++) {
+                dataAQI.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].aqi)
+                });
+                dataPM25.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].pm2_5)
+                });
+                dataPM10.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].pm10)
+                });
+                dataCO.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseFloat((parseFloat(data.rows[i].co)).toFixed(2))
+                });
+                dataNO2.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].no2)
+                });
+                dataO3.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].o3)
+                });
+                dataSO2.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].so2)
+                });
+                dataRank.push({
+                    x: converTimeFormat(data.rows[i].time).getTime(),
+                    y: parseInt(data.rows[i].rank)
+                });
+            }
+            dataPolar = [calAvg(dataAQI), calAvg(dataPM25), calAvg(dataPM10), calAvg(dataSO2), calAvg(dataO3), calAvg(dataNO2)];
+            state++;
+            if (state >= 2) {
+                showCurrentTab();
+            }
+        }
+    }, 0.5);
+</script>
+</html>

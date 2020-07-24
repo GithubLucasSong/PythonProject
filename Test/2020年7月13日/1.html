@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    $.ajax({
+        url: '{% url 'register' %}',
+        type: 'POST',
+        data: $('#form').serialize(), //所有字段数据 + csrf token
+        dataType: 'JSON',
+        success: function (res) {
+            if (res.status) {
+                location.href = res.data;
+            } else {
+                console.log(res.error);
+                $.each(res.error, function (key, value) {
+                    $('#id_' + key).next().text(value[0]);
+                })
+            }
+
+
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+{
+  "uid" : "1e41c641ec4ca914",
+  "name" : "cnodejs项目",
+  "fullName" : "scripts.test_case#test_case",
+  "historyId" : "31a7a91a214d43c880f0af5758dbd169",
+  "time" : {
+    "start" : 1588065041619,
+    "stop" : 1588065042069,
+    "duration" : 450
+  },
+  "description" : "post /topic_collect/de_collect 取消主题",
+  "descriptionHtml" : "<p>post /topic_collect/de_collect 取消主题</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "post /topic_collect/de_collect 取消主题",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ad85815ea3850b6d",
+      "name" : "log",
+      "source" : "ad85815ea3850b6d.txt",
+      "type" : "text/plain",
+      "size" : 256
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "scripts"
+  }, {
+    "name" : "suite",
+    "value" : "test_case"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-F4FFJE92"
+  }, {
+    "name" : "thread",
+    "value" : "78380-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.test_case"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "item",
+    "value" : "{'case_num': 'cnodejs004', 'case_title': 'cnodejs项目', 'case_description': 'post /topic_collect/de_collect 取消主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/de_collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1588d023cd44614",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588064897176,
+        "stop" : 1588064898703,
+        "duration" : 1527
+      }
+    }, {
+      "uid" : "c9612b79655ffb95",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588064791969,
+        "stop" : 1588064792435,
+        "duration" : 466
+      }
+    }, {
+      "uid" : "d2fdfe3dee9f458d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588061760189,
+        "stop" : 1588061760757,
+        "duration" : 568
+      }
+    }, {
+      "uid" : "98e502a94934eaf8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588061644209,
+        "stop" : 1588061644948,
+        "duration" : 739
+      }
+    }, {
+      "uid" : "92013e96c98fe06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588061592614,
+        "stop" : 1588061593596,
+        "duration" : 982
+      }
+    }, {
+      "uid" : "fee9cc054192449a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588060440564,
+        "stop" : 1588060441452,
+        "duration" : 888
+      }
+    }, {
+      "uid" : "dd7cd0bd8829c98b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588060265208,
+        "stop" : 1588060265695,
+        "duration" : 487
+      }
+    }, {
+      "uid" : "eee6a419fa67bac0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588060074189,
+        "stop" : 1588060075036,
+        "duration" : 847
+      }
+    }, {
+      "uid" : "4c09c84327a2d08f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588059714338,
+        "stop" : 1588059715953,
+        "duration" : 1615
+      }
+    }, {
+      "uid" : "16ff96fa12b60bfe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588058992181,
+        "stop" : 1588058993270,
+        "duration" : 1089
+      }
+    }, {
+      "uid" : "675e4d600eb2ada0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588058426183,
+        "stop" : 1588058426677,
+        "duration" : 494
+      }
+    }, {
+      "uid" : "2c412ac5aa4162bc",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588058298358,
+        "stop" : 1588058298815,
+        "duration" : 457
+      }
+    }, {
+      "uid" : "8444e9564dca5726",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588057987921,
+        "stop" : 1588057990537,
+        "duration" : 2616
+      }
+    }, {
+      "uid" : "2f7e5526e41235f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588057675522,
+        "stop" : 1588057677350,
+        "duration" : 1828
+      }
+    }, {
+      "uid" : "7f7170fe32035f69",
+      "status" : "passed",
+      "time" : {
+        "start" : 1588057652511,
+        "stop" : 1588057655905,
+        "duration" : 3394
+      }
+    }, {
+      "uid" : "268e07cdb357246e",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert False == 'False'\n +  where 'False' = <built-in method capitalize of str object at 0x000001D135FF0FB0>()\n +    where <built-in method capitalize of str object at 0x000001D135FF0FB0> = 'false'.capitalize",
+      "time" : {
+        "start" : 1588057571407,
+        "stop" : 1588057572430,
+        "duration" : 1023
+      }
+    }, {
+      "uid" : "9dbd6c9e7cea7633",
+      "status" : "broken",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588056532387,
+        "stop" : 1588056532988,
+        "duration" : 601
+      }
+    }, {
+      "uid" : "7d5bb927a98b62e5",
+      "status" : "broken",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588056442793,
+        "stop" : 1588056443604,
+        "duration" : 811
+      }
+    }, {
+      "uid" : "8d7d1955a1206d42",
+      "status" : "broken",
+      "statusDetails" : "TypeError: dump() missing 1 required positional argument: 'fp'",
+      "time" : {
+        "start" : 1588056132143,
+        "stop" : 1588056132595,
+        "duration" : 452
+      }
+    }, {
+      "uid" : "8d7ac7cf3d5649b8",
+      "status" : "broken",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588055898899,
+        "stop" : 1588055900124,
+        "duration" : 1225
+      }
+    }, {
+      "uid" : "b9a6bf666fa74672",
+      "status" : "broken",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588055842649,
+        "stop" : 1588055843111,
+        "duration" : 462
+      }
+    }, {
+      "uid" : "7027f2edbd220974",
+      "status" : "skipped",
+      "statusDetails" : "TypeError: string indices must be integers",
+      "time" : {
+        "start" : 1588055161638,
+        "stop" : 1588055162137,
+        "duration" : 499
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1e41c641ec4ca914.json",
+  "parameterValues" : [ "{'case_num': 'cnodejs004', 'case_title': 'cnodejs项目', 'case_description': 'post /topic_collect/de_collect 取消主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/de_collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}" ]
+}

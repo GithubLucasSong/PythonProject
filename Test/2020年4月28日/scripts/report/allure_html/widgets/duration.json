@@ -1,0 +1,61 @@
+[ {
+  "uid" : "2be81476614dd674",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588154415113,
+    "stop" : 1588154415708,
+    "duration" : 595
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c6a7dee618a4ba2",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588154409130,
+    "stop" : 1588154413897,
+    "duration" : 4767
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b6bf3a1b3a6ba263",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588154413900,
+    "stop" : 1588154414652,
+    "duration" : 752
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9d1c14e6b6e980b2",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588055026109,
+    "stop" : 1588055026752,
+    "duration" : 643
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "f2f5abbb57a51983",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588154414655,
+    "stop" : 1588154415110,
+    "duration" : 455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "de831ca59b5bc4ba",
+  "name" : "cnodejs项目",
+  "time" : {
+    "start" : 1588154415711,
+    "stop" : 1588154416262,
+    "duration" : 551
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

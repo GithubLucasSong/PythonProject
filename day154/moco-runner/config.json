@@ -1,0 +1,123 @@
+[
+  {
+    "description": "一个简单的get请求",
+    "request": {
+      "method": "get",
+      "uri": "/login"
+    },
+    "response": {
+      "text": "我是login get method",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "带参数的get请求，p1和p2是两个参数",
+    "request": {
+      "method": "get",
+      "uri": "/reg",
+      "queries": {
+        "p1": "v1",
+        "p2": "v2"
+      }
+    },
+    "response": {
+      "text": "reg get method",
+      "headers": {
+        "Content-Type": "text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "get请求返回json类型数据",
+    "request": {
+      "method": "get",
+      "uri": "/login_json"
+    },
+    "response": {
+      "json": {
+        "key": "value",
+        "请求方式是get": "相应结果为json类型",
+        "username":"张开",
+        "password":"1234",
+        "cookies": "xxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "post请求,请求参数为json格式，响应格式为json",
+    "request": {
+      "method": "post",
+      "uri": "/post_json",
+      "json": {
+        "login_status": "successful"
+      }
+    },
+    "response": {
+      "json": {
+        "login": "ok"
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "post请求，请求及响应都为json，并且请求带cookies",
+    "request": {
+      "method": "post",
+      "uri": "/post_cookie",
+      "json": {
+        "login_status": "successful"
+      },
+      "cookies": {
+        "user_id": "xsdaqawea"
+      }
+    },
+    "response": {
+      "json": {
+        "login": "ok"
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "post请求，请求及响应都为json，并且请求带cookies",
+    "request": {
+      "method": "post",
+      "uri": "/post_cookie",
+      "json": {
+        "login_status": "successful"
+      },
+      "cookies": {
+        "user_id": "xsdaqawea"
+      },
+      "headers":{
+        "Content-Type":"application/json"
+      }
+    },
+    "response": {
+      "json": {
+        "login": "ok"
+      },
+      "headers": {
+        "Content-Type": "application/json;charset=gbk"
+      }
+    }
+  },
+  {
+    "description":"重定向到指定网站",
+    "request":{
+      "method":"get",
+      "uri":"/login_redirect"
+    },
+    "redirectTo":"https://www.baidu.com"
+  }
+]
+

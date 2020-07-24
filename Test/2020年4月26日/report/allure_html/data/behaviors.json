@@ -1,0 +1,115 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "登录用例",
+    "children" : [ {
+      "name" : "登录用例1",
+      "children" : [ {
+        "name" : "登录用例1",
+        "uid" : "a8bbd52d11d61fdf",
+        "parentUid" : "7d7f28952e56fa93c04e5b27be7b22e4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786774,
+          "stop" : 1587928786774,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7d7f28952e56fa93c04e5b27be7b22e4"
+    }, {
+      "name" : "登录用例2",
+      "children" : [ {
+        "name" : "登录用例2",
+        "uid" : "9c98137557baff7b",
+        "parentUid" : "c1bb765eb0a177106f9014d048232752",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786776,
+          "stop" : 1587928786776,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c1bb765eb0a177106f9014d048232752"
+    }, {
+      "name" : "登录用例3",
+      "children" : [ {
+        "name" : "登录用例3",
+        "uid" : "8eaf5cd5cfb6a376",
+        "parentUid" : "07498631eba79d92bc63c8f9e8d824f7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786825,
+          "stop" : 1587928786825,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "07498631eba79d92bc63c8f9e8d824f7"
+    } ],
+    "uid" : "faa54caf55ab86ce567c76cec5f8e900"
+  }, {
+    "name" : "注册用例",
+    "children" : [ {
+      "name" : "注册用例1",
+      "children" : [ {
+        "name" : "注册用例1",
+        "uid" : "dd198b54654c09d9",
+        "parentUid" : "29bf101df4253640afe34104081254ae",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786827,
+          "stop" : 1587928786827,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "29bf101df4253640afe34104081254ae"
+    }, {
+      "name" : "注册用例2",
+      "children" : [ {
+        "name" : "注册用例2",
+        "uid" : "e858f4c1d7040d0a",
+        "parentUid" : "276eb213570524de7657e8cf12ab8158",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786832,
+          "stop" : 1587928786832,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "276eb213570524de7657e8cf12ab8158"
+    }, {
+      "name" : "注册用例3",
+      "children" : [ {
+        "name" : "注册用例3",
+        "uid" : "2a72eb5182d63d9f",
+        "parentUid" : "e0d83ffa39ef4770ff6e0d2645d58ad0",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786833,
+          "stop" : 1587928786834,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e0d83ffa39ef4770ff6e0d2645d58ad0"
+    } ],
+    "uid" : "011145467a99caa317dd0174b6042684"
+  } ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id ='app'>
+    <h2>{{msg}}</h2>
+    <h2 v-show="status===1">{{msg}}</h2>
+    <h2 v-show="status===0">{{msg}}</h2>
+    <button v-on:click="zouni">走你</button>
+    <button @click="zouni">走你</button>
+    <a v-bind:href="alink">百度</a>
+    <a :href="alink">百度</a>
+    <h1>{{price|tofix}}</h1>
+    <h1>{{com}}</h1>
+    <button @click="num++">num++</button>
+    <h1>{{num}}</h1>
+</div>
+
+</body>
+<script src="vue.js"></script>
+<script>
+    vm = new Vue({
+        el:'#app',
+        data(){
+            return{
+                status:1,
+                msg:'123',
+                alink:'https://www.baidu.com/',
+                price:99,
+                num:0
+            }
+        },
+        methods:{
+            zouni(){
+                this.msg = '456'
+            }
+        },
+        filters:{
+            tofix(value){
+                return value.toFixed(3)
+            }
+        },
+        computed:{
+            com(){
+                return this.price.toFixed(3)
+            }
+        },
+        watch:{
+            num(){
+                alert('num改变了')
+            }
+        }
+    })
+</script>
+</html>

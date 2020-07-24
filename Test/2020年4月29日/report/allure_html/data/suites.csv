@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 30 12:02:38 CST 2020","Thu Apr 30 12:02:38 CST 2020","21","scripts","test_case","","","","cookies_登录",""
+"passed","Thu Apr 30 12:02:38 CST 2020","Thu Apr 30 12:02:38 CST 2020","34","scripts","test_case","","","","token_登录",""
+"passed","Thu Apr 30 12:02:38 CST 2020","Thu Apr 30 12:02:38 CST 2020","21","scripts","test_case","","","","token_查询余额",""
+"passed","Thu Apr 30 12:02:28 CST 2020","Thu Apr 30 12:02:28 CST 2020","24","scripts","test_case","","","","cookies_查询余额",""

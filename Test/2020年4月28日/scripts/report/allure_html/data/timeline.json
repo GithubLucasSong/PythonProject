@@ -1,0 +1,95 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-F4FFJE92",
+    "children" : [ {
+      "name" : "175384-MainThread",
+      "children" : [ {
+        "name" : "cnodejs项目",
+        "uid" : "2be81476614dd674",
+        "parentUid" : "143416712f6303cb3af1f0367366e9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588154415113,
+          "stop" : 1588154415708,
+          "duration" : 595
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs004', 'case_title': 'cnodejs项目', 'case_description': 'post /topic_collect/de_collect 取消主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/de_collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}" ]
+      }, {
+        "name" : "cnodejs项目",
+        "uid" : "5c6a7dee618a4ba2",
+        "parentUid" : "143416712f6303cb3af1f0367366e9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588154409130,
+          "stop" : 1588154413897,
+          "duration" : 4767
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs001', 'case_title': 'cnodejs项目', 'case_description': 'get /topics 主题首页', 'case_url': 'https://cnodejs.org/api/v1/topics', 'case_method': 'get', 'case_params': '', 'case_expect': '{\"success\":\"true\"}', 'other': ''}" ]
+      }, {
+        "name" : "cnodejs项目",
+        "uid" : "b6bf3a1b3a6ba263",
+        "parentUid" : "143416712f6303cb3af1f0367366e9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588154413900,
+          "stop" : 1588154414652,
+          "duration" : 752
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs002', 'case_title': 'cnodejs项目', 'case_description': 'get /topic/:id 主题详情', 'case_url': 'https://cnodejs.org/api/v1/topic/5433d5e4e737cbe96dcef312', 'case_method': 'get', 'case_params': '', 'case_expect': '{\"success\":\"true\"}', 'other': ''}" ]
+      }, {
+        "name" : "cnodejs项目",
+        "uid" : "f2f5abbb57a51983",
+        "parentUid" : "143416712f6303cb3af1f0367366e9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588154414655,
+          "stop" : 1588154415110,
+          "duration" : 455
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs003', 'case_title': 'cnodejs项目', 'case_description': '/topic_collect/collect 收藏主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}" ]
+      }, {
+        "name" : "cnodejs项目",
+        "uid" : "de831ca59b5bc4ba",
+        "parentUid" : "143416712f6303cb3af1f0367366e9d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588154415711,
+          "stop" : 1588154416262,
+          "duration" : 551
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs005', 'case_title': 'cnodejs项目', 'case_description': '/user/:loginname 用户详情', 'case_url': 'https://cnodejs.org/api/v1/user/alsotang', 'case_method': 'get', 'case_params': '', 'case_expect': '{\"success\":\"true\"}', 'other': ''}" ]
+      } ],
+      "uid" : "143416712f6303cb3af1f0367366e9d9"
+    }, {
+      "name" : "88056-MainThread",
+      "children" : [ {
+        "name" : "cnodejs项目",
+        "uid" : "9d1c14e6b6e980b2",
+        "parentUid" : "cf1c42edfc12c861ebd5d42e11bfa299",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1588055026109,
+          "stop" : 1588055026752,
+          "duration" : 643
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'cnodejs006', 'case_title': 'cnodejs项目', 'case_description': '/message/mark_all 标记全部已读', 'case_url': 'https://cnodejs.org/api/v1/message/mark_all', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}" ]
+      } ],
+      "uid" : "cf1c42edfc12c861ebd5d42e11bfa299"
+    } ],
+    "uid" : "ae07505744e250fab418888395279752"
+  } ]
+}

@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 28 17:10:39 CST 2020","Tue Apr 28 17:10:41 CST 2020","1575","scripts","test_case","","","","cnodejs项目","get /topic/:id 主题详情"
+"passed","Tue Apr 28 17:10:41 CST 2020","Tue Apr 28 17:10:41 CST 2020","480","scripts","test_case","","","","cnodejs项目","/topic_collect/collect 收藏主题"
+"passed","Tue Apr 28 17:08:21 CST 2020","Tue Apr 28 17:08:22 CST 2020","885","scripts","test_case","","","","cnodejs项目","/message/mark_all 标记全部已读"
+"passed","Tue Apr 28 17:10:42 CST 2020","Tue Apr 28 17:10:43 CST 2020","1468","scripts","test_case","","","","cnodejs项目","/user/:loginname 用户详情"
+"passed","Tue Apr 28 17:10:41 CST 2020","Tue Apr 28 17:10:42 CST 2020","450","scripts","test_case","","","","cnodejs项目","post /topic_collect/de_collect 取消主题"
+"passed","Tue Apr 28 17:10:38 CST 2020","Tue Apr 28 17:10:39 CST 2020","1546","scripts","test_case","","","","cnodejs项目","get /topics 主题首页"

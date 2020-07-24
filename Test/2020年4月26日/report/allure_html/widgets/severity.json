@@ -1,0 +1,61 @@
+[ {
+  "uid" : "8eaf5cd5cfb6a376",
+  "name" : "登录用例3",
+  "time" : {
+    "start" : 1587928786825,
+    "stop" : 1587928786825,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a8bbd52d11d61fdf",
+  "name" : "登录用例1",
+  "time" : {
+    "start" : 1587928786774,
+    "stop" : 1587928786774,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "dd198b54654c09d9",
+  "name" : "注册用例1",
+  "time" : {
+    "start" : 1587928786827,
+    "stop" : 1587928786827,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "blocker"
+}, {
+  "uid" : "e858f4c1d7040d0a",
+  "name" : "注册用例2",
+  "time" : {
+    "start" : 1587928786832,
+    "stop" : 1587928786832,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "minor"
+}, {
+  "uid" : "2a72eb5182d63d9f",
+  "name" : "注册用例3",
+  "time" : {
+    "start" : 1587928786833,
+    "stop" : 1587928786834,
+    "duration" : 1
+  },
+  "status" : "failed",
+  "severity" : "minor"
+}, {
+  "uid" : "9c98137557baff7b",
+  "name" : "登录用例2",
+  "time" : {
+    "start" : 1587928786776,
+    "stop" : 1587928786776,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,56 @@
+{
+  "uid" : "5171a072624740d8",
+  "name" : "test_case[item3]",
+  "fullName" : "scripts.test_case#test_case",
+  "historyId" : "31a7a91a214d43c880f0af5758dbd169",
+  "time" : {
+    "start" : 1588054343858,
+    "stop" : 1588054343858,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "KeyError: 'status'",
+  "statusTrace" : "item = {'case_description': 'post /topic_collect/de_collect 取消主题', 'case_expect': '{\"success\":\"false\"}', 'case_method': 'post', 'case_num': 'cnodejs004', ...}\n\n    @pytest.mark.parametrize('item', l)\n    def test_case(item):\n>       print(item['status'])\nE       KeyError: 'status'\n\ntest_case.py:47: KeyError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "scripts"
+  }, {
+    "name" : "suite",
+    "value" : "test_case"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-F4FFJE92"
+  }, {
+    "name" : "thread",
+    "value" : "87128-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.test_case"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "item",
+    "value" : "{'case_num': 'cnodejs004', 'case_title': 'cnodejs项目', 'case_description': 'post /topic_collect/de_collect 取消主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/de_collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5171a072624740d8.json",
+  "parameterValues" : [ "{'case_num': 'cnodejs004', 'case_title': 'cnodejs项目', 'case_description': 'post /topic_collect/de_collect 取消主题', 'case_url': 'https://cnodejs.org/api/v1/topic_collect/de_collect', 'case_method': 'post', 'case_params': '', 'case_expect': '{\"success\":\"false\"}', 'other': '咱们没有用户 accessToken，所以返回为false就算对'}" ]
+}

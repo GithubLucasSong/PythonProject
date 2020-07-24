@@ -1,0 +1,84 @@
+{
+  "uid" : "a10940eeb8ed9181",
+  "name" : "token_查询余额",
+  "fullName" : "scripts.test_case#test_case",
+  "historyId" : "ef22d10a2795179037468b116c68ddb3",
+  "time" : {
+    "start" : 1588219348445,
+    "stop" : 1588219348505,
+    "duration" : 60
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_Module__pytest_setup_module",
+    "time" : {
+      "start" : 1588219348387,
+      "stop" : 1588219348387,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_Module__pytest_setup_module::0",
+    "time" : {
+      "start" : 1588219348571,
+      "stop" : 1588219352629,
+      "duration" : 4058
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "scripts"
+  }, {
+    "name" : "suite",
+    "value" : "test_case"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-F4FFJE92"
+  }, {
+    "name" : "thread",
+    "value" : "175452-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.test_case"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "item",
+    "value" : "{'case_num': 'neeo_002', 'title': 'token_查询余额', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/query2', 'method': 'get', 'params': '{\"userName\": \"admin\"}', 'data': '', 'json': '', 'cookies': '', 'headers': '{\"testfan-token\": \"${neeo_001>data>data}$\"}', 'except': '{\"code\":0}'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a10940eeb8ed9181.json",
+  "parameterValues" : [ "{'case_num': 'neeo_002', 'title': 'token_查询余额', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/query2', 'method': 'get', 'params': '{\"userName\": \"admin\"}', 'data': '', 'json': '', 'cookies': '', 'headers': '{\"testfan-token\": \"${neeo_001>data>data}$\"}', 'except': '{\"code\":0}'}" ]
+}

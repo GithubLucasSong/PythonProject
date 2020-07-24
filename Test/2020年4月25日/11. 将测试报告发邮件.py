@@ -50,7 +50,7 @@ def send_mail():
     mail_pass = "hrcjrrkrdzdabaej"  # 口令
     # 设置收件人和发件人
     sender = '1206180814@qq.com'
-    receivers = ['1206180814@qq.com', 'tingyuweilou@163.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+    receivers = ['', ]  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
 
     # 创建一个带附件的实例对象
     message = MIMEMultipart()

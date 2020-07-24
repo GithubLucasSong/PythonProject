@@ -1,0 +1,99 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "scripts",
+    "children" : [ {
+      "name" : "test_allure",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "登录用例1",
+          "uid" : "a8bbd52d11d61fdf",
+          "parentUid" : "4dbfa40e4a591a4dbccdd7717ac1697b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1587928786774,
+            "stop" : 1587928786774,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "登录用例2",
+          "uid" : "9c98137557baff7b",
+          "parentUid" : "4dbfa40e4a591a4dbccdd7717ac1697b",
+          "status" : "failed",
+          "time" : {
+            "start" : 1587928786776,
+            "stop" : 1587928786776,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "登录用例3",
+          "uid" : "8eaf5cd5cfb6a376",
+          "parentUid" : "4dbfa40e4a591a4dbccdd7717ac1697b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1587928786825,
+            "stop" : 1587928786825,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "4dbfa40e4a591a4dbccdd7717ac1697b"
+      }, {
+        "name" : "TestRegister",
+        "children" : [ {
+          "name" : "注册用例1",
+          "uid" : "dd198b54654c09d9",
+          "parentUid" : "2b72dcab83df888f7f1fc18183dd7972",
+          "status" : "failed",
+          "time" : {
+            "start" : 1587928786827,
+            "stop" : 1587928786827,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "注册用例2",
+          "uid" : "e858f4c1d7040d0a",
+          "parentUid" : "2b72dcab83df888f7f1fc18183dd7972",
+          "status" : "passed",
+          "time" : {
+            "start" : 1587928786832,
+            "stop" : 1587928786832,
+            "duration" : 0
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "注册用例3",
+          "uid" : "2a72eb5182d63d9f",
+          "parentUid" : "2b72dcab83df888f7f1fc18183dd7972",
+          "status" : "failed",
+          "time" : {
+            "start" : 1587928786833,
+            "stop" : 1587928786834,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "2b72dcab83df888f7f1fc18183dd7972"
+      } ],
+      "uid" : "57ab28882b0102eef0ca09f966517087"
+    } ],
+    "uid" : "af586ea5ffb1b57fad0f98a55a6d147c"
+  } ]
+}

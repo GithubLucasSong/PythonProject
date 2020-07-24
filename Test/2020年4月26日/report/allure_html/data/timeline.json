@@ -1,0 +1,91 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-F4FFJE92",
+    "children" : [ {
+      "name" : "19920-MainThread",
+      "children" : [ {
+        "name" : "登录用例3",
+        "uid" : "8eaf5cd5cfb6a376",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786825,
+          "stop" : 1587928786825,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "注册用例2",
+        "uid" : "e858f4c1d7040d0a",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786832,
+          "stop" : 1587928786832,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "登录用例1",
+        "uid" : "a8bbd52d11d61fdf",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "passed",
+        "time" : {
+          "start" : 1587928786774,
+          "stop" : 1587928786774,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "注册用例3",
+        "uid" : "2a72eb5182d63d9f",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786833,
+          "stop" : 1587928786834,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "注册用例1",
+        "uid" : "dd198b54654c09d9",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786827,
+          "stop" : 1587928786827,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "登录用例2",
+        "uid" : "9c98137557baff7b",
+        "parentUid" : "8bba6b72ef88a56e755e9e9523c94099",
+        "status" : "failed",
+        "time" : {
+          "start" : 1587928786776,
+          "stop" : 1587928786776,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8bba6b72ef88a56e755e9e9523c94099"
+    } ],
+    "uid" : "ae07505744e250fab418888395279752"
+  } ]
+}

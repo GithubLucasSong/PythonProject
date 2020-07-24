@@ -2,50 +2,155 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8146b51a-cb35-4c97-b207-926dcd9932c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/Monaco.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年3月17日/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月22日/dongdiqiu_e991bad6a2fe51ffcdaf1db6d5cb0e36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月23日/01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月23日/02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/1.runTest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/10.生成测试报告.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/11. 将测试报告发邮件.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/2. 断言和main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/3. TestSuite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/4.unittest.makeSuite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/5.TestLoad.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/ff_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/db/ff_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/index/ff_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/login/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月25日/scripts/reg/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_parametrize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/2020年4月3日/0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/day051_live016.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day064_live003/tracer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day066_live005/作业/tracer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/behaviors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/categories.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/packages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/suites.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/2a72eb5182d63d9f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/8eaf5cd5cfb6a376.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/9c98137557baff7b.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/a8bbd52d11d61fdf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/dd198b54654c09d9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/test-cases/e858f4c1d7040d0a.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/data/timeline.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/export/influxDbData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/export/mail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/export/prometheusData.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/history/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/history/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/history/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/history/history.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/history/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/plugins/behaviors/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/plugins/packages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/plugins/screen-diff/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/plugins/screen-diff/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/behaviors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/categories-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/categories.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/duration-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/duration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/environment.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/executors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/history-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/retry-trend.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/severity.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/status-chart.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/suites.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/allure_html/widgets/summary.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/report/assets/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_allure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_fixture.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_ordering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月26日/scripts/test_rerun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/001.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/002.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/003.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/004.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/scripts/test_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月28日/接口测试示例.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月29日/001.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月29日/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月29日/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月29日/scripts/test_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月29日/接口测试示例-2.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月30日/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月30日/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年4月30日/scripts/test_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/1.vue的简单使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/2.vue指令系统.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/3.vue指令系统之v-if和v-show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/4.vue指令系统之v-band.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/5.vue指令系统之v-on事件绑定.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月13日/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月26日/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/data/接口测试示例-2.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/scripts/test_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年5月3日/s28IT/start/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月16日/0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月16日/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月16日/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月17日/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月17日/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月17日/3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月17日/4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月17日/5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月18日/chaojiying.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/Server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/chaojiying.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/msedgedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/selenium模拟登陆12306.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/selenium爬取动态加载数据.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/多任务异步协程.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/多任务异步爬虫.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/多任务的异步爬虫案例.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/模拟登录12306.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/生产者消费者模式.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月20日/线程池.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月22日/01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月23日/etl_log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月23日/面试题.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年6月26日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月13日/0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月13日/1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月13日/db.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月15日/二叉树.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月15日/头部插入链表.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月15日/排序二叉树.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月15日/正向链表.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月16日/快速排序.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月16日/插入排序.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月16日/选择排序.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月16日/顺序查找.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月18日/0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月23日/00.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月23日/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月23日/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月5日/tcp客户端.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test/2020年7月5日/tcp服务端.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day136/wangyiPro/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day137/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day139/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day140/01.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day154/2-pytest回顾/2-pytest回顾.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day154/ddt/0.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day154/ddt/ddt使用.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day154/moco-runner/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day154/moco-runner/moco-runner-0.12.0-standalone.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/002 两数相加.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/007 整数反转.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/01 两数之和.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/097 交错字符串.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/3. 无重复字符的最长子串.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/PythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day051_live016/作业/orm_text20200224/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/2020年4月25日/11. 将测试报告发邮件.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/2020年4月25日/11. 将测试报告发邮件.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/2020年4月26日/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Test/2020年4月26日/pytest.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +160,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -62,6 +168,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="e7244311-a82b-4e5d-8709-e9e8826d2069" />
   <component name="ProjectId" id="1XgdF7Mg0WtNI56urKU9m4T0dCb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -70,27 +177,63 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/2020年4月25日" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Test/2020年7月23日" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Python s28\PythonProject\Test\2020年3月17日" />
+      <recent name="D:\Python s28\PythonProject\day154\ddt" />
+      <recent name="D:\Python s28\PythonProject\day136\wangyiPro" />
+      <recent name="D:\Python s28\PythonProject\day136\wangyiPro\wangyiPro\spiders" />
+      <recent name="D:\Python s28\PythonProject\leetcode" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年5月3日\s28IT" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日" />
-      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日\scripts\index\db" />
-      <recent name="D:\Python s28\PythonProject\Test\2020年4月25日\scripts\index" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年7月23日" />
+      <recent name="D:\Python s28\PythonProject\day154\moco-runner" />
+      <recent name="D:\Python s28\PythonProject\day136\wangyiPro\wangyiPro" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年6月20日" />
+      <recent name="D:\Python s28\PythonProject\Test\2020年6月18日" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in 01.py">
+  <component name="RunManager" selected="JavaScript Debug.00.html">
+    <configuration name="00.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PythonProject/Test/2020年7月23日/00.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="0.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PythonProject/Test/2020年7月18日/0.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="生产者消费者模式" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年6月20日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年6月20日/生产者消费者模式.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,12 +242,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月23日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月23日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月23日/01.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月23日/01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,7 +256,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="02 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1-ddt使用" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,12 +264,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月23日" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../28期视频/day154_串讲014/s28-testing-day21-串讲-2/s28-testing-day21-串讲-2/note" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月23日/02.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../28期视频/day154_串讲014/s28-testing-day21-串讲-2/s28-testing-day21-串讲-2/note/1-ddt使用.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="03" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="正向链表" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -143,12 +286,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月22日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月15日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月22日/03.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月15日/正向链表.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,7 +300,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="04" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="多任务的异步爬虫案例" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -165,12 +308,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月22日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年6月20日" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年4月22日/04.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年6月20日/多任务的异步爬虫案例.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,28 +322,204 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in 01.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="多任务异步协程" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年6月20日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年6月20日/多任务异步协程.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="选择排序" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月16日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月16日/选择排序.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="插入排序" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月16日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月16日/插入排序.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="多任务异步爬虫" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年6月20日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年6月20日/多任务异步爬虫.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="头部插入链表" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月15日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月15日/头部插入链表.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="二叉树" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月15日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月15日/二叉树.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="排序二叉树" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月15日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test/2020年7月15日/排序二叉树.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="反向链表" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年7月15日" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\Python s28\PythonProject\Test\2020年7月15日\头部插入链表.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in ddt使用.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="PythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test/2020年4月26日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/day154" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Test/2020年4月26日/01.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/day154/ddt/ddt使用.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in 01.py" />
-        <item itemvalue="Python.02 (1)" />
+        <item itemvalue="JavaScript Debug.00.html" />
         <item itemvalue="Python.01" />
-        <item itemvalue="Python.04" />
-        <item itemvalue="Python.03" />
+        <item itemvalue="Python tests.Unittests in ddt使用.py" />
+        <item itemvalue="Python.1-ddt使用" />
+        <item itemvalue="JavaScript Debug.0.html" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +569,85 @@
       <workItem from="1587914450429" duration="2347000" />
       <workItem from="1587917370177" duration="2831000" />
       <workItem from="1587920261708" duration="2761000" />
-      <workItem from="1587923092878" duration="809000" />
+      <workItem from="1587923092878" duration="6023000" />
+      <workItem from="1588049131147" duration="11260000" />
+      <workItem from="1588063139760" duration="6810000" />
+      <workItem from="1588090522686" duration="36484000" />
+      <workItem from="1588398292250" duration="936000" />
+      <workItem from="1588501827896" duration="1838000" />
+      <workItem from="1588503677080" duration="8000" />
+      <workItem from="1588504335706" duration="250000" />
+      <workItem from="1588505163112" duration="4077000" />
+      <workItem from="1588586707543" duration="775000" />
+      <workItem from="1588589273838" duration="4643000" />
+      <workItem from="1588764114235" duration="73000" />
+      <workItem from="1589224540616" duration="757000" />
+      <workItem from="1589376958931" duration="5219000" />
+      <workItem from="1589382400072" duration="169000" />
+      <workItem from="1589382580224" duration="372000" />
+      <workItem from="1590430616750" duration="535000" />
+      <workItem from="1592004768707" duration="4609000" />
+      <workItem from="1592266748919" duration="5656000" />
+      <workItem from="1592353990990" duration="10607000" />
+      <workItem from="1592406444580" duration="5219000" />
+      <workItem from="1592444152826" duration="2131000" />
+      <workItem from="1592550731106" duration="265000" />
+      <workItem from="1592551005315" duration="3234000" />
+      <workItem from="1592576026830" duration="9809000" />
+      <workItem from="1592613275165" duration="4905000" />
+      <workItem from="1592727619226" duration="11038000" />
+      <workItem from="1592748452212" duration="3796000" />
+      <workItem from="1592752379444" duration="4697000" />
+      <workItem from="1592758135923" duration="4541000" />
+      <workItem from="1592788755929" duration="2001000" />
+      <workItem from="1592811929300" duration="1396000" />
+      <workItem from="1592818407862" duration="9272000" />
+      <workItem from="1592903888838" duration="25640000" />
+      <workItem from="1592993443370" duration="24322000" />
+      <workItem from="1593176061495" duration="5875000" />
+      <workItem from="1593205598079" duration="2706000" />
+      <workItem from="1593248355115" duration="730000" />
+      <workItem from="1593270565388" duration="1492000" />
+      <workItem from="1593330477336" duration="889000" />
+      <workItem from="1593355267708" duration="4756000" />
+      <workItem from="1593413167628" duration="1845000" />
+      <workItem from="1593464600078" duration="1275000" />
+      <workItem from="1593475773234" duration="836000" />
+      <workItem from="1593547427053" duration="4878000" />
+      <workItem from="1593604683369" duration="6642000" />
+      <workItem from="1593617185999" duration="15010000" />
+      <workItem from="1593636374697" duration="4115000" />
+      <workItem from="1593692500024" duration="22071000" />
+      <workItem from="1593805662131" duration="15863000" />
+      <workItem from="1593875098632" duration="11997000" />
+      <workItem from="1593955111763" duration="5546000" />
+      <workItem from="1594042535864" duration="17435000" />
+      <workItem from="1594141013910" duration="8910000" />
+      <workItem from="1594241597376" duration="1229000" />
+      <workItem from="1594251164101" duration="4241000" />
+      <workItem from="1594278513792" duration="865000" />
+      <workItem from="1594324102531" duration="1215000" />
+      <workItem from="1594403304859" duration="1195000" />
+      <workItem from="1594432590728" duration="1198000" />
+      <workItem from="1594513920938" duration="19000" />
+      <workItem from="1594615107631" duration="1654000" />
+      <workItem from="1594628834928" duration="3000" />
+      <workItem from="1594632180307" duration="3207000" />
+      <workItem from="1594679473651" duration="16000" />
+      <workItem from="1594681193147" duration="2443000" />
+      <workItem from="1594706495027" duration="2434000" />
+      <workItem from="1594772945008" duration="12261000" />
+      <workItem from="1594795490582" duration="1014000" />
+      <workItem from="1594810098000" duration="10359000" />
+      <workItem from="1594860410960" duration="14753000" />
+      <workItem from="1595000084623" duration="801000" />
+      <workItem from="1595055602530" duration="3867000" />
+      <workItem from="1595139661830" duration="641000" />
+      <workItem from="1595239508577" duration="10934000" />
+      <workItem from="1595256672601" duration="5435000" />
+      <workItem from="1595314619516" duration="4524000" />
+      <workItem from="1595408620437" duration="735000" />
+      <workItem from="1595504759921" duration="6179000" />
     </task>
     <servers />
   </component>
@@ -258,50 +655,168 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587565758321">
-      <screen x="0" y="0" width="1280" height="760" />
+    <state x="249" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592818671600">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="0" y="44" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1587565758321" />
-    <state x="115" y="196" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587915990963">
-      <screen x="0" y="0" width="1280" height="760" />
+    <state x="249" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1592818671600" />
+    <state x="309" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592756175633">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="115" y="196" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.760@0.0.1280.760" timestamp="1587915990963" />
-    <state x="421" y="138" key="FileChooserDialogImpl" timestamp="1587920191575">
+    <state x="309" y="361" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400@0.0.3440.1400" timestamp="1592756175633" />
+    <state x="997" y="247" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592753555420">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="371" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.760@0.0.1280.760" timestamp="1588152627753" />
+    <state x="997" y="247" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1592753555420" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1589382704279">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="421" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1587920191575" />
-    <state width="432" height="186" key="GridCell.Tab.0.bottom" timestamp="1587833101712">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1589382704279" />
+    <state x="417" y="263" key="FileChooserDialogImpl" timestamp="1594155092424">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="155" y="143" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1589382859657" />
+    <state x="417" y="263" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1594155092424" />
+    <state width="1097" height="430" key="GridCell.Tab.0.bottom" timestamp="1595533616231">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1097" height="430" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1595533616231" />
+    <state width="1097" height="430" key="GridCell.Tab.0.center" timestamp="1595533616231">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1097" height="430" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1595533616231" />
+    <state width="1097" height="430" key="GridCell.Tab.0.left" timestamp="1595533616231">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1097" height="430" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1595533616231" />
+    <state width="1097" height="430" key="GridCell.Tab.0.right" timestamp="1595533616231">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1097" height="430" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1595533616231" />
+    <state width="1154" height="388" key="GridCell.Tab.1.bottom" timestamp="1594788119702">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1154" height="388" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1594788119702" />
+    <state width="1154" height="388" key="GridCell.Tab.1.center" timestamp="1594788119702">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1154" height="388" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1594788119702" />
+    <state width="1154" height="388" key="GridCell.Tab.1.left" timestamp="1594788119702">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1154" height="388" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1594788119702" />
+    <state width="1154" height="388" key="GridCell.Tab.1.right" timestamp="1594788119702">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="595" height="235" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1589379376656" />
+    <state width="1154" height="388" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1594788119702" />
+    <state width="595" height="235" key="GridCell.Tab.2.bottom" timestamp="1589379376657">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="432" height="186" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
-    <state width="432" height="186" key="GridCell.Tab.0.center" timestamp="1587833101712">
+    <state width="595" height="235" key="GridCell.Tab.2.bottom/0.0.1280.760@0.0.1280.760" timestamp="1589379376657" />
+    <state width="595" height="235" key="GridCell.Tab.2.center" timestamp="1589379376657">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="432" height="186" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
-    <state width="432" height="186" key="GridCell.Tab.0.left" timestamp="1587833101712">
+    <state width="595" height="235" key="GridCell.Tab.2.center/0.0.1280.760@0.0.1280.760" timestamp="1589379376657" />
+    <state width="595" height="235" key="GridCell.Tab.2.left" timestamp="1589379376657">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="432" height="186" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
-    <state width="432" height="186" key="GridCell.Tab.0.right" timestamp="1587833101712">
+    <state width="595" height="235" key="GridCell.Tab.2.left/0.0.1280.760@0.0.1280.760" timestamp="1589379376657" />
+    <state width="595" height="235" key="GridCell.Tab.2.right" timestamp="1589379376657">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="432" height="186" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1587833101712" />
-    <state x="336" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1587923093726">
-      <screen x="0" y="0" width="1280" height="760" />
+    <state width="595" height="235" key="GridCell.Tab.2.right/0.0.1280.760@0.0.1280.760" timestamp="1589379376657" />
+    <state x="1322" y="296" key="SettingsEditor" timestamp="1593184342246">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="336" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1587923093726" />
+    <state x="77" y="54" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1589382626724" />
+    <state x="1322" y="296" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1593184342246" />
+    <state width="516" height="446" key="SwitcherDM" timestamp="1592615180243">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="516" height="446" key="SwitcherDM/0.0.3440.1400@0.0.3440.1400" timestamp="1592615180243" />
+    <state x="903" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1595579047183">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="336" y="208" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1589382580134" />
+    <state x="903" y="383" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1595579047183" />
+    <state x="221" y="465" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1593910909869">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="221" y="465" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.3440.1400@0.0.3440.1400" timestamp="1593910909869" />
+    <state x="1337" y="362" width="827" height="981" key="dock-window-1" timestamp="1593005850112">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1337" y="362" width="827" height="981" key="dock-window-1/0.0.3440.1400@0.0.3440.1400" timestamp="1593005850112" />
+    <state x="1677" y="159" width="827" height="981" key="dock-window-2" timestamp="1593005948847">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1677" y="159" width="827" height="981" key="dock-window-2/0.0.3440.1400@0.0.3440.1400" timestamp="1593005948847" />
+    <state x="1444" y="75" width="827" height="981" key="dock-window-3" timestamp="1593006195384">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1444" y="75" width="827" height="981" key="dock-window-3/0.0.3440.1400@0.0.3440.1400" timestamp="1593006195384" />
+    <state x="2154" y="165" width="827" height="981" key="dock-window-4" timestamp="1593008429384">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="2154" y="165" width="827" height="981" key="dock-window-4/0.0.3440.1400@0.0.3440.1400" timestamp="1593008429384" />
+    <state x="814" y="151" width="1806" height="1249" key="search.everywhere.popup" timestamp="1593813078543">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1588052789286" />
+    <state x="814" y="151" width="1806" height="1249" key="search.everywhere.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1593813078543" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PythonProject$01.coverage" NAME="01 Coverage Results" MODIFIED="1587652810281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月23日" />
-    <SUITE FILE_PATH="coverage/PythonProject$02__1_.coverage" NAME="02 (1) Coverage Results" MODIFIED="1587659593432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月23日" />
     <SUITE FILE_PATH="coverage/PythonProject$Unittests_in_01_py.coverage" NAME="Unittests in 01.py Coverage Results" MODIFIED="1587833099782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月26日" />
-    <SUITE FILE_PATH="coverage/PythonProject$2.coverage" NAME="2 Coverage Results" MODIFIED="1583744823258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月8日" />
-    <SUITE FILE_PATH="coverage/PythonProject$0__1_.coverage" NAME="0 (1) Coverage Results" MODIFIED="1585997412379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月3日" />
-    <SUITE FILE_PATH="coverage/PythonProject$01__1_.coverage" NAME="01 (1) Coverage Results" MODIFIED="1587572115861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
-    <SUITE FILE_PATH="coverage/PythonProject$1.coverage" NAME="1 Coverage Results" MODIFIED="1583781849925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月8日" />
+    <SUITE FILE_PATH="coverage/PythonProject$1__2_.coverage" NAME="1 (2) Coverage Results" MODIFIED="1592570511982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月18日" />
+    <SUITE FILE_PATH="coverage/PythonProject$2.coverage" NAME="2 Coverage Results" MODIFIED="1592619079051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月20日" />
+    <SUITE FILE_PATH="coverage/PythonProject$5.coverage" NAME="5 Coverage Results" MODIFIED="1592412412572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月17日" />
+    <SUITE FILE_PATH="coverage/PythonProject$first.coverage" NAME="first Coverage Results" MODIFIED="1592823456182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day134/firstblood/firstblood/spiders" />
+    <SUITE FILE_PATH="coverage/PythonProject$Unittests_in_ddt_py.coverage" NAME="Unittests in ddt使用.py Coverage Results" MODIFIED="1595246209172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day154" />
+    <SUITE FILE_PATH="coverage/PythonProject$.coverage" NAME="插入排序 Coverage Results" MODIFIED="1594899884987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年7月16日" />
     <SUITE FILE_PATH="coverage/PythonProject$02.coverage" NAME="02 Coverage Results" MODIFIED="1587569194026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
-    <SUITE FILE_PATH="coverage/PythonProject$04.coverage" NAME="04 Coverage Results" MODIFIED="1587581533515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
-    <SUITE FILE_PATH="coverage/PythonProject$0.coverage" NAME="0 Coverage Results" MODIFIED="1584434018758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年3月17日" />
+    <SUITE FILE_PATH="coverage/PythonProject$002_.coverage" NAME="002 两数相加 Coverage Results" MODIFIED="1592266766644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/PythonProject$01__2_.coverage" NAME="01 (2) Coverage Results" MODIFIED="1593547574079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day139" />
+    <SUITE FILE_PATH="coverage/PythonProject$001__1_.coverage" NAME="001 (1) Coverage Results" MODIFIED="1588170579986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月29日" />
+    <SUITE FILE_PATH="coverage/PythonProject$002.coverage" NAME="002 Coverage Results" MODIFIED="1588057906008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月28日" />
+    <SUITE FILE_PATH="coverage/PythonProject$02__1_.coverage" NAME="02 (1) Coverage Results" MODIFIED="1587659593432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月23日" />
+    <SUITE FILE_PATH="coverage/PythonProject$01__1_.coverage" NAME="01 (1) Coverage Results" MODIFIED="1593476008634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day137" />
+    <SUITE FILE_PATH="coverage/PythonProject$4.coverage" NAME="4 Coverage Results" MODIFIED="1592407933889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月17日" />
+    <SUITE FILE_PATH="coverage/PythonProject$1.coverage" NAME="1 Coverage Results" MODIFIED="1592279706730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月16日" />
+    <SUITE FILE_PATH="coverage/PythonProject$01_.coverage" NAME="01 两数之和 Coverage Results" MODIFIED="1594643354905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/PythonProject$selenium.coverage" NAME="selenium爬取动态加载数据 Coverage Results" MODIFIED="1592758420079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月20日" />
+    <SUITE FILE_PATH="coverage/PythonProject$test_params.coverage" NAME="test_params Coverage Results" MODIFIED="1588211078163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/WeChat Files/wxid_gtmy0tocns1w12/FileStorage/File/2020-04" />
+    <SUITE FILE_PATH="coverage/PythonProject$disiti.coverage" NAME="disiti Coverage Results" MODIFIED="1593808411494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../28期视频/day141_串讲002/day2/day2" />
+    <SUITE FILE_PATH="coverage/PythonProject$test_case__1_.coverage" NAME="test_case (1) Coverage Results" MODIFIED="1588209042943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月29日/scripts" />
+    <SUITE FILE_PATH="coverage/PythonProject$0__1_.coverage" NAME="0 (1) Coverage Results" MODIFIED="1585997412379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月3日" />
+    <SUITE FILE_PATH="coverage/PythonProject$2__1_.coverage" NAME="2 (1) Coverage Results" MODIFIED="1592580186432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月18日" />
+    <SUITE FILE_PATH="coverage/PythonProject$004.coverage" NAME="004 Coverage Results" MODIFIED="1588064197027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月28日" />
+    <SUITE FILE_PATH="coverage/PythonProject$12306.coverage" NAME="模拟登录12306 Coverage Results" MODIFIED="1592762331793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月20日" />
+    <SUITE FILE_PATH="coverage/PythonProject$1__1_.coverage" NAME="1 (1) Coverage Results" MODIFIED="1592358511599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月17日" />
+    <SUITE FILE_PATH="coverage/PythonProject$3.coverage" NAME="3 Coverage Results" MODIFIED="1592582699495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月18日" />
+    <SUITE FILE_PATH="coverage/PythonProject$tcp.coverage" NAME="tcp客户端 Coverage Results" MODIFIED="1593900455434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年7月5日" />
+    <SUITE FILE_PATH="coverage/PythonProject$007_.coverage" NAME="007 整数反转 Coverage Results" MODIFIED="1592267638816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/leetcode" />
+    <SUITE FILE_PATH="coverage/PythonProject$0.coverage" NAME="0 Coverage Results" MODIFIED="1594813515464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年7月13日" />
+    <SUITE FILE_PATH="coverage/PythonProject$001.coverage" NAME="001 Coverage Results" MODIFIED="1588057641182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月28日" />
+    <SUITE FILE_PATH="coverage/PythonProject$Server.coverage" NAME="Server Coverage Results" MODIFIED="1592748681293" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月20日" />
+    <SUITE FILE_PATH="coverage/PythonProject$1_ddt.coverage" NAME="1-ddt使用 Coverage Results" MODIFIED="1595241672924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../28期视频/day154_串讲014/s28-testing-day21-串讲-2/s28-testing-day21-串讲-2/note" />
     <SUITE FILE_PATH="coverage/PythonProject$03.coverage" NAME="03 Coverage Results" MODIFIED="1587579388232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
+    <SUITE FILE_PATH="coverage/PythonProject$01.coverage" NAME="01 Coverage Results" MODIFIED="1595529877325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年7月23日" />
+    <SUITE FILE_PATH="coverage/PythonProject$04.coverage" NAME="04 Coverage Results" MODIFIED="1587581533515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月22日" />
+    <SUITE FILE_PATH="coverage/PythonProject$test_case.coverage" NAME="test_case Coverage Results" MODIFIED="1588154408616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年4月28日/scripts" />
+    <SUITE FILE_PATH="coverage/PythonProject$movie.coverage" NAME="movie Coverage Results" MODIFIED="1592993934529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/day135/moviePro/moviePro/spiders" />
+    <SUITE FILE_PATH="coverage/PythonProject$diwuti.coverage" NAME="diwuti Coverage Results" MODIFIED="1593812630341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../28期视频/day141_串讲002/day2/day2" />
+    <SUITE FILE_PATH="coverage/PythonProject$5__1_.coverage" NAME="5 (1) Coverage Results" MODIFIED="1592588088687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月18日" />
+    <SUITE FILE_PATH="coverage/PythonProject$4__1_.coverage" NAME="4 (1) Coverage Results" MODIFIED="1592584411865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test/2020年6月18日" />
+    <SUITE FILE_PATH="coverage/PythonProject$search.coverage" NAME="search Coverage Results" MODIFIED="1594861887169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Python笔记/清华博士算法+数据结构/算法+数据结构/算法/01-常用算法/算法入门/算法入门/查找排序" />
   </component>
 </project>

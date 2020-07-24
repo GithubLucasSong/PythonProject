@@ -1,0 +1,69 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LAPTOP-F4FFJE92",
+    "children" : [ {
+      "name" : "178780-MainThread",
+      "children" : [ {
+        "name" : "cookies_登录",
+        "uid" : "7e0edb79f5059f61",
+        "parentUid" : "b030f8cc93e4912173f0818fc0b0a45d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588219358919,
+          "stop" : 1588219358940,
+          "duration" : 21
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'neeo_003', 'title': 'cookies_登录', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/login', 'method': 'post', 'params': '', 'data': '{\"userName\": \"admin\", \"password\": \"1234\"}', 'json': '', 'cookies': '', 'headers': '', 'except': '{\"code\":0}'}" ]
+      }, {
+        "name" : "token_登录",
+        "uid" : "ec9be72e43f81cb3",
+        "parentUid" : "b030f8cc93e4912173f0818fc0b0a45d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588219358854,
+          "stop" : 1588219358888,
+          "duration" : 34
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'neeo_001', 'title': 'token_登录', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/login2', 'method': 'post', 'params': '', 'data': '{\"userName\": \"admin\", \"password\": \"1234\"}', 'json': '', 'cookies': '', 'headers': '', 'except': '{\"code\":0}'}" ]
+      }, {
+        "name" : "token_查询余额",
+        "uid" : "dfe96ff835f86939",
+        "parentUid" : "b030f8cc93e4912173f0818fc0b0a45d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588219358895,
+          "stop" : 1588219358916,
+          "duration" : 21
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'neeo_002', 'title': 'token_查询余额', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/query2', 'method': 'get', 'params': '{\"userName\": \"admin\"}', 'data': '', 'json': '', 'cookies': '', 'headers': '{\"testfan-token\": \"${neeo_001>data>data}$\"}', 'except': '{\"code\":0}'}" ]
+      } ],
+      "uid" : "b030f8cc93e4912173f0818fc0b0a45d"
+    }, {
+      "name" : "175452-MainThread",
+      "children" : [ {
+        "name" : "cookies_查询余额",
+        "uid" : "6162bd699f998453",
+        "parentUid" : "88fe8c2a945aabbccc95ccf1a57bcb2c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1588219348545,
+          "stop" : 1588219348569,
+          "duration" : 24
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'case_num': 'neeo_004', 'title': 'cookies_查询余额', 'url': 'http://www.neeo.cc:6002/pinter/bank/api/query', 'method': 'get', 'params': '{\"userName\": \"admin\"}', 'data': '', 'json': '', 'cookies': 'neeo_003', 'headers': '', 'except': '{\"code\":0}'}" ]
+      } ],
+      "uid" : "88fe8c2a945aabbccc95ccf1a57bcb2c"
+    } ],
+    "uid" : "ae07505744e250fab418888395279752"
+  } ]
+}

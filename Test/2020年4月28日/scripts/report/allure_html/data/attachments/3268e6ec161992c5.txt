@@ -1,0 +1,2 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:955 Starting new HTTPS connection (1): cnodejs.org:443
+DEBUG    urllib3.connectionpool:connectionpool.py:428 https://cnodejs.org:443 "GET /api/v1/topic/5433d5e4e737cbe96dcef312 HTTP/1.1" 200 None
